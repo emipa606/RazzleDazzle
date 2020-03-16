@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- ArtNameUtility RAZ_ArtName_Composition -->
+  <RAZ_ArtName_Composition.rulePack.rulesStrings>
+    <li>r_art_name->[ANYPAWN_nameIndef] への[musictype1]</li>
+    <li>r_art_name->[musictype1] 第 [RomanNumeral] 番</li>
+    <li>r_art_name->[musictype1] [musicdesc] 第 [RomanNumeral] 番</li>
+    <li>r_art_name->[musictype1] 第 [RomanNumeral] 番 [key] [keyvar]</li>
+    <li>r_art_name->[ANYPAWN_nameIndef] 組曲</li>
+    <li>r_art_name->[ConceptAny] と[ConceptAny]</li>
+    <li>r_art_name->[ConceptAny]</li>
+    <li>r_art_name->[characterType] のワルツ</li>
+    <li>r_art_name->[objectMaterial] の[ConceptAny]</li>
+    <li>r_art_name->[objectMaterial] のような[abstractNoun]</li>
+    <li>r_art_name->[AnimalBadass] [Letter]</li>
+    <li>r_art_name->古い[abstractNoun] のための[oneSylAdj] [oneSylNoun]</li>
+    <li>r_art_name->[Animal] たちと[twoSylNoun]</li>
+    
+    <li>musictype1->協奏曲</li>
+    <li>musictype1->交響曲</li>
+    <li>musictype1->アダージョ</li>
+    <li>musictype1->夜想曲</li>
+    <li>musictype1->瞑想曲</li>
+    <li>musictype1->カノン</li>
+    <li>musictype1->ポルカ</li>
+    <li>musictype1->ソナタ</li>
+    <li>musictype1->ソロ</li>
+    <li>musictype1->レクイエム</li>
+    <li>musictype1->ジムノペディ</li>
+    <li>musictype1->ラグタイム</li>
+    <li>musictype1->セレナーデ</li>
+    
+    <li>musictype2->バラッド</li>
+    <li>musictype2->セレナーデ</li>
+    <li>musictype2->セレナーデ</li>
+    <li>musictype2->セレナーデ</li>
+    <li>musictype2->セレナーデ</li>
+    <li>musictype2->セレナーデ</li>
+    <li>musictype2->セレナーデ</li>
+    <li>musictype2->セレナーデ</li>
+    <li>musictype2->セレナーデ</li>
+    
+    <li>musicdesc->アレグロ</li>
+    <li>musicdesc->グロッソ</li>
+    <li>musicdesc->アルラッビァート</li>
+    <li>musicdesc->ドルチェ</li>
+    <li>musicdesc->インフラント</li>
+    <li>musicdesc->ルナティコ</li>
+    <li>musicdesc->ピッコロ</li>
+    <li>musicdesc->スコルティーゼ</li>
+    <li>musicdesc->トリステ</li>
+    <li>musicdesc->ヌーヴォ</li>
+    <li>musicdesc->アズーロ</li>
+    <li>musicdesc->ロッソ</li>
+    <li>musicdesc->ペルドゥート</li>
+    
+    <li>key->ロ</li>
+    <li>key->ハ</li>
+    <li>key->ニ</li>
+    <li>key->ホ</li>
+    <li>key->変ヘ</li>
+    <li>key->ト</li>
+    
+    <li>keyvar->長調</li>
+    <li>keyvar->短調</li>
+    <li>keyvar->長調</li>
+    <li>keyvar->短調</li>
+    <li>keyvar->長調</li>
+    <li>keyvar->短調</li>
+    <li>keyvar->ディミニッシュ</li>
+    
+    <li>characterType->襲撃者</li>
+    <li>characterType->部族民</li>
+    <li>characterType->入植者</li>
+    <li>characterType->宙賊</li>
+    <li>characterType->繊維トレーダー</li>
+    <li>characterType->旅人</li>
+    <li>characterType->マッファロー飼い</li>
+    <li>characterType->スランボ愛好者</li>
+    <li>characterType->ボムラットの救世主</li>
+    <li>characterType->ボマロープ調教師</li>
+    <li>characterType->呪術師</li>
+    <li>characterType->流浪の祈祷師</li>
+    <li>characterType->デビルストランド農家</li>
+    <li>characterType->メガスロス騎兵</li>
+    <li>characterType->バイオクローン兵</li>
+    <li>characterType->科学者</li>
+    <li>characterType->奴隷</li>
+    
+    <li>objectMaterial->ゴールド</li>
+    <li>objectMaterial->ラバーゴム</li>
+    <li>objectMaterial->エポキシ</li>
+    <li>objectMaterial->シルバー</li>
+    <li>objectMaterial->スチール</li>
+    <li>objectMaterial->ブロンズ</li>
+    <li>objectMaterial->プラスチール</li>
+    <li>objectMaterial->ウラン</li>
+    <li>objectMaterial->プラチナ</li>
+    <li>objectMaterial->チタン</li>
+    <li>objectMaterial->ストーン</li>
+    <li>objectMaterial->カッパー</li>
+    <li>objectMaterial->プラスチック</li>
+    <li>objectMaterial->形状記憶合金</li>
+    <li>objectMaterial->サピエントペアウッド</li>
+    <li>objectMaterial->アッシュ</li>
+    <li>objectMaterial->亜鉛</li>
+    <li>objectMaterial->アルミ</li>
+    <li>objectMaterial->フッ素</li>
+    <li>objectMaterial->大理石</li>
+    <li>objectMaterial->粘板岩</li>
+    <li>objectMaterial->花崗岩</li>
+    <li>objectMaterial->石灰岩</li>
+    
+    <li>abstractNoun->魂</li>
+    <li>abstractNoun->熱い心</li>
+    <li>abstractNoun->渇望</li>
+    <li>abstractNoun->切望</li>
+    <li>abstractNoun->贖罪</li>
+    <li>abstractNoun->友情</li>
+    <li>abstractNoun->超越</li>
+    <li>abstractNoun->夢見がち</li>
+    <li>abstractNoun->感嘆</li>
+    <li>abstractNoun->親交</li>
+    <li>abstractNoun->笑い声</li>
+    <li>abstractNoun->喜劇</li>
+    <li>abstractNoun->興奮状態</li>
+    <li>abstractNoun->自暴自棄</li>
+    <li>abstractNoun->希望</li>
+    <li>abstractNoun->家事</li>
+    <li>abstractNoun->祭典</li>
+    <li>abstractNoun->演技</li>
+    <li>abstractNoun->結婚式</li>
+    <li>abstractNoun->パーティー</li>
+    <li>abstractNoun->遊戯</li>
+    <li>abstractNoun->追悼</li>
+    <li>abstractNoun->啓示</li>
+    <li>abstractNoun->復活</li>
+    <li>abstractNoun->旅行熱</li>
+    <li>abstractNoun->ハネムーン</li>
+    <li>abstractNoun->踊り</li>
+    <li>abstractNoun->愛情</li>
+    <li>abstractNoun->嘘</li>
+    <li>abstractNoun->革命</li>
+    <li>abstractNoun->影響</li>
+    <li>abstractNoun->ラスプーチン</li>
+    <li>abstractNoun->合唱</li>
+    <li>abstractNoun->時間</li>
+    
+    <li>oneSylAdj->新しい</li>
+    <li>oneSylAdj->赤い</li>
+    <li>oneSylAdj->青い</li>
+    <li>oneSylAdj->早い</li>
+    <li>oneSylAdj->全ての</li>
+    <li>oneSylAdj->巧妙な</li>
+    <li>oneSylAdj->緑の</li>
+    <li>oneSylAdj->金の</li>
+    <li>oneSylAdj->平凡な</li>
+    <li>oneSylAdj->一つの</li>
+    <li>oneSylAdj->冷たい</li>
+    <li>oneSylAdj->熱い</li>
+    <li>oneSylAdj->上等な</li>
+    <li>oneSylAdj->派手な</li>
+    <li>oneSylAdj->柔らかな</li>
+    <li>oneSylAdj->固い</li>
+    <li>oneSylAdj->荒い</li>
+    <li>oneSylAdj->滑らかな</li>
+    <li>oneSylAdj->酔いつぶれた</li>
+    <li>oneSylAdj->ゆっくりな</li>
+    <li>oneSylAdj->黒い</li>
+    <li>oneSylAdj->暗い</li>
+    <li>oneSylAdj->疲れた</li>
+    <li>oneSylAdj->タフな</li>
+    <li>oneSylAdj->純粋な</li>
+    <li>oneSylAdj->失った</li>
+    <li>oneSylAdj->嫌われた</li>
+    <li>oneSylAdj->愛された</li>
+    <li>oneSylAdj->乾いた</li>
+    <li>oneSylAdj->濡れた</li>
+    
+    <li>oneSylNoun->肌</li>
+    <li>oneSylNoun->銃</li>
+    <li>oneSylNoun->帽子</li>
+    <li>oneSylNoun->猫</li>
+    <li>oneSylNoun->椅子</li>
+    <li>oneSylNoun->部屋</li>
+    <li>oneSylNoun->縄</li>
+    <li>oneSylNoun->足</li>
+    <li>oneSylNoun->ブーツ</li>
+    <li>oneSylNoun->コート</li>
+    <li>oneSylNoun->月</li>
+    <li>oneSylNoun->太陽</li>
+    <li>oneSylNoun->星</li>
+    <li>oneSylNoun->船</li>
+    <li>oneSylNoun->プレート</li>
+    <li>oneSylNoun->ナイフ</li>
+    <li>oneSylNoun->ソード</li>
+    <li>oneSylNoun->スプーン</li>
+    <li>oneSylNoun->蜂</li>
+    <li>oneSylNoun->ネズミ</li>
+    <li>oneSylNoun->煙</li>
+    <li>oneSylNoun->平板</li>
+    <li>oneSylNoun->魚</li>
+    <li>oneSylNoun->カード</li>
+    <li>oneSylNoun->グラス</li>
+    <li>oneSylNoun->マグカップ</li>
+    <li>oneSylNoun->灯</li>
+    <li>oneSylNoun->ベッド</li>
+    <li>oneSylNoun->照明</li>
+    <li>oneSylNoun->茶碗</li>
+    <li>oneSylNoun->柱</li>
+    <li>oneSylNoun->炎</li>
+    <li>oneSylNoun->木</li>
+    <li>oneSylNoun->手</li>
+    <li>oneSylNoun->地図</li>
+    <li>oneSylNoun->時計</li>
+    <li>oneSylNoun->刀</li>
+    <li>oneSylNoun->聖地</li>
+    <li>oneSylNoun->法律</li>
+    <li>oneSylNoun->小道</li>
+    
+    <li>animalType->スランボ</li>
+    <li>animalType->マッファロー</li>
+    <li>animalType->ボムネズミ</li>
+    <li>animalType->ボマロープ</li>
+    <li>animalType->メガスロス</li>
+    <li>animalType->キツネ</li>
+    <li>animalType->オオカミ</li>
+    <li>animalType->ネコ</li>
+    <li>animalType->ハクチョウ</li>
+    <li>animalType->パフィン</li>
+    <li>animalType->ペンギン</li>
+    <li>animalType->ワーグ</li>
+    <li>animalType->アルファビーバー</li>
+    <li>animalType->ラブラトリバー</li>
+    <li>animalType->ハスキー</li>
+    <li>animalType->アルパカ</li>
+    <li>animalType->リス</li>
+    <li>animalType->ソードフィッシュ</li>
+    <li>animalType->ネズミ</li>
+    <li>animalType->ニワトリ</li>
+    
+    <li>twoSylNoun->トロンボーン</li>
+    <li>twoSylNoun->クラリネット</li>
+    <li>twoSylNoun->ギター</li>
+    <li>twoSylNoun->ピアノ</li>
+    <li>twoSylNoun->チェインソー</li>
+    <li>twoSylNoun->ハンモック</li>
+    <li>twoSylNoun->ハットスタンド</li>
+    <li>twoSylNoun->フォトグラフ</li>
+    <li>twoSylNoun->フットレスト</li>
+    <li>twoSylNoun->ランプシェード</li>
+    <li>twoSylNoun->スペースシップ</li>
+    <li>twoSylNoun->バッソン</li>
+    <li>twoSylNoun->オーボエ</li>
+    <li>twoSylNoun->チューバ</li>
+    <li>twoSylNoun->トランペット</li>
+    <li>twoSylNoun->ドアストップ</li>
+  </RAZ_ArtName_Composition.rulePack.rulesStrings>
+
+  <RAZ_ArtDescription_Composition.rulePack.rulesStrings>
+      <li>r_art_description->[ConceptAny]を表現する音楽作品。</li>
+  </RAZ_ArtDescription_Composition.rulePack.rulesStrings>
+
+</LanguageData>

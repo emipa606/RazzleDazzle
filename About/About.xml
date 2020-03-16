@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>RazzleDazzle! (Continued)</name>
+  	<packageId>Mlie.RazzleDazzle</packageId>
+	<author>Mlie</author>
+	<url>https://github.com/emipa606/RazzleDazzle</url>
+	<supportedVersions>
+		<li>1.0</li>
+		<li>1.1</li>
+	</supportedVersions>
+	<modDependencies />
+	<loadAfter />
+	<description>Update of Bar0ths mod for RimWorld 1.1
+https://steamcommunity.com/sharedfiles/filedetails/?id=1778162471
+
+Support-chat:
+https://discord.gg/SuhwVpM
+
+Non-steam version:
+https://github.com/emipa606/RazzleDazzle
+	
+--- Original Description ---
+For those players who want a little more song and dance in the lives of their colonies! This mod introduces a range of performing arts:
+
+Theatre: Colonists can write (Artistic) and perform plays (Social), which are written at sculpting benches.
+
+Music: Music can be composed (Artistic) and performed at a piano (Social).
+
+Stand-up: Rehearsed and performed at the microphone stand (Social).
+
+Radio: Performances from all of the above will be automatically broadcast if you have a broadcaster, with subscription payments sent in by nearby settlements based on the quality of your broadcast.
+
+Now you can keep your colonists from ever doing a real day's work!
+
+Credits: Original was created by SeveralPuffins, Japanese translation by Proxyer.</description>
+</ModMetaData>

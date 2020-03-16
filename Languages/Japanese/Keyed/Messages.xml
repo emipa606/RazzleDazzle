@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RAZ_VenueBasicInspectString>公演会場</RAZ_VenueBasicInspectString>
+  <RAZ_MicrophoneBasicInpectString>スタンドマイク</RAZ_MicrophoneBasicInpectString>
+  <RAZ_StageBasicInspectString>劇場のステージ！</RAZ_StageBasicInspectString>
+
+  <RAZ_Rehearsal_Venue>現在リハーサル中：{0}</RAZ_Rehearsal_Venue>
+  <RAZ_Rehearsal_Performer>パフォーマー：{PAWN_labelShort}</RAZ_Rehearsal_Performer>
+  <RAZ_Rehearsal_Performers>パフォーマー：{PAWN1_labelShort}と{PAWN2_labelShort}</RAZ_Rehearsal_Performers>
+  <RAZ_Rehearsal_Progress>{0}完了</RAZ_Rehearsal_Progress>
+
+  <RAZ_Rehearsal_Microphone>{PAWN_labelShort}は最終リハーサルの準備中</RAZ_Rehearsal_Microphone>
+  <RAZ_PerformancePending_Microphone>次回の演目：{PAWN_labelShort}の最新作</RAZ_PerformancePending_Microphone>
+
+  <RAZ_MessageRehearsalsDelayed>{PAWN_labelShort}がパフォーマンスできなくなったので、リハーサルは延期されました。</RAZ_MessageRehearsalsDelayed>
+
+  <RAZ_ReplaceLead>主演を交代</RAZ_ReplaceLead>
+  <RAZ_ReplaceSupport>助演を交代</RAZ_ReplaceSupport>
+
+  <RAZ_PerformancePending>保留中のパフォーマンス：{0}</RAZ_PerformancePending>
+  <RAZ_PerformanceStarting>パフォーマンスが始まっています。</RAZ_PerformanceStarting>
+  <RAZ_PerformanceCancelledLate>パフォーマーが時間通りに到着しなかったので、パフォーマンスは中止されました。</RAZ_PerformanceCancelledLate>
+  <RAZ_PerformanceCancelledThreat>コロニーへの脅威が確認されたので、パフォーマンスは中止されました。</RAZ_PerformanceCancelledThreat>
+
+  <RAZ_ConcertFinished>コンサートが終わった。{0}</RAZ_ConcertFinished>
+  <RAZ_ConcertFinishedHated>耐え難い内容だった（-5)</RAZ_ConcertFinishedHated>
+  <RAZ_ConcertFinishedGood>楽しかった（+5)</RAZ_ConcertFinishedGood>
+  <RAZ_ConcertFinishedGreat>素晴らしかった（+10)</RAZ_ConcertFinishedGreat>
+  <RAZ_ConcertFinishedPeerless>最高だった（+12)</RAZ_ConcertFinishedPeerless>
+
+  <RAZ_ComedyFinished>演技が終わった。{0}</RAZ_ComedyFinished>
+  <RAZ_ComedyFinishedHated>誰もが不満だった（-3)</RAZ_ComedyFinishedHated>
+  <RAZ_ComedyFinishedGood>楽しめた（+3)</RAZ_ComedyFinishedGood>
+  <RAZ_ComedyFinishedGreat>誰もが満足した（+6)</RAZ_ComedyFinishedGreat>
+  <RAZ_ComedyFinishedPeerless>比類なき演技だった（+8)</RAZ_ComedyFinishedPeerless>
+
+  <RAZ_PlayFinished>演奏が終わった。{0}</RAZ_PlayFinished>
+  <RAZ_PlayFinishedHated>終わって誰もが安心した（-5)</RAZ_PlayFinishedHated>
+  <RAZ_PlayFinishedGood>普通に良かった（+5)</RAZ_PlayFinishedGood>
+  <RAZ_PlayFinishedGreat>素晴らしかった（+10)</RAZ_PlayFinishedGreat>
+  <RAZ_PlayFinishedPeerless>人生が変わる程でした（+12)</RAZ_PlayFinishedPeerless>
+
+  <RAZ_BroadcasterInspectString>現在の放送の評判は{0}です\nこれまでの放送の評判は{1}です</RAZ_BroadcasterInspectString>
+
+  <RAZ_BroadcastQuality_Execrable>本当にひどい</RAZ_BroadcastQuality_Execrable>
+  <RAZ_BroadcastQuality_Uninspiring>つまらない</RAZ_BroadcastQuality_Uninspiring>
+  <RAZ_BroadcastQuality_Decent>普通</RAZ_BroadcastQuality_Decent>
+  <RAZ_BroadcastQuality_Good>悪くない</RAZ_BroadcastQuality_Good>
+  <RAZ_BroadcastQuality_Great>素晴らしい</RAZ_BroadcastQuality_Great>
+  <RAZ_BroadcastQuality_Outstanding>大人気</RAZ_BroadcastQuality_Outstanding>
+
+  <RAZ_BroadcastRegularity_OffAir>常にチャンネルはオフ</RAZ_BroadcastRegularity_OffAir>
+  <RAZ_BroadcastRegularity_Terrible>ひどい</RAZ_BroadcastRegularity_Terrible>
+  <RAZ_BroadcastRegularity_Poor>悪い</RAZ_BroadcastRegularity_Poor>
+  <RAZ_BroadcastRegularity_Adequate>まずまず</RAZ_BroadcastRegularity_Adequate>
+  <RAZ_BroadcastRegularity_Good>良い</RAZ_BroadcastRegularity_Good>
+  <RAZ_BroadcastRegularity_Great>素晴らしい</RAZ_BroadcastRegularity_Great>
+  <RAZ_BroadcastRegularity_Perfect>最高</RAZ_BroadcastRegularity_Perfect>
+
+  <RAZ_MessageSeasonEnd>あなたの放送シーズンが終了しました。{0}</RAZ_MessageSeasonEnd>
+  <RAZ_SeasonPositive>これは惑星内の話ですが、すべての文明的な派閥はあなたに対して好意的になっています。</RAZ_SeasonPositive>
+  <RAZ_SeasonNeutral>それは他の派閥から全体的に良い評価を受けました。</RAZ_SeasonNeutral>
+  <RAZ_SeasonNegative>隣人たちは、あなたが垂れ流しているくだらない放送を嫌っています。</RAZ_SeasonNegative>
+
+  <RAZ_MessagePaymentArrived>定期視聴への支払いが{0}から到着しました。</RAZ_MessagePaymentArrived>
+
+</LanguageData>

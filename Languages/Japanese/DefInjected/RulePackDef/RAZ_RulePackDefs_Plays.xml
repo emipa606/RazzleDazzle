@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- ArtNameUtility RAZ_ArtName_Composition -->
+  <RAZ_ArtName_Play.rulePack.rulesStrings>
+    <li>r_art_name->[ANYPAWN_nameIndef]</li>
+    <li>r_art_name->[drug]</li>
+    <li>r_art_name->[disease]</li>
+    <li>r_art_name->[disease] &amp; [drug]</li>
+    <li>r_art_name->[material] &amp; [drug]</li>
+    <li>r_art_name->[weapon]s &amp; [drug]</li>
+    <li>r_art_name->[material] 製の[weapon]</li>
+    <li>r_art_name->[ANYPAWN_nameIndef] 第[romannumeral] 章（パートI)</li>
+    <li>r_art_name->[ANYPAWN_nameIndef] の[relationType]</li>
+    <li>r_art_name->[ANYPAWN_nameIndef] [prename]</li>
+    <li>r_art_name->[preplace] [place]</li>
+    <li>r_art_name->[material] 製の[furniture]</li>
+    <li>r_art_name->[adjective] [animal]</li>
+    <li>r_art_name->[adjective] [weapon]</li>
+    <li>r_art_name->[adjective] [furniture]</li>
+    <li>r_art_name->[preconcept] [ConceptAny]</li>
+    <li>r_art_name->[ConceptAny]</li>
+    <li>r_art_name->[prenoun] [animalType]</li>
+    <li>r_art_name->[prenoun] [weapon]</li>
+    <li>r_art_name->[oneSylAdj] [material] 製の屋根の上に居る[animalType]</li>
+    <li>r_art_name->我が[relationType]たち全て</li>
+    <li>r_art_name->我が[animalType]たち全て</li>
+    
+    <li>relationType->兄弟</li>
+    <li>relationType->姉妹</li>
+    <li>relationType->叔父</li>
+    <li>relationType->叔母</li>
+    <li>relationType->いとこ</li>
+    
+    <li>drug->スモークリーフ</li>
+    <li>drug->ゴージュース</li>
+    <li>drug->イョイョ</li>
+    <li>drug->ウイスキー</li>
+    <li>drug->ルシフェリウム</li>
+    <li>drug->フレーク</li>
+    <li>drug->コーヒー</li>
+    
+    <li>disease->心臓病</li>
+    <li>disease->低体温症</li>
+    <li>disease->熱中症</li>
+    <li>disease->インフルエンザ</li>
+    <li>disease->機械化症</li>
+    <li>disease->寄生虫</li>
+    <li>disease->マラリア</li>
+    <li>disease->ねむり病</li>
+    <li>disease->認知症</li>
+    <li>disease->悪性腫瘍</li>
+    
+    <li>material->スチール</li>
+    <li>material->ゴールド</li>
+    <li>material->シルバー</li>
+    <li>material->カッパー</li>
+    <li>material->チタン</li>
+    <li>material->ウラン</li>
+    <li>material->亜鉛</li>
+    <li>material->大理石</li>
+    <li>material->デビルスストランド</li>
+    <li>material->シンスレッド</li>
+    <li>material->タンタル</li>
+    <li>material->黒曜石</li>
+    <li>material->スランボの角</li>
+    <li>material->ガラス</li>
+    
+    <li>weapon->銃</li>
+    <li>weapon->短剣</li>
+    <li>weapon->剣</li>
+    <li>weapon->こん棒</li>
+    <li>weapon->サバイバルナイフ</li>
+    <li>weapon->狙撃銃</li>
+    <li>weapon->拳銃</li>
+    <li>weapon->ナイフ</li>
+    
+    <li>prename->の人生とその悲劇的な死</li>
+    <li>prename->の数奇な大冒険</li>
+    <li>prename->であることの大切さ</li>
+    <li>prename->を恐れている誰か</li>
+    <li>prename->を待っている人</li>
+    
+    <li>preplace->の善人</li>
+    <li>preplace->の陽気な妻たち</li>
+    <li>preplace->の宙賊</li>
+    <li>preplace->の襲撃者</li>
+    <li>preplace->の商人</li>
+    <li>preplace->の物語</li>
+    <li>preplace->の紳士二人</li>
+    
+    <li>place->郊外</li>
+    <li>place->オリオン基地</li>
+    <li>place->辺境地</li>
+    <li>place->村</li>
+    <li>place->食堂</li>
+    <li>place->古き地球</li>
+    <li>place->監獄</li>
+    <li>place->収録室</li>
+    <li>place->砂漠</li>
+    <li>place->大海</li>
+    <li>place->帝国の指輪たち</li>
+    
+    <li>furniture->ベッド</li>
+    <li>furniture->机</li>
+    <li>furniture->壁</li>
+    <li>furniture->椅子</li>
+    <li>furniture->灯</li>
+    <li>furniture->鏡</li>
+    <li>furniture->回転盆</li>
+    <li>furniture->通信機</li>
+    
+    <li>animalType->スランボ</li>
+    <li>animalType->マッファロー</li>
+    <li>animalType->ボムネズミ</li>
+    <li>animalType->ボマロープ</li>
+    <li>animalType->メガスロス</li>
+    <li>animalType->キツネ</li>
+    <li>animalType->ウルフ</li>
+    <li>animalType->ネコ</li>
+    <li>animalType->スワン</li>
+    <li>animalType->パフィン</li>
+    <li>animalType->ペンギン</li>
+    <li>animalType->ワーグ</li>
+    <li>animalType->アルファビーバー</li>
+    <li>animalType->ラブラトリバー</li>
+    <li>animalType->ハスキー</li>
+    <li>animalType->アルパカ</li>
+    <li>animalType->リス</li>
+    <li>animalType->ソードフィッシュ</li>
+    <li>animalType->ネズミ</li>
+    
+    <li>prenoun->ウィンダミアお嬢様の</li>
+    <li>prenoun->最高の</li>
+    <li>prenoun->人形の</li>
+    
+    <li>preconcept->真夏の夜の</li>
+    <li>preconcept->冬の</li>
+    <li>preconcept->[weapon]という名の</li>
+    <li>preconcept->[animalType]という名の</li>
+    <li>preconcept->路面電車という名の</li>
+    <li>preconcept->大げさに騒がれた</li>
+    
+    <li>adjective->幸せな</li>
+    <li>adjective->不幸な</li>
+    <li>adjective->無関係な</li>
+    <li>adjective->秘密の</li>
+    <li>adjective->失われた</li>
+    <li>adjective->最後の</li>
+    <li>adjective->有望な</li>
+    
+    <li>oneSylAdj->新しい</li>
+    <li>oneSylAdj->赤い</li>
+    <li>oneSylAdj->青い</li>
+    <li>oneSylAdj->早い</li>
+    <li>oneSylAdj->全ての</li>
+    <li>oneSylAdj->巧妙な</li>
+    <li>oneSylAdj->緑の</li>
+    <li>oneSylAdj->金の</li>
+    <li>oneSylAdj->平凡な</li>
+    <li>oneSylAdj->一つの</li>
+    <li>oneSylAdj->冷たい</li>
+    <li>oneSylAdj->熱い</li>
+    <li>oneSylAdj->上等な</li>
+    <li>oneSylAdj->派手な</li>
+    <li>oneSylAdj->柔らかな</li>
+    <li>oneSylAdj->固い</li>
+    <li>oneSylAdj->荒い</li>
+    <li>oneSylAdj->滑らかな</li>
+    <li>oneSylAdj->酔いつぶれた</li>
+    <li>oneSylAdj->ゆっくりな</li>
+    <li>oneSylAdj->黒い</li>
+    <li>oneSylAdj->暗い</li>
+    <li>oneSylAdj->疲れた</li>
+    <li>oneSylAdj->タフな</li>
+    <li>oneSylAdj->純粋な</li>
+    <li>oneSylAdj->失った</li>
+    <li>oneSylAdj->嫌われた</li>
+    <li>oneSylAdj->愛された</li>
+    <li>oneSylAdj->乾いた</li>
+    <li>oneSylAdj->濡れた</li>
+  </RAZ_ArtName_Play.rulePack.rulesStrings>
+
+  <!-- ArtNameUtility RAZ_ArtDescription_Play -->
+  <RAZ_ArtDescription_Play.rulePack.rulesStrings>
+    <li>r_art_description->この[playType] は、[setting] 舞台となり、[secondSentencePart]「[theme]」と「[theme]」をテーマとして話が展開します。[play_tale_context]</li>
+    <li>r_art_description->この[playType] は、[setting] 舞台となり、[secondSentencePart]「[theme]」と「[theme]」をテーマとして話が展開します。[play_tale_context]</li>
+    <li>r_art_description->この[playType] は、[setting] 舞台となり、[secondSentencePart]「[theme]」と「[theme]」をテーマとして話が展開します。[play_tale_context]</li>
+    <li>r_art_description->この[playType] は、[setting] 舞台となり、[secondSentencePart]「[theme]」と「[theme]」をテーマとして話が展開します。[play_tale_context]</li>
+    <li>r_art_description->この[playType] は、[setting] 舞台となり、[secondSentencePart]「[theme]」と「[theme]」をテーマとして話が展開します。[play_tale_context]</li>
+    <li>r_art_description->この[playType] は、[setting] 舞台となり、[secondSentencePart]「[theme]」と「[theme]」をテーマとして話が展開します。[play_tale_context]</li>
+    <li>r_art_description->この[playType] は、[setting] 舞台となり、[secondSentencePart]「[theme]」と「[theme]」をテーマとして話が展開します。</li>
+    <li>r_art_description->この[playType] は、[setting] 舞台となり、[secondSentencePart]「[theme]」と「[theme]」をテーマとして話が展開します。</li>
+    <li>r_art_description->この[playType] は、[setting] 舞台となり、[secondSentencePart]「[theme]」と「[theme]」をテーマとして話が展開します。</li>
+    <li>r_art_description->この[playType] は、[setting] 舞台となり、[secondSentencePart]「[theme]」と「[theme]」をテーマとして話が展開します。</li>
+    <li>r_art_description->この[playType] は、[setting] 舞台となり、[secondSentencePart]「[theme]」と「[theme]」をテーマとして話が展開します。</li>
+    <li>r_art_description->この[playType] は、[setting] 舞台となり、[secondSentencePart]「[theme]」と「[theme]」をテーマとして話が展開します。</li>
+    
+    <li>play_tale_context->この[depiction] は、[DATE] 年に起きた[tale_noun] を元に作られました。</li>
+    <li>play_tale_context->この[depiction] は、[DATE] 年に起きた[tale_noun] を元にしたあからさまなパロディーです。</li>
+    <li>play_tale_context->その構成は[DATE] 年に起きた[tale_noun] を数多く参考にしています。</li>
+    
+    <li>playType->喜劇</li>
+    <li>playType->喜劇</li>
+    <li>playType->喜劇</li>
+    <li>playType->軽喜劇</li>
+    <li>playType->軽喜劇</li>
+    <li>playType->風刺劇</li>
+    <li>playType->風刺劇</li>
+    <li>playType->悲劇</li>
+    <li>playType->悲劇</li>
+    <li>playType->悲劇</li>
+    <li>playType->歴史劇</li>
+    <li>playType->歴史劇</li>
+    <li>playType->恋愛劇</li>
+    <li>playType->恋愛劇</li>
+    <li>playType->悲喜劇</li>
+    <li>playType->教訓劇</li>
+    <li>playType->風刺茶番劇</li>
+    <li>playType->茶番劇</li>
+    <li>playType->歌舞伎</li>
+    <li>playType->厄祓い劇</li>
+    <li>playType->ヨルバ人仮面舞踊劇</li>
+    <li>playType->カタカリ舞踊劇</li>
+    
+    <li>theme->性的な衝動</li>
+    <li>theme->信仰</li>
+    <li>theme->主体性</li>
+    <li>theme->喜び</li>
+    <li>theme->運命論</li>
+    <li>theme->偏見</li>
+    <li>theme->先入観</li>
+    <li>theme->愛国主義</li>
+    <li>theme->暴力</li>
+    <li>theme->性別</li>
+    <li>theme->不可避の死</li>
+    <li>theme->生体強化</li>
+    <li>theme->人工知能</li>
+    <li>theme->自暴自棄</li>
+    <li>theme->孤独</li>
+    <li>theme->共同体</li>
+    <li>theme->無秩序</li>
+    <li>theme->美しさ</li>
+    <li>theme->権力</li>
+    <li>theme->個性</li>
+    <li>theme->勇気</li>
+    <li>theme->病気</li>
+    <li>theme->目的喪失</li>
+    <li>theme->不死性</li>
+    <li>theme->義体化願望</li>
+    <li>theme->不公正</li>
+    <li>theme->有罪</li>
+    <li>theme->慰め</li>
+    <li>theme->希望</li>
+    <li>theme->愛情</li>
+    <li>theme->動物の個性</li>
+    <li>theme->ロボットの人間性</li>
+    <li>theme->人間性</li>
+    <li>theme->性差別</li>
+    <li>theme->実利主義</li>
+    <li>theme->民主主義</li>
+    <li>theme->派閥主義</li>
+    <li>theme->汚職</li>
+    <li>theme->不完全な知識</li>
+    <li>theme->科学技術</li>
+    <li>theme->全体主義</li>
+    <li>theme->階級闘争</li>
+    <li>theme->脆弱性</li>
+    <li>theme->誇大妄想</li>
+    <li>theme->伝統主義</li>
+    <li>theme->親子関係</li>
+    <li>theme->裏切り</li>
+    <li>theme->友情</li>
+    <li>theme->信頼</li>
+    <li>theme->強制退去</li>
+    <li>theme->救済</li>
+    <li>theme->家族</li>
+    <li>theme->目的</li>
+    <li>theme->依存症</li>
+    <li>theme->自治性</li>
+    <li>theme->因果関係</li>
+    <li>theme->正当性</li>
+    <li>theme->主観論</li>
+    <li>theme->寛容性</li>
+    <li>theme->社会主義</li>
+    <li>theme->犯罪組織</li>
+    <li>theme->言語学</li>
+    <li>theme->学習</li>
+    <li>theme->忠誠心</li>
+    <li>theme->環境保護主義</li>
+    <li>theme->薬物依存</li>
+    <li>theme->合理主義</li>
+    <li>theme->科学</li>
+    <li>theme->監視社会</li>
+    <li>theme->文化</li>
+    <li>theme->勇敢さ</li>
+    <li>theme->戦争</li>
+    <li>theme->精神性</li>
+    <li>theme->うつ病</li>
+    <li>theme->超人主義</li>
+    <li>theme->社会不安</li>
+    
+    <li>setting->[shipLocation] [shipAdj] [shipType] が</li>
+    <li>setting->[worldDescription] [iWorldType] の1つの [worldLocationType] が</li>
+    
+    <li>shipAdj->不思議な</li>
+    <li>shipAdj->感傷的な</li>
+    <li>shipAdj->迷路みたいな</li>
+    <li>shipAdj->遺棄された</li>
+    <li>shipAdj->巨大な</li>
+    <li>shipAdj->美しい</li>
+    <li>shipAdj->活気のある</li>
+    <li>shipAdj->ボロボロの</li>
+    <li>shipAdj->廃棄された</li>
+    
+    <li>shipType->宇宙ステーション</li>
+    <li>shipType->交易船</li>
+    <li>shipType->古い快速船</li>
+    <li>shipType->貨物船</li>
+    <li>shipType->遊覧船</li>
+    <li>shipType->司令植民船</li>
+    <li>shipType->スクラップ回収船</li>
+    <li>shipType->派手な海賊船</li>
+    <li>shipType->軍艦</li>
+    <li>shipType->軽量コルベット艇</li>
+    <li>shipType->旅客定期船</li>
+    <li>shipType->警備船</li>
+    
+    <li>shipLocation->[worldType] を周回する</li>
+    <li>shipLocation->[worldType] で事故を起こした</li>
+    <li>shipLocation->[worldType] へ向かう途中の</li>
+    <li>shipLocation->[worldType] に向かって渦巻く</li>
+    <li>shipLocation->[spaceLocation] で行方不明になった</li>
+    <li>shipLocation->[spaceLocation] を調査する</li>
+    <li>shipLocation->[spaceLocation] を旅する</li>
+    
+    <li>worldType->グリッターワールド</li>
+    <li>worldType->ミッドワールド</li>
+    <li>worldType->リムワールド</li>
+    <li>worldType->ハイブワールド</li>
+    <li>worldType->トンネルワールド</li>
+    <li>worldType->コアワールド</li>
+    
+    <li>worldType->[worldDescription]惑星</li>
+    <li>worldType->[worldDescription]ガス惑星</li>
+    <li>worldType->[worldDescription]月</li>
+    <li>worldType->[worldDescription]アステロイド</li>
+    
+    <li>iWorldType->グリッターワールド</li>
+    <li>iWorldType->ミッドワールド</li>
+    <li>iWorldType->リムワールド</li>
+    <li>iWorldType->ハイブワールド</li>
+    <li>iWorldType->トンネルワールド</li>
+    <li>iWorldType->コアワールド</li>
+    
+    <li>worldDescription->不安定な</li>
+    <li>worldDescription->不思議な</li>
+    <li>worldDescription->失われた</li>
+    <li>worldDescription->美しい</li>
+    <li>worldDescription->悲惨な</li>
+    <li>worldDescription->不吉な</li>
+    <li>worldDescription->奇妙な</li>
+    <li>worldDescription->粉々になった</li>
+    <li>worldDescription->呪われた</li>
+    
+    <li>spaceLocation->小惑星帯</li>
+    <li>spaceLocation->深宇宙</li>
+    <li>spaceLocation->星雲</li>
+    <li>spaceLocation->ゆりかご星雲</li>
+    <li>spaceLocation->ダークマター星系</li>
+    <li>spaceLocation->宇宙ひも</li>
+    <li>spaceLocation->平行宇宙</li>
+    
+    <li>worldLocationType->都市</li>
+    <li>worldLocationType->砂漠</li>
+    <li>worldLocationType->廃墟</li>
+    <li>worldLocationType->山麓</li>
+    <li>worldLocationType->食堂</li>
+    <li>worldLocationType->酒場</li>
+    <li>worldLocationType->我が家</li>
+    <li>worldLocationType->宿舎</li>
+    <li>worldLocationType->自治体</li>
+    <li>worldLocationType->政府施設</li>
+    
+    <li>secondSentencePart->その登場人物の[characterType] と[characterType] の[characterInteraction] を通して</li>
+    <li>secondSentencePart->[imageType]が[imageAdj]イメージを通して</li>
+    <li>secondSentencePart->[languageType]と[meterType]を使うことで</li>
+    
+    <li>characterInteraction->友情</li>
+    <li>characterInteraction->花咲くロマンス</li>
+    <li>characterInteraction->隣人</li>
+    <li>characterInteraction->敵対</li>
+    <li>characterInteraction->ライバル</li>
+    <li>characterInteraction->敵対しつつお互いを尊重</li>
+    <li>characterInteraction->秘密の関係</li>
+    <li>characterInteraction->喜劇的な勘違い</li>
+    <li>characterInteraction->隠れた憤慨</li>
+    
+    <li>characterType->襲撃者</li>
+    <li>characterType->部族民</li>
+    <li>characterType->入植者</li>
+    <li>characterType->宙賊</li>
+    <li>characterType->繊維トレーダー</li>
+    <li>characterType->旅人</li>
+    <li>characterType->マッファロー飼い</li>
+    <li>characterType->スランボ愛好者</li>
+    <li>characterType->ボムラットの救世主</li>
+    <li>characterType->ボマロープ調教師</li>
+    <li>characterType->呪術師</li>
+    <li>characterType->流浪の祈祷師</li>
+    <li>characterType->デビルストランド農家</li>
+    <li>characterType->メガスロス騎兵</li>
+    <li>characterType->バイオクローン兵</li>
+    <li>characterType->科学者</li>
+    <li>characterType->奴隷</li>
+    
+    <li>imageAdj->繰り返す</li>
+    <li>imageAdj->忘れがたい</li>
+    <li>imageAdj->ぼやけた</li>
+    <li>imageAdj->驚かされる</li>
+    <li>imageAdj->希薄な</li>
+    <li>imageAdj->ダダイズム風</li>
+    <li>imageAdj->薄暗い</li>
+    
+    <li>imageType->[animalDoing] 一匹の[animalType]</li>
+    <li>imageType->[objectAdj] [objectMaterial] 製の[objectType] 1つ</li>
+    
+    <li>animalType->スランボ</li>
+    <li>animalType->マッファロー</li>
+    <li>animalType->オオカミ</li>
+    <li>animalType->キツネ</li>
+    <li>animalType->ボムネズミ</li>
+    <li>animalType->ボマロープ</li>
+    <li>animalType->メガスロス</li>
+    <li>animalType->ネコ</li>
+    <li>animalType->ハクチョウ</li>
+    <li>animalType->パフィン</li>
+    <li>animalType->ペンギン</li>
+    <li>animalType->vatgrownガンマ</li>
+    <li>animalType->ルンバ</li>
+    <li>animalType->ワーグ</li>
+    
+    <li>animalDoing->地面に横たわっている</li>
+    <li>animalDoing->1つの[object] に夢中になった</li>
+    <li>animalDoing->嘆いている</li>
+    <li>animalDoing->死んでいく</li>
+    <li>animalDoing->溺死になった</li>
+    <li>animalDoing->火が付いた</li>
+    <li>animalDoing->観察している</li>
+    <li>animalDoing->ずっと待っている</li>
+    
+    <li>objectAdj->壊れた</li>
+    <li>objectAdj->大きな</li>
+    <li>objectAdj->誇張された</li>
+    <li>objectAdj->塗装された</li>
+    <li>objectAdj->機能しない</li>
+    <li>objectAdj->盗まれた</li>
+    
+    <li>objectMaterial->ゴールド</li>
+    <li>objectMaterial->シルバー</li>
+    <li>objectMaterial->スチール</li>
+    <li>objectMaterial->ブロンズ</li>
+    <li>objectMaterial->プラスチール</li>
+    <li>objectMaterial->ウラン</li>
+    <li>objectMaterial->プラチナ</li>
+    <li>objectMaterial->チタン</li>
+    <li>objectMaterial->石</li>
+    <li>objectMaterial->カッパー</li>
+    <li>objectMaterial->プラスチック</li>
+    
+    <li>objectType->ライフル</li>
+    <li>objectType->シールド</li>
+    <li>objectType->ベッド</li>
+    <li>objectType->ピストル</li>
+    <li>objectType->植木鉢</li>
+    <li>objectType->彫刻</li>
+    <li>objectType->マスク</li>
+    <li>objectType->ヘルメット</li>
+    <li>objectType->ハンマー</li>
+    <li>objectType->ソード</li>
+    
+    <li>languageType->軽快な言葉のやりとり</li>
+    <li>languageType->凝り過ぎな文</li>
+    <li>languageType->美しい文</li>
+    <li>languageType->感情豊かな文</li>
+    <li>languageType->ずっと続く一人芝居</li>
+    <li>languageType->静かで自然主義的な会話</li>
+    <li>languageType->予期しない沈黙</li>
+    
+    <li>meterType->無韻詩</li>
+    <li>meterType->調子よく勢いのある対話</li>
+    <li>meterType->早口の口上</li>
+    <li>meterType->韻律を踏んだ詩</li>
+    <li>meterType->古典詩の韻を踏む形式</li>
+  </RAZ_ArtDescription_Play.rulePack.rulesStrings>
+
+</LanguageData>
