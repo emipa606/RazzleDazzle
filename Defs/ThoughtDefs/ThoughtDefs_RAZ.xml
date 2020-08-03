@@ -1,5 +1,4 @@
 <Defs>
-
   <ThoughtDef>
     <defName>PerformedInExtremelyImpressiveSpace</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -14,7 +13,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>PerformedInVeryImpressiveSpace</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -29,7 +27,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>PerformedInImpressiveSpace</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -44,7 +41,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>Performed</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -59,7 +55,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>SawBadPlay</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -74,7 +69,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>SawPlay</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -89,7 +83,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>SawGoodPlay</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -104,7 +97,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>SawAmazingPlay</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -119,7 +111,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>AttendedBadConcert</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -134,7 +125,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>AttendedConcert</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -149,7 +139,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>AttendedGoodConcert</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -164,8 +153,7 @@
       </li>
     </stages>
   </ThoughtDef>
-  
-   <ThoughtDef>
+  <ThoughtDef>
     <defName>AttendedAmazingConcert</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
     <durationDays>30.0</durationDays>
@@ -179,7 +167,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>AttendedBadGig</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -194,7 +181,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>AttendedGig</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -209,7 +195,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>AttendedGoodGig</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -224,7 +209,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>AttendedAmazingGig</defName>
     <thoughtClass>Thought_Memory</thoughtClass>

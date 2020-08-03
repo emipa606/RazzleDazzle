@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!-- ================= Performance buildings tables ===================-->
   <ThingDef Name="PerformanceBuildingBase" ParentName="BenchBase" Class="RazzleDazzle.PerformanceVenueDef" Abstract="True">
@@ -10,7 +10,6 @@
     <numTicksToRehearse>1</numTicksToRehearse>
     <tickerType>Rare</tickerType>
   </ThingDef>
-  
   <ThingDef ParentName="PerformanceBuildingBase" Class="RazzleDazzle.PerformanceVenueDef">
     <defName>StageDef</defName>
     <label>Stage</label>
@@ -43,12 +42,12 @@
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <altitudeLayer>Building</altitudeLayer>
     <comps>
-      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Forbiddable" />
     </comps>
     <costList>
       <Steel>20</Steel>
     </costList>
-     <stuffCategories>
+    <stuffCategories>
       <li>Woody</li>
     </stuffCategories>
     <costStuffCount>400</costStuffCount>
@@ -60,7 +59,7 @@
       <Flammability>0.8</Flammability>
     </statBases>
     <size>(5,3)</size>
-     <building>
+    <building>
       <joyKind>Social</joyKind>
       <watchBuildingStandDistanceRange>
         <min>-8</min>
@@ -78,7 +77,6 @@
     <interactionCellIcon Inherit="false" />
     <surfaceType>Item</surfaceType>
   </ThingDef>
-  
   <ThingDef ParentName="PerformanceBuildingBase" Class="RazzleDazzle.PerformanceVenueDef">
     <defName>GrandPianoDef</defName>
     <label>grand piano</label>
@@ -107,12 +105,12 @@
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <altitudeLayer>Building</altitudeLayer>
     <comps>
-      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Forbiddable" />
     </comps>
     <costList>
       <Steel>20</Steel>
     </costList>
-     <stuffCategories>
+    <stuffCategories>
       <li>Woody</li>
     </stuffCategories>
     <costStuffCount>400</costStuffCount>
@@ -132,7 +130,9 @@
       </watchBuildingStandDistanceRange>
       <watchBuildingStandRectWidth>16</watchBuildingStandRectWidth>
     </building>
-    <researchPrerequisites><li>Machining</li></researchPrerequisites>
+    <researchPrerequisites>
+      <li>Machining</li>
+    </researchPrerequisites>
     <placeWorkers>
       <li>PlaceWorker_WatchArea</li>
     </placeWorkers>
@@ -146,7 +146,6 @@
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <surfaceType>Item</surfaceType>
   </ThingDef>
-  
   <ThingDef ParentName="PerformanceBuildingBase" Class="RazzleDazzle.PerformanceVenueDef">
     <defName>RazMicrophoneDef</defName>
     <label>microphone</label>
@@ -174,7 +173,7 @@
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <altitudeLayer>Building</altitudeLayer>
     <comps>
-      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Forbiddable" />
     </comps>
     <costList>
       <Steel>20</Steel>
@@ -209,7 +208,6 @@
       <li>Electricity</li>
     </researchPrerequisites>
   </ThingDef>
-  
   <!-- =================== Broadcast! ==========================-->
   <ThingDef ParentName="BuildingBase">
     <defName>BroadcastTowerDef</defName>
@@ -255,9 +253,9 @@
         <glowRadius>4</glowRadius>
         <glowColor>(1,213,238,0)</glowColor>
       </li>
-      <li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_Flickable"/>
-      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
     </comps>
     <researchPrerequisites>
       <li>MicroelectronicsBasics</li>

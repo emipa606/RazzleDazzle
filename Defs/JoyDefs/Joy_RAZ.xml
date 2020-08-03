@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <JoyGiverDef>
     <defName>NoodleOnPiano</defName>
@@ -16,7 +16,6 @@
       <li>Manipulation</li>
     </requiredCapacities>
   </JoyGiverDef>
-  
   <JoyGiverDef>
     <defName>MuckAroundOnStage</defName>
     <giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>

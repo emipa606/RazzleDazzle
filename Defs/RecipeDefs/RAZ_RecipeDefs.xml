@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <RecipeDef>
     <defName>RAZ_StagePlay</defName>
@@ -32,9 +32,8 @@
       <Social>6</Social>
     </skillRequirements>
   </RecipeDef>
-  
   <RecipeDef>
-  <defName>RAZ_WritePlay</defName>
+    <defName>RAZ_WritePlay</defName>
     <label>write a play</label>
     <description>Write a dramatic work for the stage.</description>
     <jobString>Writing play.</jobString>
@@ -67,9 +66,8 @@
       <Artistic>5</Artistic>
     </skillRequirements>
   </RecipeDef>
-  
   <RecipeDef>
-  <defName>RAZ_ComposeMusic</defName>
+    <defName>RAZ_ComposeMusic</defName>
     <label>compose music</label>
     <description>Compose a piece of music.</description>
     <jobString>Composing music.</jobString>
@@ -102,7 +100,6 @@
       <Artistic>5</Artistic>
     </skillRequirements>
   </RecipeDef>
-  
   <RecipeDef Name="BurnPerformance">
     <defName>BurnPerformance</defName>
     <label>burn performance</label>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <WorkGiver_Rehearser.verb>rehearse</WorkGiver_Rehearser.verb>
+  <WorkGiver_Rehearser.gerund>rehearsing</WorkGiver_Rehearser.gerund>
+
+  <WorkGiver_PreparePerformance.verb>Perparing for a performance</WorkGiver_PreparePerformance.verb>
+  <WorkGiver_PreparePerformance.gerund>Preparing for a performance</WorkGiver_PreparePerformance.gerund>
+
+  <WorkGiver_DoBillsAtGrandPiano.verb>Compose Music</WorkGiver_DoBillsAtGrandPiano.verb>
+  <WorkGiver_DoBillsAtGrandPiano.gerund>Composing music</WorkGiver_DoBillsAtGrandPiano.gerund>
+
+
+</LanguageData>

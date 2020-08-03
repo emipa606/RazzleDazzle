@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
   <ThingDef ParentName="MoteBase">
     <defName>Mote_Comedy</defName>
@@ -12,7 +12,6 @@
       <fadeOutTime>0.5</fadeOutTime>
     </mote>
   </ThingDef>
-  
   <ThingDef ParentName="MoteBase">
     <defName>Mote_Tragedy</defName>
     <graphicData>
@@ -25,7 +24,6 @@
       <fadeOutTime>0.5</fadeOutTime>
     </mote>
   </ThingDef>
-    
   <ThingDef ParentName="MoteBase">
     <defName>Mote_Music</defName>
     <graphicData>

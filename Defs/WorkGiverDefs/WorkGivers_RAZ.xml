@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <WorkGiverDef>
     <defName>WorkGiver_Rehearser</defName>
@@ -15,7 +15,6 @@
       <li>Talking</li>
     </requiredCapacities>
   </WorkGiverDef>
-  
   <WorkGiverDef>
     <defName>WorkGiver_PreparePerformance</defName>
     <giverClass>RazzleDazzle.WorkGiver_PreparePerformance</giverClass>
@@ -27,7 +26,6 @@
       <li>Manipulation</li>
     </requiredCapacities>
   </WorkGiverDef>
-
   <WorkGiverDef>
     <defName>WorkGiver_DoBillsAtGrandPiano</defName>
     <giverClass>WorkGiver_DoBill</giverClass>
@@ -41,6 +39,5 @@
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
-  </WorkGiverDef> 
- 
+  </WorkGiverDef>
 </Defs>

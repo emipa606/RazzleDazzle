@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="UnfinishedBase">
     <defName>RAZ_UnfinishedPlay</defName>
@@ -10,7 +10,6 @@
     </graphicData>
     <stuffCategories Inherit="false" />
   </ThingDef>
-
   <ThingDef ParentName="UnfinishedBase">
     <defName>RAZ_UnfinishedMusic</defName>
     <label>unfinished music</label>
@@ -20,7 +19,6 @@
     </graphicData>
     <stuffCategories Inherit="false" />
   </ThingDef>
-
   <ThingDef ParentName="ResourceBase">
     <defName>RAZ_Play</defName>
     <label>play</label>
@@ -58,7 +56,6 @@
       <li>ITab_Art</li>
     </inspectorTabs>
   </ThingDef>
-
   <ThingDef ParentName="ResourceBase">
     <defName>RAZ_Composition</defName>
     <label>composition</label>

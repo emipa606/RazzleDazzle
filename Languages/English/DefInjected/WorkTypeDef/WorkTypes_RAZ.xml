@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Performance.label>Perform</Performance.label>
+  <Performance.description>Performers put on plays, recitals and gigs for entertainment.</Performance.description>
+  <Performance.labelShort>Perform</Performance.labelShort>
+  <Performance.pawnLabel>Performer</Performance.pawnLabel>
+  <Performance.gerundLabel>Performing</Performance.gerundLabel>
+  <Performance.verb>Perform</Performance.verb>
+
+
+</LanguageData>
