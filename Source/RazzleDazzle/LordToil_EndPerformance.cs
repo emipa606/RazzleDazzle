@@ -27,26 +27,26 @@ namespace RazzleDazzle
 		// Token: 0x060000BB RID: 187 RVA: 0x00004DD4 File Offset: 0x00002FD4
 		public void CleanUpStage()
 		{
-			this.venue.rehearsing = false;
-			this.venue.rehearsedFraction = 0f;
-			this.venue.ticksIntoThisPerformance = 0;
-			this.venue.artTitle = "";
-			this.venue.artistName = "";
-			this.venue.artQuality = QualityCategory.Normal;
-			this.venue.ClearPerformers();
+			venue.rehearsing = false;
+			venue.rehearsedFraction = 0f;
+			venue.ticksIntoThisPerformance = 0;
+			venue.artTitle = "";
+			venue.artistName = "";
+			venue.artQuality = QualityCategory.Normal;
+			venue.ClearPerformers();
 		}
 
 		// Token: 0x060000BC RID: 188 RVA: 0x00004E40 File Offset: 0x00003040
 		public override void UpdateAllDuties()
 		{
-			foreach (Pawn pawn in this.lord.ownedPawns)
+			foreach (Pawn pawn in lord.ownedPawns)
 			{
 				pawn.jobs.StopAll(false);
 			}
-			this.CleanUpStage();
+			CleanUpStage();
 		}
 
 		// Token: 0x04000033 RID: 51
-		private Building_Performance venue;
+		private readonly Building_Performance venue;
 	}
 }

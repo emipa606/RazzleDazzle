@@ -18,12 +18,14 @@ namespace RazzleDazzle
 		{
 			get
 			{
-				if (this.director == null)
+				if (director == null)
 				{
-					this.director = new RazzleDazzle_Director();
-					this.director.stage = this;
-				}
-				return this.director;
+                    director = new RazzleDazzle_Director
+                    {
+                        stage = this
+                    };
+                }
+				return director;
 			}
 		}
 
@@ -34,28 +36,28 @@ namespace RazzleDazzle
 		{
 			get
 			{
-				if (this.lead == null)
+				if (lead == null)
 				{
-					if (this.leadIndex != -1)
+					if (leadIndex != -1)
 					{
-						this.lead = Building_Performance.FindColonistByID(this.leadIndex);
+						lead = FindColonistByID(leadIndex);
 					}
-					if (this.lead == null)
+					if (lead == null)
 					{
-						IEnumerable<Pawn> source = this.ColonistsAvailableToPerform();
+						IEnumerable<Pawn> source = ColonistsAvailableToPerform();
 						if (source.Count<Pawn>() > 0)
 						{
-							this.lead = source.RandomElement<Pawn>();
-							this.leadIndex = this.lead.thingIDNumber;
+							lead = source.RandomElement<Pawn>();
+							leadIndex = lead.thingIDNumber;
 						}
 					}
 				}
-				return this.lead;
+				return lead;
 			}
 			set
 			{
-				this.lead = value;
-				this.leadIndex = this.lead.thingIDNumber;
+				lead = value;
+				leadIndex = lead.thingIDNumber;
 			}
 		}
 
@@ -67,54 +69,54 @@ namespace RazzleDazzle
 			get
 			{
 				Pawn result;
-				if (this.venueDef.performersNeeded < 2)
+				if (VenueDef.performersNeeded < 2)
 				{
 					result = null;
 				}
 				else
 				{
-					if (this.support == null || this.support == this.lead)
+					if (support == null || support == lead)
 					{
-						if (this.supportIndex != -1)
+						if (supportIndex != -1)
 						{
-							this.support = Building_Performance.FindColonistByID(this.supportIndex);
+							support = FindColonistByID(supportIndex);
 						}
-						if (this.support == null || this.support == this.lead)
+						if (support == null || support == lead)
 						{
-							List<Pawn> list = this.ColonistsAvailableToPerform().ToList<Pawn>();
-							if (list.Contains(this.lead))
+							List<Pawn> list = ColonistsAvailableToPerform().ToList<Pawn>();
+							if (list.Contains(lead))
 							{
-								list.Remove(this.lead);
+								list.Remove(lead);
 							}
 							if (list.Count<Pawn>() > 0)
 							{
-								this.support = list.RandomElement<Pawn>();
-								this.supportIndex = this.support.thingIDNumber;
+								support = list.RandomElement<Pawn>();
+								supportIndex = support.thingIDNumber;
 							}
 						}
 					}
-					result = this.support;
+					result = support;
 				}
 				return result;
 			}
 			set
 			{
-				this.support = value;
-				this.supportIndex = this.support.thingIDNumber;
+				support = value;
+				supportIndex = support.thingIDNumber;
 			}
 		}
 
 		// Token: 0x17000009 RID: 9
 		// (get) Token: 0x06000021 RID: 33 RVA: 0x00002ACB File Offset: 0x00000CCB
-		public PerformanceVenueDef venueDef
+		public PerformanceVenueDef VenueDef
 		{
 			get
 			{
-				if (this.venDef == null)
+				if (venDef == null)
 				{
-					this.venDef = (PerformanceVenueDef)this.def;
+					venDef = (PerformanceVenueDef)def;
 				}
-				return this.venDef;
+				return venDef;
 			}
 		}
 
@@ -133,10 +135,10 @@ namespace RazzleDazzle
 		{
 			return new FloatMenuOption(Translator.Translate("RAZ_ReplaceLead"), delegate()
 			{
-				this.Lead = pawn;
-				if (this.rehearsedFraction > 0f)
+				Lead = pawn;
+				if (rehearsedFraction > 0f)
 				{
-					this.rehearsedFraction /= 3f;
+					rehearsedFraction /= 3f;
 				}
 			}, MenuOptionPriority.Default, null, null, 0f, null, null);
 		}
@@ -146,10 +148,10 @@ namespace RazzleDazzle
 		{
 			return new FloatMenuOption(Translator.Translate("RAZ_ReplaceSupport"), delegate()
 			{
-				this.Support = pawn;
-				if (this.rehearsedFraction > 0f)
+				Support = pawn;
+				if (rehearsedFraction > 0f)
 				{
-					this.rehearsedFraction /= 2f;
+					rehearsedFraction /= 2f;
 				}
 			}, MenuOptionPriority.Default, null, null, 0f, null, null);
 		}
@@ -158,31 +160,31 @@ namespace RazzleDazzle
 		public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
 		{
 			IEnumerable<FloatMenuOption> result;
-			if (this.rehearsedFraction >= 1f)
+			if (rehearsedFraction >= 1f)
 			{
 				result = base.GetFloatMenuOptions(selPawn);
 			}
-			else if (this.Lead == null || selPawn == null)
+			else if (Lead == null || selPawn == null)
 			{
 				result = base.GetFloatMenuOptions(selPawn);
 			}
 			else
 			{
-				bool flag = this.venueDef.performersNeeded > 1;
-				if (flag && this.Support == null)
+				bool flag = VenueDef.performersNeeded > 1;
+				if (flag && Support == null)
 				{
 					result = base.GetFloatMenuOptions(selPawn);
 				}
 				else
 				{
 					List<FloatMenuOption> list = base.GetFloatMenuOptions(selPawn).ToList<FloatMenuOption>();
-					if (selPawn != this.Lead && selPawn.workSettings.WorkIsActive(WorkTypeDefOfRazzleDazzle.Performance))
+					if (selPawn != Lead && selPawn.workSettings.WorkIsActive(WorkTypeDefOfRazzleDazzle.Performance))
 					{
-						list.Add(this.SetAsLead(selPawn));
+						list.Add(SetAsLead(selPawn));
 					}
-					if (flag && selPawn != this.Lead && selPawn != this.Support && selPawn.workSettings.WorkIsActive(WorkTypeDefOfRazzleDazzle.Performance))
+					if (flag && selPawn != Lead && selPawn != Support && selPawn.workSettings.WorkIsActive(WorkTypeDefOfRazzleDazzle.Performance))
 					{
-						list.Add(this.SetAsSupport(selPawn));
+						list.Add(SetAsSupport(selPawn));
 					}
 					result = list;
 				}
@@ -211,32 +213,32 @@ namespace RazzleDazzle
 		public override string GetInspectString()
 		{
 			StringBuilder stringBuilder = new StringBuilder();
-			if (this.rehearsing)
+			if (rehearsing)
 			{
-				if (this.rehearsedFraction < 1f)
+				if (rehearsedFraction < 1f)
 				{
-					stringBuilder.AppendLine(TranslatorFormattedStringExtensions.Translate("RAZ_Rehearsal_Venue", this.artTitle));
-					if (this.Lead != null)
+					stringBuilder.AppendLine(TranslatorFormattedStringExtensions.Translate("RAZ_Rehearsal_Venue", artTitle));
+					if (Lead != null)
 					{
-						if (this.Support == null)
+						if (Support == null)
 						{
-							stringBuilder.AppendLine(TranslatorFormattedStringExtensions.Translate("RAZ_Rehearsal_Performer", this.Lead.Named("PAWN")));
+							stringBuilder.AppendLine(TranslatorFormattedStringExtensions.Translate("RAZ_Rehearsal_Performer", Lead.Named("PAWN")));
 						}
 						else
 						{
-							stringBuilder.AppendLine(TranslatorFormattedStringExtensions.Translate("RAZ_Rehearsal_Performers", this.Lead.Named("PAWN1"), this.Support.Named("PAWN2")));
+							stringBuilder.AppendLine(TranslatorFormattedStringExtensions.Translate("RAZ_Rehearsal_Performers", Lead.Named("PAWN1"), Support.Named("PAWN2")));
 						}
 					}
-					stringBuilder.AppendLine(TranslatorFormattedStringExtensions.Translate("RAZ_Rehearsal_Progress", this.rehearsedFraction.ToStringPercent()));
+					stringBuilder.AppendLine(TranslatorFormattedStringExtensions.Translate("RAZ_Rehearsal_Progress", rehearsedFraction.ToStringPercent()));
 				}
 				else
 				{
-					stringBuilder.AppendLine(TranslatorFormattedStringExtensions.Translate("RAZ_PerformancePending", this.artTitle));
+					stringBuilder.AppendLine(TranslatorFormattedStringExtensions.Translate("RAZ_PerformancePending", artTitle));
 				}
 			}
 			else
 			{
-				stringBuilder.AppendLine(this.BasicInspectString);
+				stringBuilder.AppendLine(BasicInspectString);
 			}
 			return stringBuilder.ToString().TrimEndNewlines();
 		}
@@ -251,22 +253,22 @@ namespace RazzleDazzle
 		public override void ExposeData()
 		{
 			base.ExposeData();
-			Scribe_Values.Look<int>(ref this.ticksSinceLastPerformance, "ticksSinceLastPerformance", 0, false);
-			Scribe_Values.Look<int>(ref this.ticksIntoThisPerformance, "ticksIntoThisPerformance", 0, false);
-			Scribe_Values.Look<bool>(ref this.rehearsing, "rehearsing", false, false);
-			Scribe_Values.Look<string>(ref this.artTitle, "artTitle", "", false);
-			Scribe_Values.Look<string>(ref this.artistName, "artistName", "", false);
-			Scribe_Values.Look<QualityCategory>(ref this.artQuality, "artQuality", QualityCategory.Normal, false);
-			Scribe_Values.Look<float>(ref this.rehearsedFraction, "rehearsedFraction", 0f, false);
-			Scribe_Values.Look<int>(ref this.leadIndex, "leadIndex", -1, false);
-			Scribe_Values.Look<int>(ref this.supportIndex, "supportIndex", -1, false);
+			Scribe_Values.Look<int>(ref ticksSinceLastPerformance, "ticksSinceLastPerformance", 0, false);
+			Scribe_Values.Look<int>(ref ticksIntoThisPerformance, "ticksIntoThisPerformance", 0, false);
+			Scribe_Values.Look<bool>(ref rehearsing, "rehearsing", false, false);
+			Scribe_Values.Look<string>(ref artTitle, "artTitle", "", false);
+			Scribe_Values.Look<string>(ref artistName, "artistName", "", false);
+			Scribe_Values.Look<QualityCategory>(ref artQuality, "artQuality", QualityCategory.Normal, false);
+			Scribe_Values.Look<float>(ref rehearsedFraction, "rehearsedFraction", 0f, false);
+			Scribe_Values.Look<int>(ref leadIndex, "leadIndex", -1, false);
+			Scribe_Values.Look<int>(ref supportIndex, "supportIndex", -1, false);
 		}
 
 		// Token: 0x0600002A RID: 42 RVA: 0x00002E90 File Offset: 0x00001090
 		public Thing SelectPerformThing()
 		{
 			Thing result;
-			if (base.CurrentlyUsableForBills())
+			if (CurrentlyUsableForBills())
 			{
 				result = this;
 			}
@@ -280,20 +282,20 @@ namespace RazzleDazzle
 		// Token: 0x0600002B RID: 43 RVA: 0x00002EAC File Offset: 0x000010AC
 		public bool IsGoodAndSafeTimeForPerformance()
 		{
-			return GenLocalDate.HourOfDay(base.Map) >= 13 && GenLocalDate.HourOfDay(base.Map) <= 21 && base.Map.dangerWatcher.DangerRating == StoryDanger.None && base.Map.mapPawns.FreeColonistsSpawnedCount >= 4;
+			return GenLocalDate.HourOfDay(Map) >= 13 && GenLocalDate.HourOfDay(Map) <= 21 && Map.dangerWatcher.DangerRating == StoryDanger.None && Map.mapPawns.FreeColonistsSpawnedCount >= 4;
 		}
 
 		// Token: 0x0600002C RID: 44 RVA: 0x00002F0C File Offset: 0x0000110C
 		public IEnumerable<Pawn> ColonistsAvailableToPerform()
 		{
 			IEnumerable<Pawn> result;
-			if (base.Map == null || base.Map.mapPawns == null)
+			if (Map == null || Map.mapPawns == null)
 			{
 				result = new List<Pawn>();
 			}
 			else
 			{
-				result = from colonist in base.Map.mapPawns.FreeColonistsSpawned
+				result = from colonist in Map.mapPawns.FreeColonistsSpawned
 				where colonist.workSettings.WorkIsActive(WorkTypeDefOfRazzleDazzle.Performance) && !colonist.Downed && !colonist.Dead && colonist.Awake() && colonist.health.capacities.CapableOf(PawnCapacityDefOf.Moving)
 				select colonist;
 			}
@@ -303,7 +305,7 @@ namespace RazzleDazzle
 		// Token: 0x0600002D RID: 45 RVA: 0x00002F6C File Offset: 0x0000116C
 		public bool IsPerformanceHappeningElsewhere()
 		{
-			foreach (Pawn p in base.Map.mapPawns.FreeColonistsSpawned)
+			foreach (Pawn p in Map.mapPawns.FreeColonistsSpawned)
 			{
 				if (p.GetLord() != null && (p.GetLord().LordJob is LordJob_Joinable_MarriageCeremony || p.GetLord().LordJob is LordJob_Joinable_Party || p.GetLord().LordJob is LordJob_Performance))
 				{
@@ -320,65 +322,65 @@ namespace RazzleDazzle
 			{
 				return false;
 			}
-			CompForbiddable comp = this.GetComp<CompForbiddable>();
+			CompForbiddable comp = GetComp<CompForbiddable>();
 			return comp != null && comp.Forbidden;
 		}
 
 		// Token: 0x0600002F RID: 47 RVA: 0x0000302C File Offset: 0x0000122C
 		public virtual bool CanDoPerformanceNow()
 		{
-			return !this.IsForbidden() && this.canPerformSwitch && this.rehearsing && this.ColonistsAvailableToPerform().Count<Pawn>() >= this.venueDef.performersNeeded && this.ticksSinceLastPerformance >= this.venueDef.ticksBetweenPerformances && this.IsGoodAndSafeTimeForPerformance();
+			return !IsForbidden() && canPerformSwitch && rehearsing && ColonistsAvailableToPerform().Count<Pawn>() >= VenueDef.performersNeeded && ticksSinceLastPerformance >= VenueDef.ticksBetweenPerformances && IsGoodAndSafeTimeForPerformance();
 		}
 
 		// Token: 0x06000030 RID: 48 RVA: 0x00003084 File Offset: 0x00001284
 		public virtual bool TryToStartPerformance()
 		{
-			this.ticksSinceLastPerformance = 0;
-			Thing thing = this.SelectPerformThing();
-			return this.Lead != null && thing != null && (this.Support != null || this.venueDef.performersNeeded <= 1) && !this.Lead.InMentalState && (this.Support == null || !this.Support.InMentalState) && this.Lead.mindState.duty == null && (this.Support == null || this.Support.mindState.duty == null);
+			ticksSinceLastPerformance = 0;
+			Thing thing = SelectPerformThing();
+			return Lead != null && thing != null && (Support != null || VenueDef.performersNeeded <= 1) && !Lead.InMentalState && (Support == null || !Support.InMentalState) && Lead.mindState.duty == null && (Support == null || Support.mindState.duty == null);
 		}
 
 		// Token: 0x06000031 RID: 49 RVA: 0x00003113 File Offset: 0x00001313
 		public void ClearPerformers()
 		{
-			this.lead = null;
-			this.leadIndex = -1;
-			this.support = null;
-			this.supportIndex = -1;
+			lead = null;
+			leadIndex = -1;
+			support = null;
+			supportIndex = -1;
 		}
 
 		// Token: 0x06000032 RID: 50 RVA: 0x00003134 File Offset: 0x00001334
 		public override void TickRare()
 		{
 			base.TickRare();
-			if (this.ticksSinceLastPerformance < this.venueDef.ticksBetweenPerformances)
+			if (ticksSinceLastPerformance < VenueDef.ticksBetweenPerformances)
 			{
-				this.ticksSinceLastPerformance++;
+				ticksSinceLastPerformance++;
 				return;
 			}
-			if (this.CanDoPerformanceNow())
+			if (CanDoPerformanceNow())
 			{
-				if (this.rehearsing && this.rehearsedFraction < 1f)
+				if (rehearsing && rehearsedFraction < 1f)
 				{
-					if (this.Lead != null && (this.Lead.Dead || this.Lead.Faction != Faction.OfPlayer))
+					if (Lead != null && (Lead.Dead || Lead.Faction != Faction.OfPlayer))
 					{
-						Messages.Message(TranslatorFormattedStringExtensions.Translate("RAZ_MessageRehearsalsDelayed", this.Lead.Named("PAWN")), MessageTypeDefOf.NegativeEvent, true);
-						this.lead = null;
-						this.leadIndex = -1;
-						this.rehearsedFraction /= 3f;
+						Messages.Message(TranslatorFormattedStringExtensions.Translate("RAZ_MessageRehearsalsDelayed", Lead.Named("PAWN")), MessageTypeDefOf.NegativeEvent, true);
+						lead = null;
+						leadIndex = -1;
+						rehearsedFraction /= 3f;
 					}
-					if (this.venueDef.performersNeeded > 1 && this.Support != null && (this.Support.Dead || this.Support.Faction != Faction.OfPlayer))
+					if (VenueDef.performersNeeded > 1 && Support != null && (Support.Dead || Support.Faction != Faction.OfPlayer))
 					{
-						Messages.Message(TranslatorFormattedStringExtensions.Translate("RAZ_MessageRehearsalsDelayed", this.Support.Named("PAWN")), MessageTypeDefOf.NegativeEvent, true);
-						this.support = null;
-						this.supportIndex = -1;
-						this.rehearsedFraction /= 3f;
+						Messages.Message(TranslatorFormattedStringExtensions.Translate("RAZ_MessageRehearsalsDelayed", Support.Named("PAWN")), MessageTypeDefOf.NegativeEvent, true);
+						support = null;
+						supportIndex = -1;
+						rehearsedFraction /= 3f;
 						return;
 					}
 				}
 				else if (Rand.Value <= 0.1f)
 				{
-					this.TryToStartPerformance();
+					TryToStartPerformance();
 				}
 			}
 		}

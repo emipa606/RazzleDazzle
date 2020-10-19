@@ -20,7 +20,7 @@ namespace RazzleDazzle
 		// Token: 0x060000CB RID: 203 RVA: 0x00005169 File Offset: 0x00003369
 		private CellRect CalculateSpectateRect()
 		{
-			return CellRect.CenteredOn(this.performThing.Position, 8);
+			return CellRect.CenteredOn(performThing.Position, 8);
 		}
 
 		// Token: 0x060000CC RID: 204 RVA: 0x0000517C File Offset: 0x0000337C
@@ -32,17 +32,17 @@ namespace RazzleDazzle
 		// Token: 0x060000CD RID: 205 RVA: 0x00005184 File Offset: 0x00003384
 		public override void UpdateAllDuties()
 		{
-			for (int i = 0; i < this.lord.ownedPawns.Count; i++)
+			for (int i = 0; i < lord.ownedPawns.Count; i++)
 			{
-				Pawn pawn = this.lord.ownedPawns[i];
-				if (pawn == this.lead || pawn == this.support)
+				Pawn pawn = lord.ownedPawns[i];
+				if (pawn == lead || pawn == support)
 				{
-					pawn.mindState.duty.focus = this.performThing;
-					pawn.mindState.duty = new PawnDuty(DutyDefOfRazzleDazzle.GoToStageAndWait, this.performThing, -1f);
+					pawn.mindState.duty.focus = performThing;
+					pawn.mindState.duty = new PawnDuty(DutyDefOfRazzleDazzle.GoToStageAndWait, performThing, -1f);
 				}
 				else
 				{
-					PawnDuty duty = new PawnDuty(DutyDefOfRazzleDazzle.FindSeatWithStageViewAndChat, this.performThing, -1f);
+					PawnDuty duty = new PawnDuty(DutyDefOfRazzleDazzle.FindSeatWithStageViewAndChat, performThing, -1f);
 					pawn.mindState.duty = duty;
 				}
 			}
@@ -52,7 +52,7 @@ namespace RazzleDazzle
 		public override ThinkTreeDutyHook VoluntaryJoinDutyHookFor(Pawn p)
 		{
 			ThinkTreeDutyHook hook;
-			if (p == this.lead || p == this.support)
+			if (p == lead || p == support)
 			{
 				hook = DutyDefOfRazzleDazzle.PerformConcert.hook;
 			}

@@ -18,11 +18,11 @@ namespace RazzleDazzle
 		// Token: 0x060000C2 RID: 194 RVA: 0x00004FB4 File Offset: 0x000031B4
 		public override void UpdateAllDuties()
 		{
-			if (this.lord != null)
+			if (lord != null)
 			{
-				for (int i = 0; i < this.lord.ownedPawns.Count; i++)
+				for (int i = 0; i < lord.ownedPawns.Count; i++)
 				{
-					this.lord.ownedPawns[i].mindState.duty = new PawnDuty(DutyDefOf.Party, this.venue, -1f);
+					lord.ownedPawns[i].mindState.duty = new PawnDuty(DutyDefOf.Party, venue, -1f);
 				}
 			}
 		}
@@ -34,6 +34,6 @@ namespace RazzleDazzle
 		}
 
 		// Token: 0x04000037 RID: 55
-		private Thing venue;
+		private readonly Thing venue;
 	}
 }

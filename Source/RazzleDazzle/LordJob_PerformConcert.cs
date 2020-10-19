@@ -22,7 +22,7 @@ namespace RazzleDazzle
 		// Token: 0x060000A5 RID: 165 RVA: 0x00004997 File Offset: 0x00002B97
 		protected override float GetStatModifier()
 		{
-			return base.Lead.health.capacities.GetLevel(PawnCapacityDefOf.Manipulation);
+			return Lead.health.capacities.GetLevel(PawnCapacityDefOf.Manipulation);
 		}
 
 		// Token: 0x060000A6 RID: 166 RVA: 0x000049B4 File Offset: 0x00002BB4
@@ -74,7 +74,7 @@ namespace RazzleDazzle
 		// Token: 0x060000A8 RID: 168 RVA: 0x00004A50 File Offset: 0x00002C50
 		protected override LordToil GetPerformanceLordToil()
 		{
-			return new LordToil_Concert(base.Lead, base.Venue);
+			return new LordToil_Concert(Lead, Venue);
 		}
 	}
 }

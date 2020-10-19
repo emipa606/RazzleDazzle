@@ -15,7 +15,7 @@ namespace RazzleDazzle
 		{
 			get
 			{
-				return this.stage.Rotation;
+				return stage.Rotation;
 			}
 		}
 
@@ -26,13 +26,13 @@ namespace RazzleDazzle
 			get
 			{
 				Rot4 result;
-				if (this.stage == null)
+				if (stage == null)
 				{
 					result = Rot4.South;
 				}
 				else
 				{
-					Rot4 rotation = this.stage.Rotation;
+					Rot4 rotation = stage.Rotation;
 					rotation.Rotate(RotationDirection.Counterclockwise);
 					result = rotation;
 				}
@@ -47,13 +47,13 @@ namespace RazzleDazzle
 			get
 			{
 				Rot4 result;
-				if (this.stage == null)
+				if (stage == null)
 				{
 					result = Rot4.South;
 				}
 				else
 				{
-					Rot4 rotation = this.stage.Rotation;
+					Rot4 rotation = stage.Rotation;
 					rotation.Rotate(RotationDirection.Clockwise);
 					result = rotation;
 				}
@@ -68,13 +68,13 @@ namespace RazzleDazzle
 			get
 			{
 				Rot4 result;
-				if (this.stage == null)
+				if (stage == null)
 				{
 					result = Rot4.South;
 				}
 				else
 				{
-					result = this.stage.Rotation.Opposite;
+					result = stage.Rotation.Opposite;
 				}
 				return result;
 			}
@@ -82,30 +82,32 @@ namespace RazzleDazzle
 
 		// Token: 0x17000023 RID: 35
 		// (get) Token: 0x060000DA RID: 218 RVA: 0x00005536 File Offset: 0x00003736
-		public Pawn lead
+		public Pawn Lead
 		{
 			get
 			{
-				return this.stage.Lead;
+				return stage.Lead;
 			}
 		}
 
 		// Token: 0x17000024 RID: 36
 		// (get) Token: 0x060000DB RID: 219 RVA: 0x00005543 File Offset: 0x00003743
-		public Pawn support
+		public Pawn Support
 		{
 			get
 			{
-				return this.stage.Support;
+				return stage.Support;
 			}
 		}
 
 		// Token: 0x060000DC RID: 220 RVA: 0x00005550 File Offset: 0x00003750
 		public Toil FaceDirection(Rot4 dir)
 		{
-			Toil t = new Toil();
-			t.defaultCompleteMode = ToilCompleteMode.Instant;
-			t.initAction = delegate()
+            Toil t = new Toil
+            {
+                defaultCompleteMode = ToilCompleteMode.Instant
+            };
+            t.initAction = delegate()
 			{
 				t.GetActor().Rotation = dir;
 			};
@@ -115,38 +117,40 @@ namespace RazzleDazzle
 		// Token: 0x060000DD RID: 221 RVA: 0x0000559E File Offset: 0x0000379E
 		public Toil FaceObject(Thing thing)
 		{
-			Toil toil = new Toil();
-			toil.defaultCompleteMode = ToilCompleteMode.Instant;
-			toil.initAction = delegate()
-			{
-			};
-			return toil;
+            Toil toil = new Toil
+            {
+                defaultCompleteMode = ToilCompleteMode.Instant,
+                initAction = delegate ()
+                {
+                }
+            };
+            return toil;
 		}
 
 		// Token: 0x060000DE RID: 222 RVA: 0x000055D4 File Offset: 0x000037D4
 		public void ConstructPlay()
 		{
-			this.lToils = new List<Toil>();
-			this.sToils = new List<Toil>();
-			this.lToils.Add(this.GoToStageLocation(this.stage, RazzleDazzle_Director.StageLocations.BACKSTAGE));
-			this.sToils.Add(this.GoToStageLocation(this.stage, RazzleDazzle_Director.StageLocations.BACKSTAGE));
-			this.lToils.Add(this.Synchronise());
-			this.sToils.Add(this.Synchronise());
+			lToils = new List<Toil>();
+			sToils = new List<Toil>();
+			lToils.Add(GoToStageLocation(stage, StageLocations.BACKSTAGE));
+			sToils.Add(GoToStageLocation(stage, StageLocations.BACKSTAGE));
+			lToils.Add(Synchronise());
+			sToils.Add(Synchronise());
 			for (int i = 0; i < 6; i++)
 			{
 				switch (Rand.RangeInclusive(0, 3))
 				{
 				case 0:
-					this.Romance(this.lToils, this.sToils, this.stage);
+					Romance(lToils, sToils, stage);
 					break;
 				case 1:
-					this.Comedy(this.lToils, this.sToils, this.stage);
+					Comedy(lToils, sToils, stage);
 					break;
 				case 2:
-					this.Tragedy(this.lToils, this.sToils, this.stage);
+					Tragedy(lToils, sToils, stage);
 					break;
 				case 3:
-					this.MusicalDance(this.lToils, this.sToils, this.stage);
+					MusicalDance(lToils, sToils, stage);
 					break;
 				}
 			}
@@ -155,23 +159,23 @@ namespace RazzleDazzle
 		// Token: 0x060000DF RID: 223 RVA: 0x000056E4 File Offset: 0x000038E4
 		public List<Toil> RequestPlayToils(Pawn pawn, Building_Performance stage)
 		{
-			if (this.lToils == null || this.lToils.Count == 0)
+			if (lToils == null || lToils.Count == 0)
 			{
 				this.stage = stage;
-				this.ConstructPlay();
+				ConstructPlay();
 			}
-			if (((this.lead != null && !this.lead.Dead) || pawn == this.support) && (this.support == null || this.support.Dead))
+			if (((Lead != null && !Lead.Dead) || pawn == Support) && (Support == null || Support.Dead))
 			{
-				Pawn lead = this.lead;
+				Pawn lead = Lead;
 			}
 			List<Toil> result;
-			if (pawn == this.lead)
+			if (pawn == Lead)
 			{
-				result = this.lToils;
+				result = lToils;
 			}
-			else if (pawn == this.support)
+			else if (pawn == Support)
 			{
-				result = this.sToils;
+				result = sToils;
 			}
 			else
 			{
@@ -183,29 +187,31 @@ namespace RazzleDazzle
 		// Token: 0x060000E0 RID: 224 RVA: 0x0000577C File Offset: 0x0000397C
 		public Toil Synchronise()
 		{
-			Toil t = new Toil();
-			t.defaultCompleteMode = ToilCompleteMode.Delay;
-			t.initAction = delegate()
+            Toil t = new Toil
+            {
+                defaultCompleteMode = ToilCompleteMode.Delay
+            };
+            t.initAction = delegate()
 			{
 				t.GetActor().jobs.curDriver.ticksLeftThisToil = 10000;
-				this.leadReady = (this.supportReady = false);
+				leadReady = (supportReady = false);
 			};
 			t.tickAction = delegate()
 			{
 				t.GetActor().skills.GetSkill(SkillDefOf.Social).Learn(0.5f, false);
-				if (t.GetActor() == this.lead)
+				if (t.GetActor() == Lead)
 				{
-					this.leadReady = true;
+					leadReady = true;
 				}
-				else if (t.GetActor() == this.support)
+				else if (t.GetActor() == Support)
 				{
-					this.supportReady = true;
+					supportReady = true;
 				}
-				if (this.leadReady && this.supportReady)
+				if (leadReady && supportReady)
 				{
-					this.lead.jobs.curDriver.ticksLeftThisToil = 0;
-					this.support.jobs.curDriver.ticksLeftThisToil = 0;
-					this.leadReady = (this.supportReady = false);
+					Lead.jobs.curDriver.ticksLeftThisToil = 0;
+					Support.jobs.curDriver.ticksLeftThisToil = 0;
+					leadReady = (supportReady = false);
 				}
 			};
 			return t;
@@ -214,9 +220,11 @@ namespace RazzleDazzle
 		// Token: 0x060000E1 RID: 225 RVA: 0x000057E4 File Offset: 0x000039E4
 		public static Toil Wait(int iTicks)
 		{
-			Toil toil = new Toil();
-			toil.defaultCompleteMode = ToilCompleteMode.Delay;
-			toil.initAction = delegate()
+            Toil toil = new Toil
+            {
+                defaultCompleteMode = ToilCompleteMode.Delay
+            };
+            toil.initAction = delegate()
 			{
 				toil.GetActor().jobs.curDriver.ticksLeftThisToil = iTicks;
 			};
@@ -226,15 +234,17 @@ namespace RazzleDazzle
 		// Token: 0x060000E2 RID: 226 RVA: 0x00005834 File Offset: 0x00003A34
 		public Toil ThrowDramaticMote(Pawn p1, ThingDef mote, int ticks)
 		{
-			Toil toil = new Toil();
-			toil.defaultCompleteMode = ToilCompleteMode.Delay;
-			toil.initAction = delegate()
+            Toil toil = new Toil
+            {
+                defaultCompleteMode = ToilCompleteMode.Delay
+            };
+            toil.initAction = delegate()
 			{
 				toil.GetActor().jobs.curDriver.ticksLeftThisToil = ticks;
 			};
 			toil.tickAction = delegate()
 			{
-				this.stage.ticksIntoThisPerformance++;
+				stage.ticksIntoThisPerformance++;
 				if (toil.GetActor().jobs.curDriver.ticksLeftThisToil % 100 == 0)
 				{
 					MoteMaker.ThrowMetaIcon(toil.GetActor().Position, toil.GetActor().Map, mote);
@@ -247,7 +257,7 @@ namespace RazzleDazzle
 		// Token: 0x060000E3 RID: 227 RVA: 0x000058A8 File Offset: 0x00003AA8
 		public Toil GoToStageLocation(Building_Performance stage, RazzleDazzle_Director.StageLocations loc)
 		{
-			Toil toil = Toils_Goto.GotoCell(RazzleDazzle_Director.GetStageCell(loc, stage), PathEndMode.OnCell);
+			Toil toil = Toils_Goto.GotoCell(GetStageCell(loc, stage), PathEndMode.OnCell);
 			toil.tickAction = delegate()
 			{
 				stage.ticksIntoThisPerformance++;
@@ -258,109 +268,109 @@ namespace RazzleDazzle
 		// Token: 0x060000E4 RID: 228 RVA: 0x000058E8 File Offset: 0x00003AE8
 		public void Romance(List<Toil> leadToils, List<Toil> supportToils, Building_Performance stage)
 		{
-			leadToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.STAGE_L));
-			leadToils.Add(this.FaceDirection(this.StageRight));
-			supportToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.STAGE_R));
-			supportToils.Add(this.FaceDirection(this.StageLeft));
-			leadToils.Add(this.Synchronise());
-			supportToils.Add(this.Synchronise());
-			leadToils.Add(this.ThrowDramaticMote(this.lead, ThingDefOf.Mote_Heart, 401));
-			supportToils.Add(RazzleDazzle_Director.Wait(100));
-			supportToils.Add(this.ThrowDramaticMote(this.support, ThingDefOf.Mote_Heart, 151));
-			leadToils.Add(this.Synchronise());
-			supportToils.Add(this.Synchronise());
-			leadToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.DOWNSTAGE_C));
-			supportToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.DOWNSTAGE_C));
-			leadToils.Add(this.FaceDirection(this.StageRight));
-			supportToils.Add(this.FaceDirection(this.StageLeft));
-			leadToils.Add(this.ThrowDramaticMote(this.lead, ThingDefOf.Mote_Heart, 351));
-			supportToils.Add(this.ThrowDramaticMote(this.support, ThingDefOf.Mote_Heart, 351));
-			leadToils.Add(this.Synchronise());
-			supportToils.Add(this.Synchronise());
+			leadToils.Add(GoToStageLocation(stage, StageLocations.STAGE_L));
+			leadToils.Add(FaceDirection(StageRight));
+			supportToils.Add(GoToStageLocation(stage, StageLocations.STAGE_R));
+			supportToils.Add(FaceDirection(StageLeft));
+			leadToils.Add(Synchronise());
+			supportToils.Add(Synchronise());
+			leadToils.Add(ThrowDramaticMote(Lead, ThingDefOf.Mote_Heart, 401));
+			supportToils.Add(Wait(100));
+			supportToils.Add(ThrowDramaticMote(Support, ThingDefOf.Mote_Heart, 151));
+			leadToils.Add(Synchronise());
+			supportToils.Add(Synchronise());
+			leadToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_C));
+			supportToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_C));
+			leadToils.Add(FaceDirection(StageRight));
+			supportToils.Add(FaceDirection(StageLeft));
+			leadToils.Add(ThrowDramaticMote(Lead, ThingDefOf.Mote_Heart, 351));
+			supportToils.Add(ThrowDramaticMote(Support, ThingDefOf.Mote_Heart, 351));
+			leadToils.Add(Synchronise());
+			supportToils.Add(Synchronise());
 		}
 
 		// Token: 0x060000E5 RID: 229 RVA: 0x00005A3C File Offset: 0x00003C3C
 		public void Tragedy(List<Toil> leadToils, List<Toil> supportToils, Building_Performance stage)
 		{
-			leadToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.DOWNSTAGE_C));
-			supportToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.UPSTAGE_L));
-			leadToils.Add(this.Synchronise());
-			supportToils.Add(this.Synchronise());
-			leadToils.Add(this.ThrowDramaticMote(this.lead, ThingDefOf_RazzleDazzle.Mote_Tragedy, 201));
-			leadToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.DOWNSTAGE_L));
-			leadToils.Add(this.FaceDirection(this.StageForward));
-			leadToils.Add(this.ThrowDramaticMote(this.lead, ThingDefOf_RazzleDazzle.Mote_Tragedy, 401));
-			leadToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.DOWNSTAGE_R));
-			leadToils.Add(this.FaceDirection(this.StageForward));
-			leadToils.Add(this.ThrowDramaticMote(this.lead, ThingDefOf_RazzleDazzle.Mote_Tragedy, 251));
-			leadToils.Add(this.Synchronise());
-			supportToils.Add(this.Synchronise());
-			supportToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.DOWNSTAGE_L));
-			supportToils.Add(this.FaceDirection(this.StageRight));
-			supportToils.Add(this.ThrowDramaticMote(this.support, ThingDefOf.Mote_Heart, 201));
-			leadToils.Add(this.Synchronise());
-			supportToils.Add(this.Synchronise());
+			leadToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_C));
+			supportToils.Add(GoToStageLocation(stage, StageLocations.UPSTAGE_L));
+			leadToils.Add(Synchronise());
+			supportToils.Add(Synchronise());
+			leadToils.Add(ThrowDramaticMote(Lead, ThingDefOf_RazzleDazzle.Mote_Tragedy, 201));
+			leadToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_L));
+			leadToils.Add(FaceDirection(StageForward));
+			leadToils.Add(ThrowDramaticMote(Lead, ThingDefOf_RazzleDazzle.Mote_Tragedy, 401));
+			leadToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_R));
+			leadToils.Add(FaceDirection(StageForward));
+			leadToils.Add(ThrowDramaticMote(Lead, ThingDefOf_RazzleDazzle.Mote_Tragedy, 251));
+			leadToils.Add(Synchronise());
+			supportToils.Add(Synchronise());
+			supportToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_L));
+			supportToils.Add(FaceDirection(StageRight));
+			supportToils.Add(ThrowDramaticMote(Support, ThingDefOf.Mote_Heart, 201));
+			leadToils.Add(Synchronise());
+			supportToils.Add(Synchronise());
 		}
 
 		// Token: 0x060000E6 RID: 230 RVA: 0x00005B80 File Offset: 0x00003D80
 		public void Comedy(List<Toil> leadToils, List<Toil> supportToils, Building_Performance stage)
 		{
-			leadToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.DOWNSTAGE_R));
-			supportToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.DOWNSTAGE_L));
-			leadToils.Add(this.Synchronise());
-			supportToils.Add(this.Synchronise());
-			leadToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.STAGE_C));
-			supportToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.STAGE_C));
-			leadToils.Add(this.Synchronise());
-			supportToils.Add(this.Synchronise());
-			leadToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.DOWNSTAGE_L));
-			leadToils.Add(this.Synchronise());
-			supportToils.Add(this.Synchronise());
-			leadToils.Add(this.ThrowDramaticMote(this.lead, ThingDefOf_RazzleDazzle.Mote_Comedy, 401));
-			leadToils.Add(this.ThrowDramaticMote(this.support, ThingDefOf_RazzleDazzle.Mote_Tragedy, 271));
-			leadToils.Add(this.Synchronise());
-			supportToils.Add(this.Synchronise());
+			leadToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_R));
+			supportToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_L));
+			leadToils.Add(Synchronise());
+			supportToils.Add(Synchronise());
+			leadToils.Add(GoToStageLocation(stage, StageLocations.STAGE_C));
+			supportToils.Add(GoToStageLocation(stage, StageLocations.STAGE_C));
+			leadToils.Add(Synchronise());
+			supportToils.Add(Synchronise());
+			leadToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_L));
+			leadToils.Add(Synchronise());
+			supportToils.Add(Synchronise());
+			leadToils.Add(ThrowDramaticMote(Lead, ThingDefOf_RazzleDazzle.Mote_Comedy, 401));
+			leadToils.Add(ThrowDramaticMote(Support, ThingDefOf_RazzleDazzle.Mote_Tragedy, 271));
+			leadToils.Add(Synchronise());
+			supportToils.Add(Synchronise());
 		}
 
 		// Token: 0x060000E7 RID: 231 RVA: 0x00005C6C File Offset: 0x00003E6C
 		public void MusicalDance(List<Toil> leadToils, List<Toil> supportToils, Building_Performance stage)
 		{
-			leadToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.DOWNSTAGE_C));
-			leadToils.Add(this.FaceDirection(this.StageRight));
-			supportToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.DOWNSTAGE_C));
-			supportToils.Add(this.FaceDirection(this.StageLeft));
-			leadToils.Add(this.Synchronise());
-			supportToils.Add(this.Synchronise());
-			leadToils.Add(this.ThrowDramaticMote(this.lead, ThingDefOf_RazzleDazzle.Mote_Music, 401));
-			supportToils.Add(this.ThrowDramaticMote(this.support, ThingDefOf_RazzleDazzle.Mote_Music, 401));
-			leadToils.Add(this.Synchronise());
-			supportToils.Add(this.Synchronise());
-			leadToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.DOWNSTAGE_L));
-			supportToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.DOWNSTAGE_R));
-			leadToils.Add(this.Synchronise());
-			supportToils.Add(this.Synchronise());
-			leadToils.Add(this.ThrowDramaticMote(this.lead, ThingDefOf_RazzleDazzle.Mote_Music, 401));
-			supportToils.Add(this.ThrowDramaticMote(this.support, ThingDefOf_RazzleDazzle.Mote_Music, 401));
-			leadToils.Add(this.Synchronise());
-			supportToils.Add(this.Synchronise());
-			leadToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.UPSTAGE_R));
-			supportToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.UPSTAGE_L));
-			leadToils.Add(this.Synchronise());
-			supportToils.Add(this.Synchronise());
-			leadToils.Add(this.ThrowDramaticMote(this.lead, ThingDefOf_RazzleDazzle.Mote_Music, 401));
-			supportToils.Add(this.ThrowDramaticMote(this.support, ThingDefOf_RazzleDazzle.Mote_Music, 401));
-			leadToils.Add(this.Synchronise());
-			supportToils.Add(this.Synchronise());
-			leadToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.DOWNSTAGE_C));
-			leadToils.Add(this.FaceDirection(this.StageRight));
-			supportToils.Add(this.GoToStageLocation(stage, RazzleDazzle_Director.StageLocations.DOWNSTAGE_C));
-			supportToils.Add(this.FaceDirection(this.StageLeft));
-			leadToils.Add(this.Synchronise());
-			supportToils.Add(this.Synchronise());
-			leadToils.Add(this.ThrowDramaticMote(this.lead, ThingDefOf_RazzleDazzle.Mote_Music, 401));
-			supportToils.Add(this.ThrowDramaticMote(this.support, ThingDefOf_RazzleDazzle.Mote_Music, 401));
-			leadToils.Add(this.Synchronise());
-			supportToils.Add(this.Synchronise());
+			leadToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_C));
+			leadToils.Add(FaceDirection(StageRight));
+			supportToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_C));
+			supportToils.Add(FaceDirection(StageLeft));
+			leadToils.Add(Synchronise());
+			supportToils.Add(Synchronise());
+			leadToils.Add(ThrowDramaticMote(Lead, ThingDefOf_RazzleDazzle.Mote_Music, 401));
+			supportToils.Add(ThrowDramaticMote(Support, ThingDefOf_RazzleDazzle.Mote_Music, 401));
+			leadToils.Add(Synchronise());
+			supportToils.Add(Synchronise());
+			leadToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_L));
+			supportToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_R));
+			leadToils.Add(Synchronise());
+			supportToils.Add(Synchronise());
+			leadToils.Add(ThrowDramaticMote(Lead, ThingDefOf_RazzleDazzle.Mote_Music, 401));
+			supportToils.Add(ThrowDramaticMote(Support, ThingDefOf_RazzleDazzle.Mote_Music, 401));
+			leadToils.Add(Synchronise());
+			supportToils.Add(Synchronise());
+			leadToils.Add(GoToStageLocation(stage, StageLocations.UPSTAGE_R));
+			supportToils.Add(GoToStageLocation(stage, StageLocations.UPSTAGE_L));
+			leadToils.Add(Synchronise());
+			supportToils.Add(Synchronise());
+			leadToils.Add(ThrowDramaticMote(Lead, ThingDefOf_RazzleDazzle.Mote_Music, 401));
+			supportToils.Add(ThrowDramaticMote(Support, ThingDefOf_RazzleDazzle.Mote_Music, 401));
+			leadToils.Add(Synchronise());
+			supportToils.Add(Synchronise());
+			leadToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_C));
+			leadToils.Add(FaceDirection(StageRight));
+			supportToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_C));
+			supportToils.Add(FaceDirection(StageLeft));
+			leadToils.Add(Synchronise());
+			supportToils.Add(Synchronise());
+			leadToils.Add(ThrowDramaticMote(Lead, ThingDefOf_RazzleDazzle.Mote_Music, 401));
+			supportToils.Add(ThrowDramaticMote(Support, ThingDefOf_RazzleDazzle.Mote_Music, 401));
+			leadToils.Add(Synchronise());
+			supportToils.Add(Synchronise());
 		}
 
 		// Token: 0x060000E8 RID: 232 RVA: 0x00005ED4 File Offset: 0x000040D4
@@ -371,7 +381,7 @@ namespace RazzleDazzle
 			IntVec3 result = new IntVec3(position.x, position.y, position.z);
 			switch (loc)
 			{
-			case RazzleDazzle_Director.StageLocations.STAGE_R:
+			case StageLocations.STAGE_R:
 				if (rotation.IsHorizontal)
 				{
 					result.z -= 2;
@@ -381,7 +391,7 @@ namespace RazzleDazzle
 					result.x -= 2;
 				}
 				break;
-			case RazzleDazzle_Director.StageLocations.STAGE_L:
+			case StageLocations.STAGE_L:
 				if (rotation.IsHorizontal)
 				{
 					result.z += 2;
@@ -391,7 +401,7 @@ namespace RazzleDazzle
 					result.x += 2;
 				}
 				break;
-			case RazzleDazzle_Director.StageLocations.UPSTAGE_R:
+			case StageLocations.UPSTAGE_R:
 				if (rotation.IsHorizontal)
 				{
 					result.z -= 2;
@@ -403,7 +413,7 @@ namespace RazzleDazzle
 					result.z++;
 				}
 				break;
-			case RazzleDazzle_Director.StageLocations.UPSTAGE_L:
+			case StageLocations.UPSTAGE_L:
 				if (rotation.IsHorizontal)
 				{
 					result.z += 2;
@@ -415,7 +425,7 @@ namespace RazzleDazzle
 					result.z++;
 				}
 				break;
-			case RazzleDazzle_Director.StageLocations.UPSTAGE_C:
+			case StageLocations.UPSTAGE_C:
 				if (rotation.IsHorizontal)
 				{
 					result.x--;
@@ -425,7 +435,7 @@ namespace RazzleDazzle
 					result.z++;
 				}
 				break;
-			case RazzleDazzle_Director.StageLocations.DOWNSTAGE_R:
+			case StageLocations.DOWNSTAGE_R:
 				if (rotation.IsHorizontal)
 				{
 					result.z -= 2;
@@ -437,7 +447,7 @@ namespace RazzleDazzle
 					result.z--;
 				}
 				break;
-			case RazzleDazzle_Director.StageLocations.DOWNSTAGE_L:
+			case StageLocations.DOWNSTAGE_L:
 				if (rotation.IsHorizontal)
 				{
 					result.z += 2;
@@ -449,7 +459,7 @@ namespace RazzleDazzle
 					result.z--;
 				}
 				break;
-			case RazzleDazzle_Director.StageLocations.DOWNSTAGE_C:
+			case StageLocations.DOWNSTAGE_C:
 				if (rotation.IsHorizontal)
 				{
 					result.x++;
@@ -459,7 +469,7 @@ namespace RazzleDazzle
 					result.z--;
 				}
 				break;
-			case RazzleDazzle_Director.StageLocations.BACKSTAGE:
+			case StageLocations.BACKSTAGE:
 				if (rotation.IsHorizontal)
 				{
 					result.x += 3;

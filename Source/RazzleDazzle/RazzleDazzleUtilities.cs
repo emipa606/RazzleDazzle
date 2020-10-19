@@ -40,8 +40,8 @@ namespace RazzleDazzle
 		{
 			get
 			{
-				return from car in RazzleDazzleUtilities.GetAllPlayerCaravans
-				from col in car.PawnsListForReading
+				return from car in GetAllPlayerCaravans
+                       from col in car.PawnsListForReading
 				select new
 				{
 					car,
@@ -58,8 +58,8 @@ namespace RazzleDazzle
 		{
 			get
 			{
-				return from map in RazzleDazzleUtilities.GetAllMapsContainingFreeSpawnedColonists
-				from col in map.mapPawns.FreeColonistsSpawned
+				return from map in GetAllMapsContainingFreeSpawnedColonists
+                       from col in map.mapPawns.FreeColonistsSpawned
 				select new
 				{
 					map,
@@ -76,15 +76,15 @@ namespace RazzleDazzle
 		{
 			get
 			{
-				return RazzleDazzleUtilities.GetAllFreeSpawnedColonistsOnMaps.Concat(RazzleDazzleUtilities.GetAllColonistsInCaravans);
+				return GetAllFreeSpawnedColonistsOnMaps.Concat(GetAllColonistsInCaravans);
 			}
 		}
 
 		// Token: 0x060000D5 RID: 213 RVA: 0x0000545C File Offset: 0x0000365C
 		public static IEnumerable<Pawn> GetAllColonistsLocalTo(Pawn p)
 		{
-			return from x in RazzleDazzleUtilities.GetAllFreeColonistsAlive
-			where x.RaceProps.Humanlike && x.Faction == Faction.OfPlayer && x != p && ((x.Map != null && x.Map == p.Map) || (x.GetCaravan() != null && x.GetCaravan() == p.GetCaravan()))
+			return from x in GetAllFreeColonistsAlive
+                   where x.RaceProps.Humanlike && x.Faction == Faction.OfPlayer && x != p && ((x.Map != null && x.Map == p.Map) || (x.GetCaravan() != null && x.GetCaravan() == p.GetCaravan()))
 			select x;
 		}
 	}

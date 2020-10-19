@@ -9,6 +9,9 @@
     <minTicksInPerformance>3000</minTicksInPerformance>
     <numTicksToRehearse>1</numTicksToRehearse>
     <tickerType>Rare</tickerType>
+    <building>
+      <buildingTags Inherit="False" />
+    </building>
   </ThingDef>
   <ThingDef ParentName="PerformanceBuildingBase" Class="RazzleDazzle.PerformanceVenueDef">
     <defName>StageDef</defName>

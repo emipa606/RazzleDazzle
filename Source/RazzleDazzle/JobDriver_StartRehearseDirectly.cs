@@ -14,30 +14,30 @@ namespace RazzleDazzle
 		{
 			get
 			{
-				return (Building_Performance)this.job.targetA.Thing;
+				return (Building_Performance)job.targetA.Thing;
 			}
 		}
 
 		// Token: 0x06000068 RID: 104 RVA: 0x00003A74 File Offset: 0x00001C74
 		public override bool TryMakePreToilReservations(bool errorOnFailed)
 		{
-			return this.pawn.Reserve(this.Venue, this.job, 1, -1, null, errorOnFailed);
+			return pawn.Reserve(Venue, job, 1, -1, null, errorOnFailed);
 		}
 
 		// Token: 0x06000069 RID: 105 RVA: 0x00003AA3 File Offset: 0x00001CA3
 		protected override IEnumerable<Toil> MakeNewToils()
 		{
-			yield return Toils_Goto.GotoCell(this.Venue.InteractionCell, PathEndMode.OnCell);
+			yield return Toils_Goto.GotoCell(Venue.InteractionCell, PathEndMode.OnCell);
 			yield return new Toil
 			{
 				initAction = delegate()
 				{
-					this.Venue.rehearsing = true;
-					this.Venue.rehearsedFraction = 0f;
-					this.Venue.artistName = base.GetActor().Name.ToStringShort;
-					this.Venue.artTitle = "Latest Set";
-					this.Venue.artQuality = QualityCategory.Normal;
-					this.Venue.Lead = base.GetActor();
+					Venue.rehearsing = true;
+					Venue.rehearsedFraction = 0f;
+					Venue.artistName = GetActor().Name.ToStringShort;
+					Venue.artTitle = "Latest Set";
+					Venue.artQuality = QualityCategory.Normal;
+					Venue.Lead = GetActor();
 				},
 				defaultCompleteMode = ToilCompleteMode.Instant
 			};

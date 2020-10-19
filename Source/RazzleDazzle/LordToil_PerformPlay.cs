@@ -25,18 +25,18 @@ namespace RazzleDazzle
 		// Token: 0x060000BF RID: 191 RVA: 0x00004EC4 File Offset: 0x000030C4
 		public override void UpdateAllDuties()
 		{
-			if (this.lord != null)
+			if (lord != null)
 			{
-				for (int i = 0; i < this.lord.ownedPawns.Count; i++)
+				for (int i = 0; i < lord.ownedPawns.Count; i++)
 				{
-					Pawn pawn = this.lord.ownedPawns[i];
-					if (pawn == this.lead || pawn == this.support)
+					Pawn pawn = lord.ownedPawns[i];
+					if (pawn == lead || pawn == support)
 					{
-						pawn.mindState.duty = new PawnDuty(DutyDefOfRazzleDazzle.PerformPlay, this.stage, -1f);
+						pawn.mindState.duty = new PawnDuty(DutyDefOfRazzleDazzle.PerformPlay, stage, -1f);
 					}
 					else
 					{
-						pawn.mindState.duty = new PawnDuty(DutyDefOfRazzleDazzle.WatchPlayQuietly, this.lead, -1f);
+						pawn.mindState.duty = new PawnDuty(DutyDefOfRazzleDazzle.WatchPlayQuietly, lead, -1f);
 					}
 				}
 			}
@@ -46,7 +46,7 @@ namespace RazzleDazzle
 		public override ThinkTreeDutyHook VoluntaryJoinDutyHookFor(Pawn p)
 		{
 			ThinkTreeDutyHook hook;
-			if (p == this.lead || p == this.support)
+			if (p == lead || p == support)
 			{
 				hook = DutyDefOfRazzleDazzle.PerformPlay.hook;
 			}

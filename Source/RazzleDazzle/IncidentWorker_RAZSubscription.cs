@@ -21,7 +21,7 @@ namespace RazzleDazzle
 		// Token: 0x06000038 RID: 56 RVA: 0x00003318 File Offset: 0x00001518
 		protected override bool TryExecuteWorker(IncidentParms parms)
 		{
-			ThingSetMakerParams parms2 = default(ThingSetMakerParams);
+			ThingSetMakerParams parms2 = default;
 			parms2.techLevel = new TechLevel?(parms.faction.def.techLevel);
 			parms2.countRange = new IntRange?(new IntRange(1, 4));
 			parms2.totalMarketValueRange = new FloatRange?(new FloatRange(parms.points, parms.points));

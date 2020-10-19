@@ -15,7 +15,7 @@ namespace RazzleDazzle
 		{
 			get
 			{
-				return (Building_Performance)this.job.targetA.Thing;
+				return (Building_Performance)job.targetA.Thing;
 			}
 		}
 
@@ -25,14 +25,14 @@ namespace RazzleDazzle
 		{
 			get
 			{
-				return this.job.targetB.Thing;
+				return job.targetB.Thing;
 			}
 		}
 
 		// Token: 0x0600003C RID: 60 RVA: 0x00003420 File Offset: 0x00001620
 		public override bool TryMakePreToilReservations(bool errorOnFailed)
 		{
-			return this.pawn.Reserve(this.Venue, this.job, 1, -1, null, errorOnFailed) && this.pawn.Reserve(this.Art, this.job, 1, -1, null, errorOnFailed);
+			return pawn.Reserve(Venue, job, 1, -1, null, errorOnFailed) && pawn.Reserve(Art, job, 1, -1, null, errorOnFailed);
 		}
 
 		// Token: 0x0600003D RID: 61 RVA: 0x0000347A File Offset: 0x0000167A
@@ -45,16 +45,16 @@ namespace RazzleDazzle
 			{
 				initAction = delegate()
 				{
-					this.Venue.rehearsing = true;
-					CompArt compArt = this.Art.TryGetComp<CompArt>();
-					CompQuality compQuality = this.Art.TryGetComp<CompQuality>();
+					Venue.rehearsing = true;
+					CompArt compArt = Art.TryGetComp<CompArt>();
+					CompQuality compQuality = Art.TryGetComp<CompQuality>();
 					if (compArt != null && compQuality != null)
 					{
-						this.Venue.artistName = compArt.AuthorName;
-						this.Venue.artTitle = compArt.Title;
-						this.Venue.artQuality = compQuality.Quality;
+						Venue.artistName = compArt.AuthorName;
+						Venue.artTitle = compArt.Title;
+						Venue.artQuality = compQuality.Quality;
 					}
-					this.Art.Destroy(DestroyMode.Vanish);
+					Art.Destroy(DestroyMode.Vanish);
 				},
 				defaultCompleteMode = ToilCompleteMode.Instant
 			};

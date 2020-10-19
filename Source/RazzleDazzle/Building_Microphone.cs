@@ -38,21 +38,21 @@ namespace RazzleDazzle
 		public override string GetInspectString()
 		{
 			StringBuilder stringBuilder = new StringBuilder();
-			if (this.rehearsing)
+			if (rehearsing)
 			{
-				if (this.rehearsedFraction < 1f)
+				if (rehearsedFraction < 1f)
 				{
-					stringBuilder.AppendLine(TranslatorFormattedStringExtensions.Translate("RAZ_Rehearsal_Microphone", base.Lead.Named("PAWN")));
-					stringBuilder.AppendLine(TranslatorFormattedStringExtensions.Translate("RAZ_Rehearsal_Progress", this.rehearsedFraction.ToStringPercent()));
+					stringBuilder.AppendLine(TranslatorFormattedStringExtensions.Translate("RAZ_Rehearsal_Microphone", Lead.Named("PAWN")));
+					stringBuilder.AppendLine(TranslatorFormattedStringExtensions.Translate("RAZ_Rehearsal_Progress", rehearsedFraction.ToStringPercent()));
 				}
 				else
 				{
-					stringBuilder.AppendLine(TranslatorFormattedStringExtensions.Translate("RAZ_PerformancePending_Microphone", base.Lead.Named("PAWN")));
+					stringBuilder.AppendLine(TranslatorFormattedStringExtensions.Translate("RAZ_PerformancePending_Microphone", Lead.Named("PAWN")));
 				}
 			}
 			else
 			{
-				stringBuilder.AppendLine(this.BasicInspectString);
+				stringBuilder.AppendLine(BasicInspectString);
 			}
 			return stringBuilder.ToString().TrimEndNewlines();
 		}

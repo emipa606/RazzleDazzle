@@ -10,7 +10,7 @@ namespace RazzleDazzle
 		// Token: 0x0600005D RID: 93 RVA: 0x00003828 File Offset: 0x00001A28
 		public override bool TryMakePreToilReservations(bool errorOnFailed)
 		{
-			return this.pawn.Reserve(this.job.targetA, this.job, 1, -1, null, errorOnFailed);
+			return pawn.Reserve(job.targetA, job, 1, -1, null, errorOnFailed);
 		}
 
 		// Token: 0x0600005E RID: 94 RVA: 0x00003857 File Offset: 0x00001A57

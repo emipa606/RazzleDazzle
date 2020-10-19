@@ -13,7 +13,7 @@ namespace RazzleDazzle
 		// Token: 0x0600004E RID: 78 RVA: 0x000036DC File Offset: 0x000018DC
 		public override bool TryMakePreToilReservations(bool errorOnFailed)
 		{
-			return this.pawn.Reserve(this.job.targetA, this.job, 1, -1, null, errorOnFailed);
+			return pawn.Reserve(job.targetA, job, 1, -1, null, errorOnFailed);
 		}
 
 		// Token: 0x0600004F RID: 79 RVA: 0x0000370B File Offset: 0x0000190B
@@ -21,13 +21,13 @@ namespace RazzleDazzle
 		{
 			this.FailOnDespawnedOrNull(TargetIndex.A);
 			yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
-			LordJob_PerformComedySet job = base.GetActor().GetLord().LordJob as LordJob_PerformComedySet;
+			LordJob_PerformComedySet job = GetActor().GetLord().LordJob as LordJob_PerformComedySet;
 			yield return new Toil
 			{
 				defaultCompleteMode = ToilCompleteMode.Delay,
 				initAction = delegate()
 				{
-					this.GetActor().jobs.curDriver.ticksLeftThisToil = 1200;
+					GetActor().jobs.curDriver.ticksLeftThisToil = 1200;
 				},
 				tickAction = delegate()
 				{
@@ -40,24 +40,24 @@ namespace RazzleDazzle
 					}
 					else
 					{
-						if (this.ticksLeftThisToil % 300 == 1)
+						if (ticksLeftThisToil % 300 == 1)
 						{
-							MoteMaker.ThrowMetaIcon(this.GetActor().Position, this.GetActor().Map, ThingDefOf_RazzleDazzle.Mote_Comedy);
+							MoteMaker.ThrowMetaIcon(GetActor().Position, GetActor().Map, ThingDefOf_RazzleDazzle.Mote_Comedy);
 						}
 						else if (Rand.Chance(0.01f))
 						{
 							float value = Rand.Value;
 							if (value < 0.25f)
 							{
-								MoteMaker.ThrowMetaIcon(this.GetActor().Position, this.GetActor().Map, ThingDefOf.Mote_IncapIcon);
+								MoteMaker.ThrowMetaIcon(GetActor().Position, GetActor().Map, ThingDefOf.Mote_IncapIcon);
 							}
 							else if (value < 0.5f)
 							{
-								MoteMaker.ThrowMetaIcon(this.GetActor().Position, this.GetActor().Map, ThingDefOf.Mote_Heart);
+								MoteMaker.ThrowMetaIcon(GetActor().Position, GetActor().Map, ThingDefOf.Mote_Heart);
 							}
 							else
 							{
-								MoteMaker.ThrowMetaIcon(this.GetActor().Position, this.GetActor().Map, ThingDefOf_RazzleDazzle.Mote_Tragedy);
+								MoteMaker.ThrowMetaIcon(GetActor().Position, GetActor().Map, ThingDefOf_RazzleDazzle.Mote_Tragedy);
 							}
 						}
 						if (Rand.Chance(0.002f))
@@ -65,7 +65,7 @@ namespace RazzleDazzle
 							job.punchline = true;
 						}
 					}
-					this.GetActor().skills.GetSkill(SkillDefOf.Social).Learn(1f, false);
+					GetActor().skills.GetSkill(SkillDefOf.Social).Learn(1f, false);
 				}
 			};
 			yield break;

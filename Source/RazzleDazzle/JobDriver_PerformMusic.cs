@@ -11,7 +11,7 @@ namespace RazzleDazzle
 		// Token: 0x06000052 RID: 82 RVA: 0x0000371C File Offset: 0x0000191C
 		public override bool TryMakePreToilReservations(bool errorOnFailed)
 		{
-			return this.pawn.Reserve(this.job.targetA, this.job, 1, -1, null, errorOnFailed);
+			return pawn.Reserve(job.targetA, job, 1, -1, null, errorOnFailed);
 		}
 
 		// Token: 0x06000053 RID: 83 RVA: 0x0000374B File Offset: 0x0000194B
@@ -23,15 +23,15 @@ namespace RazzleDazzle
 				defaultCompleteMode = ToilCompleteMode.Delay,
 				initAction = delegate()
 				{
-					base.GetActor().jobs.curDriver.ticksLeftThisToil = 250;
+                    GetActor().jobs.curDriver.ticksLeftThisToil = 250;
 				},
 				tickAction = delegate()
 				{
-					if (this.ticksLeftThisToil % 200 == 0)
+					if (ticksLeftThisToil % 200 == 0)
 					{
-						MoteMaker.ThrowMetaIcon(base.GetActor().Position, base.GetActor().Map, ThingDefOf_RazzleDazzle.Mote_Music);
+						MoteMaker.ThrowMetaIcon(GetActor().Position, GetActor().Map, ThingDefOf_RazzleDazzle.Mote_Music);
 					}
-					base.GetActor().skills.GetSkill(SkillDefOf.Social).Learn(1f, false);
+                    GetActor().skills.GetSkill(SkillDefOf.Social).Learn(1f, false);
 				}
 			};
 			yield break;

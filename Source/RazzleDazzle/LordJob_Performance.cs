@@ -16,7 +16,7 @@ namespace RazzleDazzle
 		{
 			get
 			{
-				return this.venue;
+				return venue;
 			}
 		}
 
@@ -26,7 +26,7 @@ namespace RazzleDazzle
 		{
 			get
 			{
-				return this.venue.Lead;
+				return venue.Lead;
 			}
 		}
 
@@ -36,7 +36,7 @@ namespace RazzleDazzle
 		{
 			get
 			{
-				return this.venue.Support;
+				return venue.Support;
 			}
 		}
 
@@ -54,33 +54,33 @@ namespace RazzleDazzle
 		// Token: 0x06000081 RID: 129 RVA: 0x00003EE6 File Offset: 0x000020E6
 		public override void ExposeData()
 		{
-			Scribe_References.Look<Building_Performance>(ref this.venue, "venue", false);
+			Scribe_References.Look<Building_Performance>(ref venue, "venue", false);
 			base.ExposeData();
 		}
 
 		// Token: 0x06000082 RID: 130 RVA: 0x00003F00 File Offset: 0x00002100
 		public bool IsPerformanceValid()
 		{
-			return this.Venue != null && this.Lead != null && (this.Venue.venueDef.performersNeeded <= 1 || this.Support != null) && !(this.Venue.artTitle == "");
+			return Venue != null && Lead != null && (Venue.VenueDef.performersNeeded <= 1 || Support != null) && !(Venue.artTitle == "");
 		}
 
 		// Token: 0x06000083 RID: 131 RVA: 0x00003F52 File Offset: 0x00002152
 		public bool HasPerformanceFinished()
 		{
-			return this.lord.ticksInToil > this.Venue.venueDef.minTicksInPerformance && Rand.Chance(0.01f);
+			return lord.ticksInToil > Venue.VenueDef.minTicksInPerformance && Rand.Chance(0.01f);
 		}
 
 		// Token: 0x06000084 RID: 132 RVA: 0x00003F80 File Offset: 0x00002180
 		public bool TryStartPerformance()
 		{
 			bool result;
-			if (!this.IsPerformanceValid())
+			if (!IsPerformanceValid())
 			{
 				result = false;
 			}
 			else
 			{
-				LordMaker.MakeNewLord(Faction.OfPlayer, this, this.Venue.Map, null);
+				LordMaker.MakeNewLord(Faction.OfPlayer, this, Venue.Map, null);
 				result = true;
 			}
 			return result;
@@ -90,13 +90,13 @@ namespace RazzleDazzle
 		public bool PerformersAreReady()
 		{
 			bool result;
-			if (!this.IsValidLead(this.Lead) || !GatheringsUtility.InGatheringArea(this.Lead.Position, this.Venue.Position, this.Venue.Map))
+			if (!IsValidLead(Lead) || !GatheringsUtility.InGatheringArea(Lead.Position, Venue.Position, Venue.Map))
 			{
 				result = false;
 			}
 			else
 			{
-				if (this.Venue.venueDef.performersNeeded > 1 && (!this.IsValidSupport(this.Support) || !GatheringsUtility.InGatheringArea(this.Support.Position, this.Venue.Position, this.Venue.Map)))
+				if (Venue.VenueDef.performersNeeded > 1 && (!IsValidSupport(Support) || !GatheringsUtility.InGatheringArea(Support.Position, Venue.Position, Venue.Map)))
 				{
 					return false;
 				}
@@ -108,13 +108,13 @@ namespace RazzleDazzle
 		// Token: 0x06000086 RID: 134 RVA: 0x0000404B File Offset: 0x0000224B
 		private bool IsValidLead(Pawn p)
 		{
-			return p == this.Lead && !p.Dead && !p.Downed && p.health.capacities.CapableOf(PawnCapacityDefOf.Moving);
+			return p == Lead && !p.Dead && !p.Downed && p.health.capacities.CapableOf(PawnCapacityDefOf.Moving);
 		}
 
 		// Token: 0x06000087 RID: 135 RVA: 0x0000407D File Offset: 0x0000227D
 		private bool IsValidSupport(Pawn p)
 		{
-			return p == this.Support && !p.Dead && !p.Downed && p.health.capacities.CapableOf(PawnCapacityDefOf.Moving);
+			return p == Support && !p.Dead && !p.Downed && p.health.capacities.CapableOf(PawnCapacityDefOf.Moving);
 		}
 
 		// Token: 0x06000088 RID: 136 RVA: 0x000040AF File Offset: 0x000022AF
@@ -126,7 +126,7 @@ namespace RazzleDazzle
 		// Token: 0x06000089 RID: 137 RVA: 0x000040E0 File Offset: 0x000022E0
 		private bool ShouldPlayBeCalledOff()
 		{
-			return this.Lead.DestroyedOrNull() || this.Lead.Dead || this.Venue.Position.GetDangerFor(this.Lead, this.venue.Map) != Danger.None || (this.Venue.venueDef.performersNeeded > 1 && (this.Support.DestroyedOrNull() || this.Support.Dead || this.Venue.Position.GetDangerFor(this.Support, this.venue.Map) != Danger.None)) || this.Venue.IsBurning() || this.Venue.Destroyed || !GatheringsUtility.AcceptableGameConditionsToContinueGathering(this.Venue.Map);
+			return Lead.DestroyedOrNull() || Lead.Dead || Venue.Position.GetDangerFor(Lead, venue.Map) != Danger.None || (Venue.VenueDef.performersNeeded > 1 && (Support.DestroyedOrNull() || Support.Dead || Venue.Position.GetDangerFor(Support, venue.Map) != Danger.None)) || Venue.IsBurning() || Venue.Destroyed || !GatheringsUtility.AcceptableGameConditionsToContinueGathering(Venue.Map);
 		}
 
 		// Token: 0x0600008A RID: 138 RVA: 0x000041B1 File Offset: 0x000023B1
@@ -138,12 +138,12 @@ namespace RazzleDazzle
 		// Token: 0x0600008B RID: 139 RVA: 0x000041B8 File Offset: 0x000023B8
 		protected virtual float GetFinalQuality()
 		{
-			float num = (float)this.GetQualityModifier(this.Venue.artQuality);
-			float num2 = (float)this.GetQualityModifier(QualityUtility.GenerateQualityCreatedByPawn(this.Lead, SkillDefOf.Social));
-			float statModifier = this.GetStatModifier();
-			if (this.Venue.venueDef.performersNeeded > 1)
+			float num = (float)GetQualityModifier(Venue.artQuality);
+			float num2 = (float)GetQualityModifier(QualityUtility.GenerateQualityCreatedByPawn(Lead, SkillDefOf.Social));
+			float statModifier = GetStatModifier();
+			if (Venue.VenueDef.performersNeeded > 1)
 			{
-				num2 = 0.6f * num2 + 0.4f * (float)this.GetQualityModifier(QualityUtility.GenerateQualityCreatedByPawn(this.Support, SkillDefOf.Social));
+				num2 = 0.6f * num2 + 0.4f * (float)GetQualityModifier(QualityUtility.GenerateQualityCreatedByPawn(Support, SkillDefOf.Social));
 			}
 			num2 *= statModifier;
 			return Rand.Range(num2, num2 + num);
@@ -195,53 +195,53 @@ namespace RazzleDazzle
 		// Token: 0x0600008F RID: 143 RVA: 0x000042A0 File Offset: 0x000024A0
 		protected virtual void UpdateBroadcastTower(float qualityScore)
 		{
-			List<Thing> list = this.Venue.Map.listerThings.ThingsOfDef(ThingDefOf_RazzleDazzle.BroadcastTowerDef);
+			List<Thing> list = Venue.Map.listerThings.ThingsOfDef(ThingDefOf_RazzleDazzle.BroadcastTowerDef);
 			list = (from t in list
 			where !t.IsForbidden(Faction.OfPlayer)
 			select t).ToList<Thing>();
 			if (!list.NullOrEmpty<Thing>())
 			{
-				(list.FirstOrDefault<Thing>() as Building_BroadcastTower).qualityValue += this.Venue.venueDef.entertainmentWeight * (qualityScore - 5f);
+				(list.FirstOrDefault<Thing>() as Building_BroadcastTower).qualityValue += Venue.VenueDef.entertainmentWeight * (qualityScore - 5f);
 			}
 		}
 
 		// Token: 0x06000090 RID: 144 RVA: 0x0000432C File Offset: 0x0000252C
 		public virtual void GiveWatchedPlayThoughts()
 		{
-			float finalQuality = this.GetFinalQuality();
+			float finalQuality = GetFinalQuality();
 			if (finalQuality >= 14f)
 			{
-				if (this.Venue.venueDef.performersNeeded > 1)
+				if (Venue.VenueDef.performersNeeded > 1)
 				{
-					TaleRecorder.RecordTale(this.Venue.venueDef.taleDef, new object[]
+					TaleRecorder.RecordTale(Venue.VenueDef.taleDef, new object[]
 					{
-						this.Lead,
-						this.Support
+						Lead,
+						Support
 					});
 				}
 				else
 				{
-					TaleRecorder.RecordTale(this.Venue.venueDef.taleDef, new object[]
+					TaleRecorder.RecordTale(Venue.VenueDef.taleDef, new object[]
 					{
-						this.Lead
+						Lead
 					});
 				}
 			}
-			string messageForQualityLevel = this.GetMessageForQualityLevel(finalQuality);
-			ThoughtDef thoughtForQualityLevel = this.GetThoughtForQualityLevel(finalQuality);
-			foreach (Pawn pawn in this.lord.ownedPawns)
+			string messageForQualityLevel = GetMessageForQualityLevel(finalQuality);
+			ThoughtDef thoughtForQualityLevel = GetThoughtForQualityLevel(finalQuality);
+			foreach (Pawn pawn in lord.ownedPawns)
 			{
-				if (pawn == this.Lead || pawn == this.Support)
+				if (pawn == Lead || pawn == Support)
 				{
-					if (this.Venue.GetRoom(RegionType.Set_Passable).GetStat(RoomStatDefOf.Impressiveness) >= 160f)
+					if (Venue.GetRoom(RegionType.Set_Passable).GetStat(RoomStatDefOf.Impressiveness) >= 160f)
 					{
 						pawn.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOfRazzleDazzle.PerformedInExtremelyImpressiveSpace, null);
 					}
-					else if (this.Venue.GetRoom(RegionType.Set_Passable).GetStat(RoomStatDefOf.Impressiveness) >= 115f)
+					else if (Venue.GetRoom(RegionType.Set_Passable).GetStat(RoomStatDefOf.Impressiveness) >= 115f)
 					{
 						pawn.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOfRazzleDazzle.PerformedInVeryImpressiveSpace, null);
 					}
-					else if (this.Venue.GetRoom(RegionType.Set_Passable).GetStat(RoomStatDefOf.Impressiveness) >= 80f)
+					else if (Venue.GetRoom(RegionType.Set_Passable).GetStat(RoomStatDefOf.Impressiveness) >= 80f)
 					{
 						pawn.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOfRazzleDazzle.PerformedInImpressiveSpace, null);
 					}
@@ -255,23 +255,23 @@ namespace RazzleDazzle
 					pawn.needs.mood.thoughts.memories.TryGainMemory(thoughtForQualityLevel, null);
 				}
 			}
-			this.UpdateBroadcastTower(finalQuality);
-			Messages.Message(messageForQualityLevel, this.Venue, MessageTypeDefOf.NeutralEvent, true);
+			UpdateBroadcastTower(finalQuality);
+			Messages.Message(messageForQualityLevel, Venue, MessageTypeDefOf.NeutralEvent, true);
 		}
 
 		// Token: 0x06000091 RID: 145 RVA: 0x00004554 File Offset: 0x00002754
 		public override float VoluntaryJoinPriorityFor(Pawn p)
 		{
 			float result;
-			if (this.IsValidLead(p))
+			if (IsValidLead(p))
 			{
 				result = 100f;
 			}
-			else if (this.IsValidSupport(p))
+			else if (IsValidSupport(p))
 			{
 				result = 100f;
 			}
-			else if (this.IsValidAttendee(p))
+			else if (IsValidAttendee(p))
 			{
 				result = 20f;
 			}
@@ -292,10 +292,10 @@ namespace RazzleDazzle
 		public override StateGraph CreateGraph()
 		{
 			StateGraph stateGraph = new StateGraph();
-			LordToil lordToil = new LordToil_PrePerformance(this.Venue);
-			LordToil lordToil2 = new LordToil_SettleForPerformance(this.Venue);
-			LordToil performanceLordToil = this.GetPerformanceLordToil();
-			LordToil lordToil3 = new LordToil_EndPerformance(this.Venue);
+			LordToil lordToil = new LordToil_PrePerformance(Venue);
+			LordToil lordToil2 = new LordToil_SettleForPerformance(Venue);
+			LordToil performanceLordToil = GetPerformanceLordToil();
+			LordToil lordToil3 = new LordToil_EndPerformance(Venue);
 			stateGraph.AddToil(lordToil);
 			stateGraph.AddToil(lordToil2);
 			stateGraph.AddToil(performanceLordToil);
@@ -306,31 +306,31 @@ namespace RazzleDazzle
 			transition.AddPreAction(new TransitionAction_Message(Translator.Translate("RAZ_PerformanceStarting"), MessageTypeDefOf.PositiveEvent, null, 1f));
 			transition.AddPreAction(new TransitionAction_Custom(delegate()
 			{
-				this.Venue.ticksIntoThisPerformance = 0;
+				Venue.ticksIntoThisPerformance = 0;
 			}));
-			transition.AddTrigger(new Trigger_TickCondition(() => this.lord.ticksInToil >= 3000 && this.PerformersAreReady(), 1));
-			transition2.AddTrigger(new Trigger_TickCondition(() => this.lord.ticksInToil >= 6000, 1));
+			transition.AddTrigger(new Trigger_TickCondition(() => lord.ticksInToil >= 3000 && PerformersAreReady(), 1));
+			transition2.AddTrigger(new Trigger_TickCondition(() => lord.ticksInToil >= 6000, 1));
 			transition2.AddPreAction(new TransitionAction_Message(Translator.Translate("RAZ_PerformanceCancelledLate"), null, 1f));
-			transition3.AddTrigger(new Trigger_TickCondition(() => this.ShouldPlayBeCalledOff(), 1));
+			transition3.AddTrigger(new Trigger_TickCondition(() => ShouldPlayBeCalledOff(), 1));
 			transition3.AddPreAction(new TransitionAction_Message(Translator.Translate("RAZ_PerformanceCancelledThreat"), null, 1f));
 			stateGraph.AddTransition(transition, false);
 			stateGraph.AddTransition(transition2, false);
 			stateGraph.AddTransition(transition3, false);
 			Transition transition4 = new Transition(lordToil2, performanceLordToil, false, true);
 			Transition transition5 = new Transition(lordToil2, lordToil3, false, true);
-			transition4.AddTrigger(new Trigger_TickCondition(() => this.lord.ticksInToil > 500, 1));
-			transition5.AddTrigger(new Trigger_TickCondition(() => this.ShouldPlayBeCalledOff(), 1));
+			transition4.AddTrigger(new Trigger_TickCondition(() => lord.ticksInToil > 500, 1));
+			transition5.AddTrigger(new Trigger_TickCondition(() => ShouldPlayBeCalledOff(), 1));
 			stateGraph.AddTransition(transition4, false);
 			stateGraph.AddTransition(transition5, false);
 			Transition transition6 = new Transition(performanceLordToil, lordToil3, false, true);
-			transition6.AddTrigger(new Trigger_TickCondition(() => this.HasPerformanceFinished() || this.lord.ticksInToil > 16000, 1));
+			transition6.AddTrigger(new Trigger_TickCondition(() => HasPerformanceFinished() || lord.ticksInToil > 16000, 1));
 			transition6.AddPreAction(new TransitionAction_EndAllJobs());
 			transition6.AddPreAction(new TransitionAction_Custom(delegate()
 			{
-				this.GiveWatchedPlayThoughts();
+				GiveWatchedPlayThoughts();
 			}));
 			Transition transition7 = new Transition(performanceLordToil, lordToil3, false, true);
-			transition7.AddTrigger(new Trigger_TickCondition(() => this.ShouldPlayBeCalledOff(), 1));
+			transition7.AddTrigger(new Trigger_TickCondition(() => ShouldPlayBeCalledOff(), 1));
 			transition7.AddPreAction(new TransitionAction_Message(Translator.Translate("RAZ_PerformanceCancelledThreat"), null, 1f));
 			stateGraph.AddTransition(transition6, false);
 			stateGraph.AddTransition(transition7, false);

@@ -16,7 +16,7 @@ namespace RazzleDazzle
 		{
 			get
 			{
-				return base.GetActor();
+				return GetActor();
 			}
 		}
 
@@ -29,28 +29,27 @@ namespace RazzleDazzle
 		// Token: 0x06000042 RID: 66 RVA: 0x00003515 File Offset: 0x00001715
 		protected override IEnumerable<Toil> MakeNewToils()
 		{
-			LordJob lj = this.Actor.GetLord().LordJob;
+			LordJob lj = Actor.GetLord().LordJob;
 			yield return new Toil
 			{
 				defaultCompleteMode = ToilCompleteMode.Delay,
 				initAction = delegate()
 				{
-					this.ticksLeftThisToil = 500;
+					ticksLeftThisToil = 500;
 				},
 				tickAction = delegate()
 				{
 					if (lj is LordJob_PerformComedySet)
 					{
-						LordJob_PerformComedySet lordJob_PerformComedySet = lj as LordJob_PerformComedySet;
-						if (lordJob_PerformComedySet != null && lordJob_PerformComedySet.Lead != null)
-						{
-							float num = 1f * (float)lordJob_PerformComedySet.Lead.skills.GetSkill(SkillDefOf.Social).Level;
-							if (lordJob_PerformComedySet.punchline && Rand.Value < num * 0.001f)
-							{
-								MoteMaker.ThrowMetaIcon(this.Actor.Position, this.Actor.Map, ThingDefOf_RazzleDazzle.Mote_Comedy);
-							}
-						}
-					}
+                        if (lj is LordJob_PerformComedySet lordJob_PerformComedySet && lordJob_PerformComedySet.Lead != null)
+                        {
+                            float num = 1f * (float)lordJob_PerformComedySet.Lead.skills.GetSkill(SkillDefOf.Social).Level;
+                            if (lordJob_PerformComedySet.punchline && Rand.Value < num * 0.001f)
+                            {
+                                MoteMaker.ThrowMetaIcon(Actor.Position, Actor.Map, ThingDefOf_RazzleDazzle.Mote_Comedy);
+                            }
+                        }
+                    }
 				}
 			};
 			yield break;

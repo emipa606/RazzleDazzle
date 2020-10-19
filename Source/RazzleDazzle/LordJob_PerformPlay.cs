@@ -22,10 +22,10 @@ namespace RazzleDazzle
 		// Token: 0x060000AB RID: 171 RVA: 0x00004A64 File Offset: 0x00002C64
 		protected override float GetStatModifier()
 		{
-			float level = base.Lead.health.capacities.GetLevel(PawnCapacityDefOf.Talking);
-			float level2 = base.Lead.health.capacities.GetLevel(PawnCapacityDefOf.Moving);
-			float level3 = base.Support.health.capacities.GetLevel(PawnCapacityDefOf.Talking);
-			float level4 = base.Support.health.capacities.GetLevel(PawnCapacityDefOf.Moving);
+			float level = Lead.health.capacities.GetLevel(PawnCapacityDefOf.Talking);
+			float level2 = Lead.health.capacities.GetLevel(PawnCapacityDefOf.Moving);
+			float level3 = Support.health.capacities.GetLevel(PawnCapacityDefOf.Talking);
+			float level4 = Support.health.capacities.GetLevel(PawnCapacityDefOf.Moving);
 			return 0.3f * (level + level2) + 0.2f * (level3 + level4);
 		}
 
@@ -78,7 +78,7 @@ namespace RazzleDazzle
 		// Token: 0x060000AE RID: 174 RVA: 0x00004B8C File Offset: 0x00002D8C
 		protected override LordToil GetPerformanceLordToil()
 		{
-			return new LordToil_PerformPlay(base.Lead, base.Support, base.Venue);
+			return new LordToil_PerformPlay(Lead, Support, Venue);
 		}
 	}
 }

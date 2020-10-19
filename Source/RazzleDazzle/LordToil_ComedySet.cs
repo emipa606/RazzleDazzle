@@ -19,23 +19,23 @@ namespace RazzleDazzle
 		// Token: 0x060000B2 RID: 178 RVA: 0x00004BC5 File Offset: 0x00002DC5
 		private CellRect CalculateSpectateRect()
 		{
-			return CellRect.CenteredOn(this.performThing.Position, 8);
+			return CellRect.CenteredOn(performThing.Position, 8);
 		}
 
 		// Token: 0x060000B3 RID: 179 RVA: 0x00004BD8 File Offset: 0x00002DD8
 		public override void UpdateAllDuties()
 		{
-			for (int i = 0; i < this.lord.ownedPawns.Count; i++)
+			for (int i = 0; i < lord.ownedPawns.Count; i++)
 			{
-				Pawn pawn = this.lord.ownedPawns[i];
-				if (pawn == this.performer)
+				Pawn pawn = lord.ownedPawns[i];
+				if (pawn == performer)
 				{
-					pawn.mindState.duty.focus = this.performThing;
-					pawn.mindState.duty = new PawnDuty(DutyDefOfRazzleDazzle.PerformComedy, this.performThing, -1f);
+					pawn.mindState.duty.focus = performThing;
+					pawn.mindState.duty = new PawnDuty(DutyDefOfRazzleDazzle.PerformComedy, performThing, -1f);
 				}
 				else
 				{
-					pawn.mindState.duty = new PawnDuty(DutyDefOfRazzleDazzle.WatchPlayQuietly, this.performer, -1f);
+					pawn.mindState.duty = new PawnDuty(DutyDefOfRazzleDazzle.WatchPlayQuietly, performer, -1f);
 				}
 			}
 		}
@@ -44,7 +44,7 @@ namespace RazzleDazzle
 		public override ThinkTreeDutyHook VoluntaryJoinDutyHookFor(Pawn p)
 		{
 			ThinkTreeDutyHook hook;
-			if (p == this.performer)
+			if (p == performer)
 			{
 				hook = DutyDefOfRazzleDazzle.PerformConcert.hook;
 			}

@@ -15,23 +15,23 @@ namespace RazzleDazzle
 		private string BroadcastQualityString()
 		{
 			string text = null;
-			if (this.qualityValue > 45f)
+			if (qualityValue > 45f)
 			{
 				text = Translator.Translate("RAZ_BroadcastQuality_Outstanding");
 			}
-			else if (this.qualityValue > 30f)
+			else if (qualityValue > 30f)
 			{
 				text = Translator.Translate("RAZ_BroadcastQuality_Great");
 			}
-			else if (this.qualityValue > 16f)
+			else if (qualityValue > 16f)
 			{
 				text = Translator.Translate("RAZ_BroadcastQuality_Good");
 			}
-			else if (this.qualityValue > 8f)
+			else if (qualityValue > 8f)
 			{
 				text = Translator.Translate("RAZ_BroadcastQuality_Decent");
 			}
-			else if (this.qualityValue >= 0f)
+			else if (qualityValue >= 0f)
 			{
 				text = Translator.Translate("RAZ_BroadcastQuality_Uninspiring");
 			}
@@ -42,27 +42,27 @@ namespace RazzleDazzle
 		private string BroadcastRegularityString()
 		{
 			string text = null;
-			if (this.serviceRegularity == 1f)
+			if (serviceRegularity == 1f)
 			{
 				text = Translator.Translate("RAZ_BroadcastRegularity_Perfect");
 			}
-			else if (this.serviceRegularity > 0.9f)
+			else if (serviceRegularity > 0.9f)
 			{
 				text = Translator.Translate("RAZ_BroadcastRegularity_Great");
 			}
-			else if (this.serviceRegularity > 0.75f)
+			else if (serviceRegularity > 0.75f)
 			{
 				text = Translator.Translate("RAZ_BroadcastRegularity_Good");
 			}
-			else if (this.serviceRegularity > 0.6f)
+			else if (serviceRegularity > 0.6f)
 			{
 				text = Translator.Translate("RAZ_BroadcastRegularity_Adequate");
 			}
-			else if (this.serviceRegularity > 0.35f)
+			else if (serviceRegularity > 0.35f)
 			{
 				text = Translator.Translate("RAZ_BroadcastRegularity_Poor");
 			}
-			else if (this.serviceRegularity > 0.15f)
+			else if (serviceRegularity > 0.15f)
 			{
 				text = Translator.Translate("RAZ_BroadcastRegularity_Terrible");
 			}
@@ -72,7 +72,7 @@ namespace RazzleDazzle
 		// Token: 0x0600000F RID: 15 RVA: 0x0000241C File Offset: 0x0000061C
 		public void IncrementGoodwill()
 		{
-			int num = (int)(this.seasonScore * this.serviceRegularity * 0.2f);
+			int num = (int)(seasonScore * serviceRegularity * 0.2f);
 			if ((float)num > 12f)
 			{
 				Messages.Message(TranslatorFormattedStringExtensions.Translate("RAZ_MessageSeasonEnd", Translator.Translate("RAZ_SeasonPositive")), MessageTypeDefOf.PositiveEvent, true);
@@ -97,8 +97,8 @@ namespace RazzleDazzle
 		// Token: 0x06000010 RID: 16 RVA: 0x00002528 File Offset: 0x00000728
 		private void CallInSubscriptions(int originTile)
 		{
-			this.IncrementGoodwill();
-			float num = this.seasonScore * this.serviceRegularity * 75f;
+			IncrementGoodwill();
+			float num = seasonScore * serviceRegularity * 75f;
 			if (num >= 50f)
 			{
 				List<Settlement> list = (from settlement in Find.WorldObjects.SettlementBases
@@ -108,12 +108,14 @@ namespace RazzleDazzle
 				{
 					foreach (Settlement settlementBase in list)
 					{
-						IncidentParms incidentParms = new IncidentParms();
-						incidentParms.faction = settlementBase.Faction;
-						incidentParms.points = num;
-						incidentParms.spawnCenter = base.Position;
-						incidentParms.target = base.Map;
-						QueuedIncident qi = new QueuedIncident(new FiringIncident(ThingDefOf_RazzleDazzle.RAZSubscription, null, incidentParms), Find.TickManager.TicksGame + Rand.RangeInclusive(6000, 120000), 0);
+                        IncidentParms incidentParms = new IncidentParms
+                        {
+                            faction = settlementBase.Faction,
+                            points = num,
+                            spawnCenter = Position,
+                            target = Map
+                        };
+                        QueuedIncident qi = new QueuedIncident(new FiringIncident(ThingDefOf_RazzleDazzle.RAZSubscription, null, incidentParms), Find.TickManager.TicksGame + Rand.RangeInclusive(6000, 120000), 0);
 						Find.Storyteller.incidentQueue.Add(qi);
 					}
 				}
@@ -129,7 +131,7 @@ namespace RazzleDazzle
 			{
 				stringBuilder.AppendLine();
 			}
-			stringBuilder.AppendLine(TranslatorFormattedStringExtensions.Translate("RAZ_BroadcasterInspectString", this.BroadcastQualityString(), this.BroadcastRegularityString()));
+			stringBuilder.AppendLine(TranslatorFormattedStringExtensions.Translate("RAZ_BroadcasterInspectString", BroadcastQualityString(), BroadcastRegularityString()));
 			return stringBuilder.ToString().TrimEndNewlines();
 		}
 
@@ -137,43 +139,43 @@ namespace RazzleDazzle
 		public override void ExposeData()
 		{
 			base.ExposeData();
-			Scribe_Values.Look<float>(ref this.seasonScore, "seasonScore", 0f, false);
-			Scribe_Values.Look<float>(ref this.serviceRegularity, "serviceRegularity", 0f, false);
-			Scribe_Values.Look<float>(ref this.qualityValue, "qualityValue", 1f, false);
+			Scribe_Values.Look<float>(ref seasonScore, "seasonScore", 0f, false);
+			Scribe_Values.Look<float>(ref serviceRegularity, "serviceRegularity", 0f, false);
+			Scribe_Values.Look<float>(ref qualityValue, "qualityValue", 1f, false);
 		}
 
 		// Token: 0x06000013 RID: 19 RVA: 0x00002705 File Offset: 0x00000905
 		protected void ChangeSeasons(int originTile)
 		{
-			this.CallInSubscriptions(originTile);
-			this.seasonScore = 0f;
-			this.serviceRegularity = 1f;
+			CallInSubscriptions(originTile);
+			seasonScore = 0f;
+			serviceRegularity = 1f;
 		}
 
 		// Token: 0x06000014 RID: 20 RVA: 0x00002724 File Offset: 0x00000924
 		public override void TickRare()
 		{
-			if (this.lastBroadcastSeason == Season.Undefined)
+			if (lastBroadcastSeason == Season.Undefined)
 			{
-				this.lastBroadcastSeason = GenLocalDate.Season(base.Map);
+				lastBroadcastSeason = GenLocalDate.Season(Map);
 			}
-			this.seasonScore += 0.001f * this.qualityValue;
-			if (this.qualityValue > 0f)
+			seasonScore += 0.001f * qualityValue;
+			if (qualityValue > 0f)
 			{
-				this.qualityValue -= Math.Min(this.qualityValue, 0.0008f * this.qualityValue + 0.01f);
+				qualityValue -= Math.Min(qualityValue, 0.0008f * qualityValue + 0.01f);
 			}
-			if (this.qualityValue < 0f)
+			if (qualityValue < 0f)
 			{
-				this.qualityValue += Math.Min(-this.qualityValue, 0.005f);
+				qualityValue += Math.Min(-qualityValue, 0.005f);
 			}
-			if (!base.GetComp<CompPowerTrader>().PowerOn && this.serviceRegularity > 0f)
+			if (!GetComp<CompPowerTrader>().PowerOn && serviceRegularity > 0f)
 			{
-				this.serviceRegularity -= 0.001f;
+				serviceRegularity -= 0.001f;
 			}
-			if (GenLocalDate.Season(base.Map) != this.lastBroadcastSeason)
+			if (GenLocalDate.Season(Map) != lastBroadcastSeason)
 			{
-				this.lastBroadcastSeason = GenLocalDate.Season(base.Map);
-				this.ChangeSeasons(base.Map.Tile);
+				lastBroadcastSeason = GenLocalDate.Season(Map);
+				ChangeSeasons(Map.Tile);
 			}
 		}
 

@@ -15,7 +15,7 @@ namespace RazzleDazzle
 		{
 			get
 			{
-				return this.venue;
+				return venue;
 			}
 		}
 
@@ -25,7 +25,7 @@ namespace RazzleDazzle
 		{
 			get
 			{
-				return this.Venue.Lead;
+				return Venue.Lead;
 			}
 		}
 
@@ -35,7 +35,7 @@ namespace RazzleDazzle
 		{
 			get
 			{
-				return this.Venue.Support;
+				return Venue.Support;
 			}
 		}
 
@@ -48,17 +48,17 @@ namespace RazzleDazzle
 		// Token: 0x060000C8 RID: 200 RVA: 0x00005058 File Offset: 0x00003258
 		public override void UpdateAllDuties()
 		{
-			for (int i = 0; i < this.lord.ownedPawns.Count; i++)
+			for (int i = 0; i < lord.ownedPawns.Count; i++)
 			{
-				Pawn pawn = this.lord.ownedPawns[i];
-				if (pawn == this.Lead || pawn == this.Support)
+				Pawn pawn = lord.ownedPawns[i];
+				if (pawn == Lead || pawn == Support)
 				{
-					pawn.mindState.duty.focus = this.venue;
-					pawn.mindState.duty = new PawnDuty(DutyDefOfRazzleDazzle.GoToStageAndWait, this.Venue, -1f);
+					pawn.mindState.duty.focus = venue;
+					pawn.mindState.duty = new PawnDuty(DutyDefOfRazzleDazzle.GoToStageAndWait, Venue, -1f);
 				}
 				else
 				{
-					PawnDuty duty = new PawnDuty(DutyDefOfRazzleDazzle.FindSeatWithStageViewAndChat, this.Venue, -1f);
+					PawnDuty duty = new PawnDuty(DutyDefOfRazzleDazzle.FindSeatWithStageViewAndChat, Venue, -1f);
 					pawn.mindState.duty = duty;
 				}
 			}
@@ -68,7 +68,7 @@ namespace RazzleDazzle
 		public override ThinkTreeDutyHook VoluntaryJoinDutyHookFor(Pawn p)
 		{
 			ThinkTreeDutyHook hook;
-			if (p == this.Lead || p == this.Support)
+			if (p == Lead || p == Support)
 			{
 				hook = DutyDefOfRazzleDazzle.PerformConcert.hook;
 			}
@@ -80,6 +80,6 @@ namespace RazzleDazzle
 		}
 
 		// Token: 0x04000038 RID: 56
-		private Building_Performance venue;
+		private readonly Building_Performance venue;
 	}
 }

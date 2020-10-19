@@ -15,15 +15,15 @@ namespace RazzleDazzle
 		{
 			get
 			{
-				return (Building_Performance)this.job.targetA.Thing;
+				return (Building_Performance)job.targetA.Thing;
 			}
 		}
 
 		// Token: 0x06000061 RID: 97 RVA: 0x00003860 File Offset: 0x00001A60
 		public override bool TryMakePreToilReservations(bool errorOnFailed)
 		{
-			int stackCount = (this.Venue.venueDef.performersNeeded > 1) ? 0 : -1;
-			return this.pawn.Reserve(this.Venue, this.job, this.Venue.venueDef.performersNeeded, stackCount, null, errorOnFailed);
+			int stackCount = (Venue.VenueDef.performersNeeded > 1) ? 0 : -1;
+			return pawn.Reserve(Venue, job, Venue.VenueDef.performersNeeded, stackCount, null, errorOnFailed);
 		}
 
 		// Token: 0x06000062 RID: 98 RVA: 0x000038B6 File Offset: 0x00001AB6
@@ -33,25 +33,25 @@ namespace RazzleDazzle
 			{
 				initAction = delegate()
 				{
-					if (this.Venue.Director.stage == null)
+					if (Venue.Director.stage == null)
 					{
-						this.Venue.Director.stage = this.Venue;
+						Venue.Director.stage = Venue;
 					}
-					if ((this.Venue.Lead == null || this.Venue.Lead.Dead) && this.Venue.Support != base.GetActor())
+					if ((Venue.Lead == null || Venue.Lead.Dead) && Venue.Support != GetActor())
 					{
-						this.Venue.Lead = base.GetActor();
+						Venue.Lead = GetActor();
 						return;
 					}
-					if (this.Venue.venueDef.performersNeeded > 1 && (this.Venue.Support == null || this.Venue.Support.Dead) && this.Venue.Lead != base.GetActor())
+					if (Venue.VenueDef.performersNeeded > 1 && (Venue.Support == null || Venue.Support.Dead) && Venue.Lead != GetActor())
 					{
-						this.Venue.Support = base.GetActor();
+						Venue.Support = GetActor();
 					}
 				},
 				defaultCompleteMode = ToilCompleteMode.Instant
 			};
-			if (this.Venue.InteractionCell.IsValid)
+			if (Venue.InteractionCell.IsValid)
 			{
-				yield return Toils_Goto.GotoCell(this.Venue.InteractionCell, PathEndMode.OnCell);
+				yield return Toils_Goto.GotoCell(Venue.InteractionCell, PathEndMode.OnCell);
 			}
 			else
 			{
@@ -62,21 +62,21 @@ namespace RazzleDazzle
 				defaultCompleteMode = ToilCompleteMode.Delay,
 				initAction = delegate()
 				{
-					base.GetActor().jobs.curDriver.ticksLeftThisToil = 1001;
+                    GetActor().jobs.curDriver.ticksLeftThisToil = 1001;
 				},
 				tickAction = delegate()
 				{
-					if (this.ticksLeftThisToil % 100 == 0)
+					if (ticksLeftThisToil % 100 == 0)
 					{
-						ThingDef moteDef = this.Venue.venueDef.rehearsalMotes.RandomElement<ThingDef>();
-						MoteMaker.ThrowMetaIcon(base.GetActor().Position, base.GetActor().Map, moteDef);
-						this.Venue.rehearsedFraction += 100f / (float)this.Venue.venueDef.numTicksToRehearse;
-						base.GetActor().skills.GetSkill(SkillDefOf.Social).Learn(1f, false);
+						ThingDef moteDef = Venue.VenueDef.rehearsalMotes.RandomElement<ThingDef>();
+						MoteMaker.ThrowMetaIcon(GetActor().Position, GetActor().Map, moteDef);
+						Venue.rehearsedFraction += 100f / (float)Venue.VenueDef.numTicksToRehearse;
+                        GetActor().skills.GetSkill(SkillDefOf.Social).Learn(1f, false);
 					}
-					if (this.Venue.rehearsedFraction >= 1f)
+					if (Venue.rehearsedFraction >= 1f)
 					{
-						this.Venue.rehearsedFraction = 1.00000012f;
-						this.ticksLeftThisToil = 0;
+						Venue.rehearsedFraction = 1.00000012f;
+						ticksLeftThisToil = 0;
 					}
 				}
 			};

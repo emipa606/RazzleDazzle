@@ -12,7 +12,7 @@ namespace RazzleDazzle
 		{
 			return new Job(JobDefOfRazzleDazzle.JobDef_FaceObject, pawn.mindState.duty.focus)
 			{
-				expiryInterval = this.ticks
+				expiryInterval = ticks
 			};
 		}
 

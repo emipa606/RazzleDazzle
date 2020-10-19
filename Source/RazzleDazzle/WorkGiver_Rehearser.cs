@@ -59,7 +59,7 @@ namespace RazzleDazzle
 				{
 					if (building_Performance.Lead != null && building_Performance.Lead != pawn)
 					{
-						if (building_Performance.venueDef.performersNeeded <= 1)
+						if (building_Performance.VenueDef.performersNeeded <= 1)
 						{
 							return false;
 						}
@@ -68,7 +68,7 @@ namespace RazzleDazzle
 							return false;
 						}
 					}
-					result = pawn.CanReserveAndReach(building_Performance, this.PathEndMode, Danger.Some, building_Performance.venueDef.performersNeeded, -1, null, false);
+					result = pawn.CanReserveAndReach(building_Performance, PathEndMode, Danger.Some, building_Performance.VenueDef.performersNeeded, -1, null, false);
 				}
 			}
 			return result;

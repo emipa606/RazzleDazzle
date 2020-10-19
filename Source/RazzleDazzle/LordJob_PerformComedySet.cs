@@ -22,9 +22,9 @@ namespace RazzleDazzle
 		// Token: 0x0600009F RID: 159 RVA: 0x00004884 File Offset: 0x00002A84
 		protected override float GetFinalQuality()
 		{
-			float num = (float)base.GetQualityModifier(QualityUtility.GenerateQualityCreatedByPawn(base.Lead, SkillDefOf.Social));
-			float num2 = (float)base.GetQualityModifier(QualityUtility.GenerateQualityCreatedByPawn(base.Lead, SkillDefOf.Artistic));
-			return base.Lead.health.capacities.GetLevel(PawnCapacityDefOf.Talking) * Rand.Range(num, num + num2);
+			float num = (float)GetQualityModifier(QualityUtility.GenerateQualityCreatedByPawn(Lead, SkillDefOf.Social));
+			float num2 = (float)GetQualityModifier(QualityUtility.GenerateQualityCreatedByPawn(Lead, SkillDefOf.Artistic));
+			return Lead.health.capacities.GetLevel(PawnCapacityDefOf.Talking) * Rand.Range(num, num + num2);
 		}
 
 		// Token: 0x060000A0 RID: 160 RVA: 0x000048E8 File Offset: 0x00002AE8
@@ -76,7 +76,7 @@ namespace RazzleDazzle
 		// Token: 0x060000A2 RID: 162 RVA: 0x00004984 File Offset: 0x00002B84
 		protected override LordToil GetPerformanceLordToil()
 		{
-			return new LordToil_ComedySet(base.Lead, base.Venue);
+			return new LordToil_ComedySet(Lead, Venue);
 		}
 
 		// Token: 0x0400002C RID: 44

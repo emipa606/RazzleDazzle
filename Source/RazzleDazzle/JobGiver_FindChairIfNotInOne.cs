@@ -20,9 +20,9 @@ namespace RazzleDazzle
 		// Token: 0x0600006F RID: 111 RVA: 0x00003B94 File Offset: 0x00001D94
 		private static bool TryToFindChairNear(IntVec3 center, Pawn sitter, out Thing chair)
 		{
-			for (int i = 0; i < JobGiver_FindChairIfNotInOne.rpo.Count; i++)
+			for (int i = 0; i < rpo.Count; i++)
 			{
-				IntVec3 c = center + JobGiver_FindChairIfNotInOne.rpo[i];
+				IntVec3 c = center + rpo[i];
 				Building edifice = c.GetEdifice(sitter.Map);
 				if (edifice != null && edifice.def.category == ThingCategory.Building && edifice.def.building.isSittable && sitter.CanReserve(edifice, 1, -1, null, false) && !edifice.IsForbidden(sitter) && GenSight.LineOfSight(center, edifice.Position, sitter.Map, true, null, 0, 0) && c.GetFirstPawn(sitter.Map) == null)
 				{
@@ -39,7 +39,7 @@ namespace RazzleDazzle
 		{
 			for (int i = 0; i < 30; i++)
 			{
-				IntVec3 intVec = center + JobGiver_FindChairIfNotInOne.rpo[i];
+				IntVec3 intVec = center + rpo[i];
 				if (sitter.CanReserveAndReach(intVec, PathEndMode.OnCell, Danger.None, 1, -1, null, false) && intVec.GetEdifice(sitter.Map) == null && GenSight.LineOfSight(center, intVec, sitter.Map, true, null, 0, 0) && intVec.GetFirstPawn(sitter.Map) == null)
 				{
 					result = intVec;
@@ -54,31 +54,29 @@ namespace RazzleDazzle
 		protected override Job TryGiveJob(Pawn pawn)
 		{
 			Job result;
-			Thing t;
-			IntVec3 c;
-			if (this.CellHasChair(pawn.Position, pawn.Map) && pawn.CanSee(pawn.mindState.duty.focus.Thing, null))
-			{
-				result = null;
-			}
-			else if (JobGiver_FindChairIfNotInOne.TryToFindChairNear(pawn.mindState.duty.focus.Cell, pawn, out t))
-			{
-				result = new Job(JobDefOf.Goto, t);
-			}
-			else if (JobGiver_FindChairIfNotInOne.TryToFindGroundSpotNear(pawn.mindState.duty.focus.Cell, pawn, out c))
-			{
-				result = new Job(JobDefOf.Goto, c);
-			}
-			else
-			{
-				result = null;
-			}
-			return result;
+            if (CellHasChair(pawn.Position, pawn.Map) && pawn.CanSee(pawn.mindState.duty.focus.Thing, null))
+            {
+                result = null;
+            }
+            else if (TryToFindChairNear(pawn.mindState.duty.focus.Cell, pawn, out Thing t))
+            {
+                result = new Job(JobDefOf.Goto, t);
+            }
+            else if (TryToFindGroundSpotNear(pawn.mindState.duty.focus.Cell, pawn, out IntVec3 c))
+            {
+                result = new Job(JobDefOf.Goto, c);
+            }
+            else
+            {
+                result = null;
+            }
+            return result;
 		}
 
 		// Token: 0x04000029 RID: 41
-		private static int numCellsInRadius = GenRadial.NumCellsInRadius(7f);
+		private static readonly int numCellsInRadius = GenRadial.NumCellsInRadius(7f);
 
 		// Token: 0x0400002A RID: 42
-		private static List<IntVec3> rpo = GenRadial.RadialPattern.Take(JobGiver_FindChairIfNotInOne.numCellsInRadius).ToList<IntVec3>();
+		private static readonly List<IntVec3> rpo = GenRadial.RadialPattern.Take(numCellsInRadius).ToList<IntVec3>();
 	}
 }
