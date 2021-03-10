@@ -83,7 +83,7 @@ namespace RazzleDazzle
 						}
 						if (support == null || support == lead)
 						{
-							List<Pawn> list = ColonistsAvailableToPerform().ToList<Pawn>();
+							var list = ColonistsAvailableToPerform().ToList<Pawn>();
 							if (list.Contains(lead))
 							{
 								list.Remove(lead);
@@ -120,18 +120,12 @@ namespace RazzleDazzle
 			}
 		}
 
-		// Token: 0x1700000A RID: 10
-		// (get) Token: 0x06000022 RID: 34 RVA: 0x00002AEC File Offset: 0x00000CEC
-		protected virtual string BasicInspectString
-		{
-			get
-			{
-				return Translator.Translate("RAZ_VenueBasicInspectString");
-			}
-		}
+        // Token: 0x1700000A RID: 10
+        // (get) Token: 0x06000022 RID: 34 RVA: 0x00002AEC File Offset: 0x00000CEC
+        protected virtual string BasicInspectString => Translator.Translate("RAZ_VenueBasicInspectString");
 
-		// Token: 0x06000023 RID: 35 RVA: 0x00002AF8 File Offset: 0x00000CF8
-		protected FloatMenuOption SetAsLead(Pawn pawn)
+        // Token: 0x06000023 RID: 35 RVA: 0x00002AF8 File Offset: 0x00000CF8
+        protected FloatMenuOption SetAsLead(Pawn pawn)
 		{
 			return new FloatMenuOption(Translator.Translate("RAZ_ReplaceLead"), delegate()
 			{
@@ -170,14 +164,14 @@ namespace RazzleDazzle
 			}
 			else
 			{
-				bool flag = VenueDef.performersNeeded > 1;
+				var flag = VenueDef.performersNeeded > 1;
 				if (flag && Support == null)
 				{
 					result = base.GetFloatMenuOptions(selPawn);
 				}
 				else
 				{
-					List<FloatMenuOption> list = base.GetFloatMenuOptions(selPawn).ToList<FloatMenuOption>();
+					var list = base.GetFloatMenuOptions(selPawn).ToList<FloatMenuOption>();
 					if (selPawn != Lead && selPawn.workSettings.WorkIsActive(WorkTypeDefOfRazzleDazzle.Performance))
 					{
 						list.Add(SetAsLead(selPawn));
@@ -212,7 +206,7 @@ namespace RazzleDazzle
 		// Token: 0x06000027 RID: 39 RVA: 0x00002CBC File Offset: 0x00000EBC
 		public override string GetInspectString()
 		{
-			StringBuilder stringBuilder = new StringBuilder();
+			var stringBuilder = new StringBuilder();
 			if (rehearsing)
 			{
 				if (rehearsedFraction < 1f)

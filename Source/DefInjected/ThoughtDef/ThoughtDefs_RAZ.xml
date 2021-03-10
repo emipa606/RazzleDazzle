@@ -1,53 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <PerformedInExtremelyImpressiveSpace.stages.0.label>performed in extremely impressive environment</PerformedInExtremelyImpressiveSpace.stages.0.label>
   <PerformedInExtremelyImpressiveSpace.stages.0.description>I always dreamed I would perform somewhere like that</PerformedInExtremelyImpressiveSpace.stages.0.description>
-
   <PerformedInVeryImpressiveSpace.stages.0.label>performed in very impressive environment</PerformedInVeryImpressiveSpace.stages.0.label>
   <PerformedInVeryImpressiveSpace.stages.0.description>What an incredible place to perform</PerformedInVeryImpressiveSpace.stages.0.description>
-
   <PerformedInImpressiveSpace.stages.0.label>performed in impressive environment</PerformedInImpressiveSpace.stages.0.label>
   <PerformedInImpressiveSpace.stages.0.description>I enjoy performing in in that lovely environment</PerformedInImpressiveSpace.stages.0.description>
-
   <Performed.stages.0.label>performed for the colony</Performed.stages.0.label>
   <Performed.stages.0.description>I got to share my art with the world!</Performed.stages.0.description>
-
   <SawBadPlay.stages.0.label>saw bad play</SawBadPlay.stages.0.label>
   <SawBadPlay.stages.0.description>I can't believe I had to sit through that!</SawBadPlay.stages.0.description>
-
   <SawPlay.stages.0.label>saw play</SawPlay.stages.0.label>
   <SawPlay.stages.0.description>It was nice to get to do something diverting.</SawPlay.stages.0.description>
-
   <SawGoodPlay.stages.0.label>saw play</SawGoodPlay.stages.0.label>
   <SawGoodPlay.stages.0.description>It's wonderful to have time for the arts!</SawGoodPlay.stages.0.description>
-
   <SawAmazingPlay.stages.0.label>saw amazing play</SawAmazingPlay.stages.0.label>
   <SawAmazingPlay.stages.0.description>That performance was life-changing.</SawAmazingPlay.stages.0.description>
-
   <AttendedBadConcert.stages.0.label>attended bad concert</AttendedBadConcert.stages.0.label>
   <AttendedBadConcert.stages.0.description>Uugh. It sounded like a boomalope's death throws.</AttendedBadConcert.stages.0.description>
-
   <AttendedConcert.stages.0.label>attended concert</AttendedConcert.stages.0.label>
   <AttendedConcert.stages.0.description>A pleasant evening's music.</AttendedConcert.stages.0.description>
-
   <AttendedGoodConcert.stages.0.label>attended good concert</AttendedGoodConcert.stages.0.label>
   <AttendedGoodConcert.stages.0.description>That rocked!</AttendedGoodConcert.stages.0.description>
-
   <AttendedAmazingConcert.stages.0.label>attended amazing concert</AttendedAmazingConcert.stages.0.label>
   <AttendedAmazingConcert.stages.0.description>That music is in my soul!</AttendedAmazingConcert.stages.0.description>
-
   <AttendedBadGig.stages.0.label>attended bad gig</AttendedBadGig.stages.0.label>
   <AttendedBadGig.stages.0.description>The silence was so awkward.</AttendedBadGig.stages.0.description>
-
   <AttendedGig.stages.0.label>attended gig</AttendedGig.stages.0.label>
   <AttendedGig.stages.0.description>A few duff lines, but it was pretty good.</AttendedGig.stages.0.description>
-
   <AttendedGoodGig.stages.0.label>attended good gig</AttendedGoodGig.stages.0.label>
   <AttendedGoodGig.stages.0.description>So clever and funny!</AttendedGoodGig.stages.0.description>
-
   <AttendedAmazingGig.stages.0.label>attended amazing gig</AttendedAmazingGig.stages.0.label>
   <AttendedAmazingGig.stages.0.description>I'll never look at a muffalo the same way again!</AttendedAmazingGig.stages.0.description>
-
-
 </LanguageData>

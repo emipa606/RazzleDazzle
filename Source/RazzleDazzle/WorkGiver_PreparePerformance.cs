@@ -20,7 +20,7 @@ namespace RazzleDazzle
 			}
 			else
 			{
-                result = (t is Building_Performance building_Performance && building_Performance.CurrentlyUsableForBills() && pawn.CanReserve(t, 1, 0, null, false) && !building_Performance.IsBurning() && !building_Performance.IsForbidden(pawn) && building_Performance.canPerformSwitch && !building_Performance.rehearsing && pawn.CanReach(t.InteractionCell, PathEndMode.OnCell, Danger.Some, false, TraverseMode.ByPawn) && JobOnThing(pawn, t, false) != null);
+                result = t is Building_Performance building_Performance && building_Performance.CurrentlyUsableForBills() && pawn.CanReserve(t, 1, 0, null, false) && !building_Performance.IsBurning() && !building_Performance.IsForbidden(pawn) && building_Performance.canPerformSwitch && !building_Performance.rehearsing && pawn.CanReach(t.InteractionCell, PathEndMode.OnCell, Danger.Some, false, TraverseMode.ByPawn) && JobOnThing(pawn, t, false) != null;
             }
 			return result;
 		}
@@ -28,7 +28,7 @@ namespace RazzleDazzle
 		// Token: 0x060000EF RID: 239 RVA: 0x0000622C File Offset: 0x0000442C
 		public override Job JobOnThing(Pawn pawn, Thing thing, bool forced = false)
 		{
-			Building_Performance building_Performance = thing as Building_Performance;
+			var building_Performance = thing as Building_Performance;
 			Job result;
 			if (building_Performance.VenueDef.artDef == null)
 			{
@@ -96,13 +96,17 @@ namespace RazzleDazzle
 			}
 			else
 			{
-				bool found = false;
-                bool validArt(Thing t) => t.Spawned && !t.IsForbidden(pawn) && (t.Position - pawn.Position).LengthHorizontalSquared < 999 && t.def == venue.VenueDef.artDef && pawn.CanReserve(t, 1, -1, null, false);
+				var found = false;
+                bool validArt(Thing t)
+                {
+                    return t.Spawned && !t.IsForbidden(pawn) && (t.Position - pawn.Position).LengthHorizontalSquared < 999 && t.def == venue.VenueDef.artDef && pawn.CanReserve(t, 1, -1, null, false);
+                }
+
                 newCorrectArt.Clear();
                 bool regionProcessor(Region r)
                 {
                     List<Thing> list = r.ListerThings.ThingsMatching(ThingRequest.ForGroup(ThingRequestGroup.HaulableEver));
-                    for (int i = 0; i < list.Count; i++)
+                    for (var i = 0; i < list.Count; i++)
                     {
                         Thing thing = list[i];
                         if (validArt(thing) && !thing.def.IsMedicine)
@@ -114,8 +118,8 @@ namespace RazzleDazzle
                     {
                         int comparison(Thing t1, Thing t2)
                         {
-                            float num = (float)(t1.Position - pawn.Position).LengthHorizontalSquared;
-                            float value = (float)(t2.Position - pawn.Position).LengthHorizontalSquared;
+                            var num = (float)(t1.Position - pawn.Position).LengthHorizontalSquared;
+                            var value = (float)(t2.Position - pawn.Position).LengthHorizontalSquared;
                             return num.CompareTo(value);
                         }
                         newCorrectArt.Sort(comparison);
@@ -129,8 +133,12 @@ namespace RazzleDazzle
                     }
                     return false;
                 }
-                TraverseParms traverseParams = TraverseParms.For(pawn, Danger.Some, TraverseMode.ByPawn, false);
-                bool entryCondition(Region from, Region r) => r.Allows(traverseParams, false);
+                var traverseParams = TraverseParms.For(pawn, Danger.Some, TraverseMode.ByPawn, false);
+                bool entryCondition(Region from, Region r)
+                {
+                    return r.Allows(traverseParams, false);
+                }
+
                 RegionTraverser.BreadthFirstTraverse(validRegionAt, entryCondition, regionProcessor, 999, RegionType.Set_Passable);
 				if (found)
 				{

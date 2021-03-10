@@ -11,27 +11,50 @@
   </supportedVersions>
   <modDependencies />
   <loadAfter />
-  <description>Update of Bar0ths mod
+  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+Update of Bar0ths mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1778162471
 
-Support-chat:
-https://invite.gg/Mlie
+- Removed the production-tag for all entertainment buildnings making them ok in thronerooms
+- Added the Grand Piano as a valid piano-requirement for thronerooms
 
-Non-steam version:
-https://github.com/emipa606/RazzleDazzle
+[img]https://i.imgur.com/7Gzt3Rg.png[/img]
+
+[table]
+	[tr]
+		[td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
+		[td][url=https://github.com/emipa606/RazzleDazzle][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+	[/tr]
+[/table]
 	
---- Original Description ---
+[img]https://i.imgur.com/NOW7jU1.png[/img]
+
 For those players who want a little more song and dance in the lives of their colonies! This mod introduces a range of performing arts:
 
-Theatre: Colonists can write (Artistic) and perform plays (Social), which are written at sculpting benches.
+Theatre:  Colonists can write (Artistic) and perform plays (Social), which are written at sculpting benches.
 
-Music: Music can be composed (Artistic) and performed at a piano (Social).
+Music:    Music can be composed (Artistic) and performed at a piano (Social).
 
 Stand-up: Rehearsed and performed at the microphone stand (Social).
 
 Radio: Performances from all of the above will be automatically broadcast if you have a broadcaster, with subscription payments sent in by nearby settlements based on the quality of your broadcast.
 
 Now you can keep your colonists from ever doing a real day's work!
+  	
+Credits: Original was created by [url=http://steamcommunity.com/profiles/76561198018142626]SeveralPuffins[/url], Japanese translation by [url=http://steamcommunity.com/profiles/76561198257945076]Proxyer[/url].
 
-Credits: Original was created by SeveralPuffins, Japanese translation by Proxyer.</description>
+Direct Download: [url=https://www.dropbox.com/sh/fmbh06zqkki2a9d/AAAcyZXk2wrpxerH1-aohLJUa?dl=0]Dropbox[/url]
+
+
+[img]https://i.imgur.com/Rs6T6cr.png[/img]
+[list]
+[*] See if the the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[/list]
+</description>
 </ModMetaData>
+

@@ -9,19 +9,13 @@ namespace RazzleDazzle
 	// Token: 0x0200002A RID: 42
 	public class RazzleDazzle_Director
 	{
-		// Token: 0x1700001F RID: 31
-		// (get) Token: 0x060000D6 RID: 214 RVA: 0x0000548C File Offset: 0x0000368C
-		private Rot4 StageForward
-		{
-			get
-			{
-				return stage.Rotation;
-			}
-		}
+        // Token: 0x1700001F RID: 31
+        // (get) Token: 0x060000D6 RID: 214 RVA: 0x0000548C File Offset: 0x0000368C
+        private Rot4 StageForward => stage.Rotation;
 
-		// Token: 0x17000020 RID: 32
-		// (get) Token: 0x060000D7 RID: 215 RVA: 0x0000549C File Offset: 0x0000369C
-		private Rot4 StageLeft
+        // Token: 0x17000020 RID: 32
+        // (get) Token: 0x060000D7 RID: 215 RVA: 0x0000549C File Offset: 0x0000369C
+        private Rot4 StageLeft
 		{
 			get
 			{
@@ -80,30 +74,18 @@ namespace RazzleDazzle
 			}
 		}
 
-		// Token: 0x17000023 RID: 35
-		// (get) Token: 0x060000DA RID: 218 RVA: 0x00005536 File Offset: 0x00003736
-		public Pawn Lead
-		{
-			get
-			{
-				return stage.Lead;
-			}
-		}
+        // Token: 0x17000023 RID: 35
+        // (get) Token: 0x060000DA RID: 218 RVA: 0x00005536 File Offset: 0x00003736
+        public Pawn Lead => stage.Lead;
 
-		// Token: 0x17000024 RID: 36
-		// (get) Token: 0x060000DB RID: 219 RVA: 0x00005543 File Offset: 0x00003743
-		public Pawn Support
-		{
-			get
-			{
-				return stage.Support;
-			}
-		}
+        // Token: 0x17000024 RID: 36
+        // (get) Token: 0x060000DB RID: 219 RVA: 0x00005543 File Offset: 0x00003743
+        public Pawn Support => stage.Support;
 
-		// Token: 0x060000DC RID: 220 RVA: 0x00005550 File Offset: 0x00003750
-		public Toil FaceDirection(Rot4 dir)
+        // Token: 0x060000DC RID: 220 RVA: 0x00005550 File Offset: 0x00003750
+        public Toil FaceDirection(Rot4 dir)
 		{
-            Toil t = new Toil
+            var t = new Toil
             {
                 defaultCompleteMode = ToilCompleteMode.Instant
             };
@@ -117,7 +99,7 @@ namespace RazzleDazzle
 		// Token: 0x060000DD RID: 221 RVA: 0x0000559E File Offset: 0x0000379E
 		public Toil FaceObject(Thing thing)
 		{
-            Toil toil = new Toil
+            var toil = new Toil
             {
                 defaultCompleteMode = ToilCompleteMode.Instant,
                 initAction = delegate ()
@@ -136,7 +118,7 @@ namespace RazzleDazzle
 			sToils.Add(GoToStageLocation(stage, StageLocations.BACKSTAGE));
 			lToils.Add(Synchronise());
 			sToils.Add(Synchronise());
-			for (int i = 0; i < 6; i++)
+			for (var i = 0; i < nScenes; i++)
 			{
 				switch (Rand.RangeInclusive(0, 3))
 				{
@@ -187,14 +169,14 @@ namespace RazzleDazzle
 		// Token: 0x060000E0 RID: 224 RVA: 0x0000577C File Offset: 0x0000397C
 		public Toil Synchronise()
 		{
-            Toil t = new Toil
+            var t = new Toil
             {
                 defaultCompleteMode = ToilCompleteMode.Delay
             };
             t.initAction = delegate()
 			{
 				t.GetActor().jobs.curDriver.ticksLeftThisToil = 10000;
-				leadReady = (supportReady = false);
+				leadReady = supportReady = false;
 			};
 			t.tickAction = delegate()
 			{
@@ -211,7 +193,7 @@ namespace RazzleDazzle
 				{
 					Lead.jobs.curDriver.ticksLeftThisToil = 0;
 					Support.jobs.curDriver.ticksLeftThisToil = 0;
-					leadReady = (supportReady = false);
+					leadReady = supportReady = false;
 				}
 			};
 			return t;
@@ -220,7 +202,7 @@ namespace RazzleDazzle
 		// Token: 0x060000E1 RID: 225 RVA: 0x000057E4 File Offset: 0x000039E4
 		public static Toil Wait(int iTicks)
 		{
-            Toil toil = new Toil
+            var toil = new Toil
             {
                 defaultCompleteMode = ToilCompleteMode.Delay
             };
@@ -234,7 +216,7 @@ namespace RazzleDazzle
 		// Token: 0x060000E2 RID: 226 RVA: 0x00005834 File Offset: 0x00003A34
 		public Toil ThrowDramaticMote(Pawn p1, ThingDef mote, int ticks)
 		{
-            Toil toil = new Toil
+            var toil = new Toil
             {
                 defaultCompleteMode = ToilCompleteMode.Delay
             };
@@ -378,7 +360,7 @@ namespace RazzleDazzle
 		{
 			IntVec3 position = stage.Position;
 			Rot4 rotation = stage.Rotation;
-			IntVec3 result = new IntVec3(position.x, position.y, position.z);
+			var result = new IntVec3(position.x, position.y, position.z);
 			switch (loc)
 			{
 			case StageLocations.STAGE_R:

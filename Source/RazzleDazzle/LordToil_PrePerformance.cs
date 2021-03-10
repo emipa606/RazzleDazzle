@@ -20,7 +20,7 @@ namespace RazzleDazzle
 		{
 			if (lord != null)
 			{
-				for (int i = 0; i < lord.ownedPawns.Count; i++)
+				for (var i = 0; i < lord.ownedPawns.Count; i++)
 				{
 					lord.ownedPawns[i].mindState.duty = new PawnDuty(DutyDefOf.Party, venue, -1f);
 				}

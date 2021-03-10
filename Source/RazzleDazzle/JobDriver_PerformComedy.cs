@@ -21,7 +21,7 @@ namespace RazzleDazzle
 		{
 			this.FailOnDespawnedOrNull(TargetIndex.A);
 			yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
-			LordJob_PerformComedySet job = GetActor().GetLord().LordJob as LordJob_PerformComedySet;
+			var job = GetActor().GetLord().LordJob as LordJob_PerformComedySet;
 			yield return new Toil
 			{
 				defaultCompleteMode = ToilCompleteMode.Delay,
@@ -46,7 +46,7 @@ namespace RazzleDazzle
 						}
 						else if (Rand.Chance(0.01f))
 						{
-							float value = Rand.Value;
+							var value = Rand.Value;
 							if (value < 0.25f)
 							{
 								MoteMaker.ThrowMetaIcon(GetActor().Position, GetActor().Map, ThingDefOf.Mote_IncapIcon);

@@ -72,7 +72,7 @@ namespace RazzleDazzle
 		// Token: 0x0600000F RID: 15 RVA: 0x0000241C File Offset: 0x0000061C
 		public void IncrementGoodwill()
 		{
-			int num = (int)(seasonScore * serviceRegularity * 0.2f);
+			var num = (int)(seasonScore * serviceRegularity * goodwill_multiplier);
 			if ((float)num > 12f)
 			{
 				Messages.Message(TranslatorFormattedStringExtensions.Translate("RAZ_MessageSeasonEnd", Translator.Translate("RAZ_SeasonPositive")), MessageTypeDefOf.PositiveEvent, true);
@@ -98,24 +98,24 @@ namespace RazzleDazzle
 		private void CallInSubscriptions(int originTile)
 		{
 			IncrementGoodwill();
-			float num = seasonScore * serviceRegularity * 75f;
+			var num = seasonScore * serviceRegularity * 75f;
 			if (num >= 50f)
 			{
-				List<Settlement> list = (from settlement in Find.WorldObjects.SettlementBases
+				var list = (from settlement in Find.WorldObjects.SettlementBases
 				where settlement.Faction != Faction.OfPlayer && settlement.Faction.def.CanEverBeNonHostile && (float)settlement.Faction.PlayerGoodwill > 0f && Find.WorldGrid.ApproxDistanceInTiles(originTile, settlement.Tile) < 36f && Find.WorldReachability.CanReach(originTile, settlement.Tile)
 				select settlement).ToList<Settlement>();
 				if (!list.NullOrEmpty<Settlement>())
 				{
 					foreach (Settlement settlementBase in list)
 					{
-                        IncidentParms incidentParms = new IncidentParms
+                        var incidentParms = new IncidentParms
                         {
                             faction = settlementBase.Faction,
                             points = num,
                             spawnCenter = Position,
                             target = Map
                         };
-                        QueuedIncident qi = new QueuedIncident(new FiringIncident(ThingDefOf_RazzleDazzle.RAZSubscription, null, incidentParms), Find.TickManager.TicksGame + Rand.RangeInclusive(6000, 120000), 0);
+                        var qi = new QueuedIncident(new FiringIncident(ThingDefOf_RazzleDazzle.RAZSubscription, null, incidentParms), Find.TickManager.TicksGame + Rand.RangeInclusive(6000, 120000), 0);
 						Find.Storyteller.incidentQueue.Add(qi);
 					}
 				}
@@ -125,7 +125,7 @@ namespace RazzleDazzle
 		// Token: 0x06000011 RID: 17 RVA: 0x0000264C File Offset: 0x0000084C
 		public override string GetInspectString()
 		{
-			StringBuilder stringBuilder = new StringBuilder();
+			var stringBuilder = new StringBuilder();
 			stringBuilder.Append(base.GetInspectString());
 			if (stringBuilder.Length != 0)
 			{
@@ -162,7 +162,7 @@ namespace RazzleDazzle
 			seasonScore += 0.001f * qualityValue;
 			if (qualityValue > 0f)
 			{
-				qualityValue -= Math.Min(qualityValue, 0.0008f * qualityValue + 0.01f);
+				qualityValue -= Math.Min(qualityValue, (0.0008f * qualityValue) + 0.01f);
 			}
 			if (qualityValue < 0f)
 			{

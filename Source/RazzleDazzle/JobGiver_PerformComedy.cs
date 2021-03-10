@@ -10,7 +10,7 @@ namespace RazzleDazzle
 		// Token: 0x06000074 RID: 116 RVA: 0x00003DA0 File Offset: 0x00001FA0
 		protected override Job TryGiveJob(Pawn pawn)
 		{
-			Thing thing = (Thing)pawn.mindState.duty.focus;
+			var thing = (Thing)pawn.mindState.duty.focus;
 			Job result;
 			if (!(thing is Building_Microphone))
 			{

@@ -10,18 +10,12 @@ namespace RazzleDazzle
 	// Token: 0x02000031 RID: 49
 	public class WorkGiver_Rehearser : WorkGiver_Scanner
 	{
-		// Token: 0x17000025 RID: 37
-		// (get) Token: 0x060000F6 RID: 246 RVA: 0x00006423 File Offset: 0x00004623
-		public override PathEndMode PathEndMode
-		{
-			get
-			{
-				return PathEndMode.ClosestTouch;
-			}
-		}
+        // Token: 0x17000025 RID: 37
+        // (get) Token: 0x060000F6 RID: 246 RVA: 0x00006423 File Offset: 0x00004623
+        public override PathEndMode PathEndMode => PathEndMode.ClosestTouch;
 
-		// Token: 0x060000F7 RID: 247 RVA: 0x00006426 File Offset: 0x00004626
-		public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
+        // Token: 0x060000F7 RID: 247 RVA: 0x00006426 File Offset: 0x00004626
+        public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
 		{
 			return from t in pawn.Map.listerThings.AllThings
 			where t is Building_Performance
@@ -38,7 +32,7 @@ namespace RazzleDazzle
 			}
 			else
 			{
-				Building_Performance building_Performance = t as Building_Performance;
+				var building_Performance = t as Building_Performance;
 				if (pawn.Dead || pawn.Downed || pawn.IsBurning())
 				{
 					result = false;

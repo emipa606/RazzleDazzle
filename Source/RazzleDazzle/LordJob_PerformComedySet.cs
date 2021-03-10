@@ -22,8 +22,8 @@ namespace RazzleDazzle
 		// Token: 0x0600009F RID: 159 RVA: 0x00004884 File Offset: 0x00002A84
 		protected override float GetFinalQuality()
 		{
-			float num = (float)GetQualityModifier(QualityUtility.GenerateQualityCreatedByPawn(Lead, SkillDefOf.Social));
-			float num2 = (float)GetQualityModifier(QualityUtility.GenerateQualityCreatedByPawn(Lead, SkillDefOf.Artistic));
+			var num = (float)GetQualityModifier(QualityUtility.GenerateQualityCreatedByPawn(Lead, SkillDefOf.Social));
+			var num2 = (float)GetQualityModifier(QualityUtility.GenerateQualityCreatedByPawn(Lead, SkillDefOf.Artistic));
 			return Lead.health.capacities.GetLevel(PawnCapacityDefOf.Talking) * Rand.Range(num, num + num2);
 		}
 

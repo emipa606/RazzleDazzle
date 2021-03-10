@@ -31,7 +31,7 @@ namespace RazzleDazzle
                     GetActor().skills.GetSkill(SkillDefOf.Social).Learn(0.05f, false);
 					if (ticksLeftThisToil % 100 == 0)
 					{
-						float value = Rand.Value;
+						var value = Rand.Value;
 						ThingDef moteDef;
 						if ((double)value < 0.4)
 						{

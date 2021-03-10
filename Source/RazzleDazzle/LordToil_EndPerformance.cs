@@ -8,18 +8,12 @@ namespace RazzleDazzle
 	// Token: 0x02000023 RID: 35
 	public class LordToil_EndPerformance : LordToil
 	{
-		// Token: 0x17000016 RID: 22
-		// (get) Token: 0x060000B9 RID: 185 RVA: 0x00003512 File Offset: 0x00001712
-		public override bool ShouldFail
-		{
-			get
-			{
-				return true;
-			}
-		}
+        // Token: 0x17000016 RID: 22
+        // (get) Token: 0x060000B9 RID: 185 RVA: 0x00003512 File Offset: 0x00001712
+        public override bool ShouldFail => true;
 
-		// Token: 0x060000BA RID: 186 RVA: 0x00004DC3 File Offset: 0x00002FC3
-		public LordToil_EndPerformance(Building_Performance venue)
+        // Token: 0x060000BA RID: 186 RVA: 0x00004DC3 File Offset: 0x00002FC3
+        public LordToil_EndPerformance(Building_Performance venue)
 		{
 			this.venue = venue;
 		}

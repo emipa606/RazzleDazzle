@@ -22,11 +22,11 @@ namespace RazzleDazzle
 		// Token: 0x060000AB RID: 171 RVA: 0x00004A64 File Offset: 0x00002C64
 		protected override float GetStatModifier()
 		{
-			float level = Lead.health.capacities.GetLevel(PawnCapacityDefOf.Talking);
-			float level2 = Lead.health.capacities.GetLevel(PawnCapacityDefOf.Moving);
-			float level3 = Support.health.capacities.GetLevel(PawnCapacityDefOf.Talking);
-			float level4 = Support.health.capacities.GetLevel(PawnCapacityDefOf.Moving);
-			return 0.3f * (level + level2) + 0.2f * (level3 + level4);
+			var level = Lead.health.capacities.GetLevel(PawnCapacityDefOf.Talking);
+			var level2 = Lead.health.capacities.GetLevel(PawnCapacityDefOf.Moving);
+			var level3 = Support.health.capacities.GetLevel(PawnCapacityDefOf.Talking);
+			var level4 = Support.health.capacities.GetLevel(PawnCapacityDefOf.Moving);
+			return (0.3f * (level + level2)) + (0.2f * (level3 + level4));
 		}
 
 		// Token: 0x060000AC RID: 172 RVA: 0x00004AF0 File Offset: 0x00002CF0

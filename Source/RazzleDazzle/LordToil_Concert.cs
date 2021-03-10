@@ -25,7 +25,7 @@ namespace RazzleDazzle
 		// Token: 0x060000B7 RID: 183 RVA: 0x00004CE0 File Offset: 0x00002EE0
 		public override void UpdateAllDuties()
 		{
-			for (int i = 0; i < lord.ownedPawns.Count; i++)
+			for (var i = 0; i < lord.ownedPawns.Count; i++)
 			{
 				Pawn pawn = lord.ownedPawns[i];
 				if (pawn == performer)
@@ -35,7 +35,7 @@ namespace RazzleDazzle
 				}
 				else
 				{
-					PawnDuty duty = new PawnDuty(DutyDefOfRazzleDazzle.WatchPlayQuietly, performer, -1f);
+					var duty = new PawnDuty(DutyDefOfRazzleDazzle.WatchPlayQuietly, performer, -1f);
 					pawn.mindState.duty = duty;
 				}
 			}

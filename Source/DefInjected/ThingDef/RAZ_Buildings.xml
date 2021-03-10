@@ -1,22 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- Performance buildings tables -->
-
   <StageDef.label>Stage</StageDef.label>
   <StageDef.description>A stage on which to hold performances.</StageDef.description>
-
   <GrandPianoDef.label>grand piano</GrandPianoDef.label>
   <GrandPianoDef.description>A grand piano.</GrandPianoDef.description>
-
   <RazMicrophoneDef.label>microphone</RazMicrophoneDef.label>
   <RazMicrophoneDef.description>A microphone.</RazMicrophoneDef.description>
-
-
   <!-- Broadcast! -->
-
   <BroadcastTowerDef.label>Broadcaster</BroadcastTowerDef.label>
   <BroadcastTowerDef.description>A device for sending radio broadcasts.</BroadcastTowerDef.description>
-
-
 </LanguageData>

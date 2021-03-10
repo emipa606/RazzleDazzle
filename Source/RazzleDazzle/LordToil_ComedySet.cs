@@ -25,7 +25,7 @@ namespace RazzleDazzle
 		// Token: 0x060000B3 RID: 179 RVA: 0x00004BD8 File Offset: 0x00002DD8
 		public override void UpdateAllDuties()
 		{
-			for (int i = 0; i < lord.ownedPawns.Count; i++)
+			for (var i = 0; i < lord.ownedPawns.Count; i++)
 			{
 				Pawn pawn = lord.ownedPawns[i];
 				if (pawn == performer)

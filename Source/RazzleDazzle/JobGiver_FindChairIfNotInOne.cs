@@ -20,7 +20,7 @@ namespace RazzleDazzle
 		// Token: 0x0600006F RID: 111 RVA: 0x00003B94 File Offset: 0x00001D94
 		private static bool TryToFindChairNear(IntVec3 center, Pawn sitter, out Thing chair)
 		{
-			for (int i = 0; i < rpo.Count; i++)
+			for (var i = 0; i < rpo.Count; i++)
 			{
 				IntVec3 c = center + rpo[i];
 				Building edifice = c.GetEdifice(sitter.Map);
@@ -37,7 +37,7 @@ namespace RazzleDazzle
 		// Token: 0x06000070 RID: 112 RVA: 0x00003C48 File Offset: 0x00001E48
 		private static bool TryToFindGroundSpotNear(IntVec3 center, Pawn sitter, out IntVec3 result)
 		{
-			for (int i = 0; i < 30; i++)
+			for (var i = 0; i < 30; i++)
 			{
 				IntVec3 intVec = center + rpo[i];
 				if (sitter.CanReserveAndReach(intVec, PathEndMode.OnCell, Danger.None, 1, -1, null, false) && intVec.GetEdifice(sitter.Map) == null && GenSight.LineOfSight(center, intVec, sitter.Map, true, null, 0, 0) && intVec.GetFirstPawn(sitter.Map) == null)

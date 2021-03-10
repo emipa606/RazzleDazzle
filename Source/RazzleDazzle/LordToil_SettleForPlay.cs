@@ -32,7 +32,7 @@ namespace RazzleDazzle
 		// Token: 0x060000CD RID: 205 RVA: 0x00005184 File Offset: 0x00003384
 		public override void UpdateAllDuties()
 		{
-			for (int i = 0; i < lord.ownedPawns.Count; i++)
+			for (var i = 0; i < lord.ownedPawns.Count; i++)
 			{
 				Pawn pawn = lord.ownedPawns[i];
 				if (pawn == lead || pawn == support)
@@ -42,7 +42,7 @@ namespace RazzleDazzle
 				}
 				else
 				{
-					PawnDuty duty = new PawnDuty(DutyDefOfRazzleDazzle.FindSeatWithStageViewAndChat, performThing, -1f);
+					var duty = new PawnDuty(DutyDefOfRazzleDazzle.FindSeatWithStageViewAndChat, performThing, -1f);
 					pawn.mindState.duty = duty;
 				}
 			}

@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <JobDef_Rehearse.reportString>Rehearsing on TargetA.</JobDef_Rehearse.reportString>
   <JobDef_DoStartRehearsalDirectly.reportString>Rehearsing on TargetA.</JobDef_DoStartRehearsalDirectly.reportString>
   <JobDef_PerformPlay.reportString>Performing play.</JobDef_PerformPlay.reportString>
@@ -9,12 +8,7 @@
   <JobDef_PerformMusic.reportString>Playing music.</JobDef_PerformMusic.reportString>
   <JobDef_PerformComedy.reportString>Performing stand-up.</JobDef_PerformComedy.reportString>
   <JobDef_FaceObject.reportString>Woo!</JobDef_FaceObject.reportString>
-
-
   <!-- JOY JOBS -->
-
   <MuckAroundOnStage.reportString>Mucking about.</MuckAroundOnStage.reportString>
   <NoodleOnPiano.reportString>Noodling on the piano.</NoodleOnPiano.reportString>
-
-
 </LanguageData>

@@ -1,16 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <RAZ_UnfinishedPlay.label>unfinished play</RAZ_UnfinishedPlay.label>
   <RAZ_UnfinishedPlay.description>half-written. half-baked.</RAZ_UnfinishedPlay.description>
-
   <RAZ_UnfinishedMusic.label>unfinished music</RAZ_UnfinishedMusic.label>
-
   <RAZ_Play.label>play</RAZ_Play.label>
   <RAZ_Play.description>A play written by a colonist.</RAZ_Play.description>
-
   <RAZ_Composition.label>composition</RAZ_Composition.label>
   <RAZ_Composition.description>A composition written by a colonist.</RAZ_Composition.description>
-
-
 </LanguageData>

@@ -9,20 +9,14 @@ namespace RazzleDazzle
 	// Token: 0x02000014 RID: 20
 	public class JobDriver_Rehearse : JobDriver
 	{
-		// Token: 0x17000011 RID: 17
-		// (get) Token: 0x06000060 RID: 96 RVA: 0x000033F5 File Offset: 0x000015F5
-		private Building_Performance Venue
-		{
-			get
-			{
-				return (Building_Performance)job.targetA.Thing;
-			}
-		}
+        // Token: 0x17000011 RID: 17
+        // (get) Token: 0x06000060 RID: 96 RVA: 0x000033F5 File Offset: 0x000015F5
+        private Building_Performance Venue => (Building_Performance)job.targetA.Thing;
 
-		// Token: 0x06000061 RID: 97 RVA: 0x00003860 File Offset: 0x00001A60
-		public override bool TryMakePreToilReservations(bool errorOnFailed)
+        // Token: 0x06000061 RID: 97 RVA: 0x00003860 File Offset: 0x00001A60
+        public override bool TryMakePreToilReservations(bool errorOnFailed)
 		{
-			int stackCount = (Venue.VenueDef.performersNeeded > 1) ? 0 : -1;
+			var stackCount = (Venue.VenueDef.performersNeeded > 1) ? 0 : -1;
 			return pawn.Reserve(Venue, job, Venue.VenueDef.performersNeeded, stackCount, null, errorOnFailed);
 		}
 

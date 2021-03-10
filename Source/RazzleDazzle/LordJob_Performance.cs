@@ -10,38 +10,20 @@ namespace RazzleDazzle
 	// Token: 0x0200001C RID: 28
 	public class LordJob_Performance : LordJob_VoluntarilyJoinable
 	{
-		// Token: 0x17000013 RID: 19
-		// (get) Token: 0x0600007C RID: 124 RVA: 0x00003EAD File Offset: 0x000020AD
-		public Building_Performance Venue
-		{
-			get
-			{
-				return venue;
-			}
-		}
+        // Token: 0x17000013 RID: 19
+        // (get) Token: 0x0600007C RID: 124 RVA: 0x00003EAD File Offset: 0x000020AD
+        public Building_Performance Venue => venue;
 
-		// Token: 0x17000014 RID: 20
-		// (get) Token: 0x0600007D RID: 125 RVA: 0x00003EB5 File Offset: 0x000020B5
-		public Pawn Lead
-		{
-			get
-			{
-				return venue.Lead;
-			}
-		}
+        // Token: 0x17000014 RID: 20
+        // (get) Token: 0x0600007D RID: 125 RVA: 0x00003EB5 File Offset: 0x000020B5
+        public Pawn Lead => venue.Lead;
 
-		// Token: 0x17000015 RID: 21
-		// (get) Token: 0x0600007E RID: 126 RVA: 0x00003EC2 File Offset: 0x000020C2
-		public Pawn Support
-		{
-			get
-			{
-				return venue.Support;
-			}
-		}
+        // Token: 0x17000015 RID: 21
+        // (get) Token: 0x0600007E RID: 126 RVA: 0x00003EC2 File Offset: 0x000020C2
+        public Pawn Support => venue.Support;
 
-		// Token: 0x0600007F RID: 127 RVA: 0x00003ECF File Offset: 0x000020CF
-		public LordJob_Performance()
+        // Token: 0x0600007F RID: 127 RVA: 0x00003ECF File Offset: 0x000020CF
+        public LordJob_Performance()
 		{
 		}
 
@@ -138,12 +120,12 @@ namespace RazzleDazzle
 		// Token: 0x0600008B RID: 139 RVA: 0x000041B8 File Offset: 0x000023B8
 		protected virtual float GetFinalQuality()
 		{
-			float num = (float)GetQualityModifier(Venue.artQuality);
-			float num2 = (float)GetQualityModifier(QualityUtility.GenerateQualityCreatedByPawn(Lead, SkillDefOf.Social));
-			float statModifier = GetStatModifier();
+			var num = (float)GetQualityModifier(Venue.artQuality);
+			var num2 = (float)GetQualityModifier(QualityUtility.GenerateQualityCreatedByPawn(Lead, SkillDefOf.Social));
+			var statModifier = GetStatModifier();
 			if (Venue.VenueDef.performersNeeded > 1)
 			{
-				num2 = 0.6f * num2 + 0.4f * (float)GetQualityModifier(QualityUtility.GenerateQualityCreatedByPawn(Support, SkillDefOf.Social));
+				num2 = (0.6f * num2) + (0.4f * (float)GetQualityModifier(QualityUtility.GenerateQualityCreatedByPawn(Support, SkillDefOf.Social)));
 			}
 			num2 *= statModifier;
 			return Rand.Range(num2, num2 + num);
@@ -152,7 +134,7 @@ namespace RazzleDazzle
 		// Token: 0x0600008C RID: 140 RVA: 0x00004240 File Offset: 0x00002440
 		protected int GetQualityModifier(QualityCategory qc)
 		{
-			int result = 0;
+			var result = 0;
 			switch (qc)
 			{
 			case QualityCategory.Awful:
@@ -208,7 +190,7 @@ namespace RazzleDazzle
 		// Token: 0x06000090 RID: 144 RVA: 0x0000432C File Offset: 0x0000252C
 		public virtual void GiveWatchedPlayThoughts()
 		{
-			float finalQuality = GetFinalQuality();
+			var finalQuality = GetFinalQuality();
 			if (finalQuality >= 14f)
 			{
 				if (Venue.VenueDef.performersNeeded > 1)
@@ -227,7 +209,7 @@ namespace RazzleDazzle
 					});
 				}
 			}
-			string messageForQualityLevel = GetMessageForQualityLevel(finalQuality);
+			var messageForQualityLevel = GetMessageForQualityLevel(finalQuality);
 			ThoughtDef thoughtForQualityLevel = GetThoughtForQualityLevel(finalQuality);
 			foreach (Pawn pawn in lord.ownedPawns)
 			{
@@ -291,7 +273,7 @@ namespace RazzleDazzle
 		// Token: 0x06000093 RID: 147 RVA: 0x000045A4 File Offset: 0x000027A4
 		public override StateGraph CreateGraph()
 		{
-			StateGraph stateGraph = new StateGraph();
+			var stateGraph = new StateGraph();
 			LordToil lordToil = new LordToil_PrePerformance(Venue);
 			LordToil lordToil2 = new LordToil_SettleForPerformance(Venue);
 			LordToil performanceLordToil = GetPerformanceLordToil();
@@ -300,9 +282,9 @@ namespace RazzleDazzle
 			stateGraph.AddToil(lordToil2);
 			stateGraph.AddToil(performanceLordToil);
 			stateGraph.AddToil(lordToil3);
-			Transition transition = new Transition(lordToil, lordToil2, false, true);
-			Transition transition2 = new Transition(lordToil, lordToil3, false, true);
-			Transition transition3 = new Transition(lordToil, lordToil3, false, true);
+			var transition = new Transition(lordToil, lordToil2, false, true);
+			var transition2 = new Transition(lordToil, lordToil3, false, true);
+			var transition3 = new Transition(lordToil, lordToil3, false, true);
 			transition.AddPreAction(new TransitionAction_Message(Translator.Translate("RAZ_PerformanceStarting"), MessageTypeDefOf.PositiveEvent, null, 1f));
 			transition.AddPreAction(new TransitionAction_Custom(delegate()
 			{
@@ -316,20 +298,20 @@ namespace RazzleDazzle
 			stateGraph.AddTransition(transition, false);
 			stateGraph.AddTransition(transition2, false);
 			stateGraph.AddTransition(transition3, false);
-			Transition transition4 = new Transition(lordToil2, performanceLordToil, false, true);
-			Transition transition5 = new Transition(lordToil2, lordToil3, false, true);
+			var transition4 = new Transition(lordToil2, performanceLordToil, false, true);
+			var transition5 = new Transition(lordToil2, lordToil3, false, true);
 			transition4.AddTrigger(new Trigger_TickCondition(() => lord.ticksInToil > 500, 1));
 			transition5.AddTrigger(new Trigger_TickCondition(() => ShouldPlayBeCalledOff(), 1));
 			stateGraph.AddTransition(transition4, false);
 			stateGraph.AddTransition(transition5, false);
-			Transition transition6 = new Transition(performanceLordToil, lordToil3, false, true);
+			var transition6 = new Transition(performanceLordToil, lordToil3, false, true);
 			transition6.AddTrigger(new Trigger_TickCondition(() => HasPerformanceFinished() || lord.ticksInToil > 16000, 1));
 			transition6.AddPreAction(new TransitionAction_EndAllJobs());
 			transition6.AddPreAction(new TransitionAction_Custom(delegate()
 			{
 				GiveWatchedPlayThoughts();
 			}));
-			Transition transition7 = new Transition(performanceLordToil, lordToil3, false, true);
+			var transition7 = new Transition(performanceLordToil, lordToil3, false, true);
 			transition7.AddTrigger(new Trigger_TickCondition(() => ShouldPlayBeCalledOff(), 1));
 			transition7.AddPreAction(new TransitionAction_Message(Translator.Translate("RAZ_PerformanceCancelledThreat"), null, 1f));
 			stateGraph.AddTransition(transition6, false);
