@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RAZ_VenueBasicInspectString>Un lieu de spectacle</RAZ_VenueBasicInspectString>
+  <RAZ_MicrophoneBasicInpectString>Un pied de micro</RAZ_MicrophoneBasicInpectString>
+  <RAZ_StageBasicInspectString>Les planches!</RAZ_StageBasicInspectString>
+  <RAZ_Rehearsal_Venue>Répétition en cours: {0}</RAZ_Rehearsal_Venue>
+  <RAZ_Rehearsal_Performer>Avec {PAWN_labelShort}</RAZ_Rehearsal_Performer>
+  <RAZ_Rehearsal_Performers>Avec {PAWN1_labelShort} et {PAWN2_labelShort}</RAZ_Rehearsal_Performers>
+  <RAZ_Rehearsal_Progress>{0} terminé</RAZ_Rehearsal_Progress>
+  <RAZ_Rehearsal_Microphone>Préparation de la dernière série de {PAWN_labelShort}</RAZ_Rehearsal_Microphone>
+  <RAZ_PerformancePending_Microphone>Ensuite: la dernière série de {PAWN_labelShort}</RAZ_PerformancePending_Microphone>
+  <RAZ_MessageRehearsalsDelayed>Les répétitions ont été reportées car {PAWN_labelShort} ne peut plus jouer.</RAZ_MessageRehearsalsDelayed>
+  <RAZ_ReplaceLead>Remplacer l'acte principal</RAZ_ReplaceLead>
+  <RAZ_ReplaceSupport>Remplacer l'acte de soutien</RAZ_ReplaceSupport>
+  <RAZ_PerformancePending>Performance en attente: {0}</RAZ_PerformancePending>
+  <RAZ_PerformanceStarting>Une représentation commence.</RAZ_PerformanceStarting>
+  <RAZ_PerformanceCancelledLate>Le spectacle a été annulé car l'artiste n'est pas arrivé à l'heure.</RAZ_PerformanceCancelledLate>
+  <RAZ_PerformanceCancelledThreat>Le spectacle a été annulé en raison d'une menace pour la colonie!</RAZ_PerformanceCancelledThreat>
+  <RAZ_ConcertFinished>Le concert est terminé. {0}.</RAZ_ConcertFinished>
+  <RAZ_ConcertFinishedHated>C'était atroce (-5)</RAZ_ConcertFinishedHated>
+  <RAZ_ConcertFinishedGood>C'était très amusant (+5)</RAZ_ConcertFinishedGood>
+  <RAZ_ConcertFinishedGreat>C'était super (+10)</RAZ_ConcertFinishedGreat>
+  <RAZ_ConcertFinishedPeerless>C'était sublime (+12)</RAZ_ConcertFinishedPeerless>
+  <RAZ_ComedyFinished>L'acte est terminé. {0}.</RAZ_ComedyFinished>
+  <RAZ_ComedyFinishedHated>Tout le monde a détesté (-3)</RAZ_ComedyFinishedHated>
+  <RAZ_ComedyFinishedGood>C'était très amusant (+3)</RAZ_ComedyFinishedGood>
+  <RAZ_ComedyFinishedGreat>Tout le monde a adoré (+6)</RAZ_ComedyFinishedGreat>
+  <RAZ_ComedyFinishedPeerless>C'était une performance sans égal (+8)</RAZ_ComedyFinishedPeerless>
+  <RAZ_PlayFinished>La pièce est terminée. {0}.</RAZ_PlayFinished>
+  <RAZ_PlayFinishedHated>Tout le monde est soulagé que ce soit terminé (-5)</RAZ_PlayFinishedHated>
+  <RAZ_PlayFinishedGood>Il a été généralement bien accueilli (+5)</RAZ_PlayFinishedGood>
+  <RAZ_PlayFinishedGreat>C'était excellent (+10)</RAZ_PlayFinishedGreat>
+  <RAZ_PlayFinishedPeerless>Ça a changé ma vie (+12)</RAZ_PlayFinishedPeerless>
+  <RAZ_BroadcasterInspectString>Votre réputation de diffusion actuelle est {0}\nVotre cohérence de diffusion est {1}</RAZ_BroadcasterInspectString>
+  <RAZ_BroadcastQuality_Execrable>exécrable</RAZ_BroadcastQuality_Execrable>
+  <RAZ_BroadcastQuality_Uninspiring>pas inspiré</RAZ_BroadcastQuality_Uninspiring>
+  <RAZ_BroadcastQuality_Decent>pas mal</RAZ_BroadcastQuality_Decent>
+  <RAZ_BroadcastQuality_Good>bon</RAZ_BroadcastQuality_Good>
+  <RAZ_BroadcastQuality_Great>excellent</RAZ_BroadcastQuality_Great>
+  <RAZ_BroadcastQuality_Outstanding>exceptionnel</RAZ_BroadcastQuality_Outstanding>
+  <RAZ_BroadcastRegularity_OffAir>constamment hors de l'air</RAZ_BroadcastRegularity_OffAir>
+  <RAZ_BroadcastRegularity_Terrible>nul</RAZ_BroadcastRegularity_Terrible>
+  <RAZ_BroadcastRegularity_Poor>mauvais</RAZ_BroadcastRegularity_Poor>
+  <RAZ_BroadcastRegularity_Adequate>pas mal</RAZ_BroadcastRegularity_Adequate>
+  <RAZ_BroadcastRegularity_Good>bien</RAZ_BroadcastRegularity_Good>
+  <RAZ_BroadcastRegularity_Great>très bien</RAZ_BroadcastRegularity_Great>
+  <RAZ_BroadcastRegularity_Perfect>parfait</RAZ_BroadcastRegularity_Perfect>
+  <RAZ_MessageSeasonEnd>Votre saison de diffusion est terminée. {0}</RAZ_MessageSeasonEnd>
+  <RAZ_SeasonPositive>It is the talk of the planet, and all civilised factions are warming to you.</RAZ_SeasonPositive>
+  <RAZ_SeasonNeutral>Il a été généralement bien reçu par les autres factions.</RAZ_SeasonNeutral>
+  <RAZ_SeasonNegative>Vos voisins n'aiment pas la façon dont vous polluez les ondes avec des ronflements.</RAZ_SeasonNegative>
+  <RAZ_MessagePaymentArrived>Les paiements d'abonnement sont arrivés de {0}.</RAZ_MessagePaymentArrived>
+</LanguageData>

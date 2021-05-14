@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PerformedInExtremelyImpressiveSpace.stages.0.label>a joué dans un théâtre extrêmement impressionant</PerformedInExtremelyImpressiveSpace.stages.0.label>
+  <PerformedInExtremelyImpressiveSpace.stages.0.description>J'ai toujours rêvé de jouer dans un tel endroit.</PerformedInExtremelyImpressiveSpace.stages.0.description>
+  <PerformedInVeryImpressiveSpace.stages.0.label>a joué dans un théâtre très impressionant</PerformedInVeryImpressiveSpace.stages.0.label>
+  <PerformedInVeryImpressiveSpace.stages.0.description>Je suis heureux de pouvoir jouer dans un endroit aussi merveilleux.</PerformedInVeryImpressiveSpace.stages.0.description>
+  <PerformedInImpressiveSpace.stages.0.label>a joué dans un théâtre impressionant</PerformedInImpressiveSpace.stages.0.label>
+  <PerformedInImpressiveSpace.stages.0.description>J'apprécie jouer dans un bel endroit.</PerformedInImpressiveSpace.stages.0.description>
+  <Performed.stages.0.label>a fait une performance artistique pour la colonie</Performed.stages.0.label>
+  <Performed.stages.0.description>Montrez mon art à ce monde!</Performed.stages.0.description>
+  <SawBadPlay.stages.0.label>On m'a montré une mauvaise performance</SawBadPlay.stages.0.label>
+  <SawBadPlay.stages.0.description>J'ai dû assister à ça!</SawBadPlay.stages.0.description>
+  <SawPlay.stages.0.label>J'ai vu la performance</SawPlay.stages.0.label>
+  <SawPlay.stages.0.description>Je suis content d'avoir apprécié.</SawPlay.stages.0.description>
+  <SawGoodPlay.stages.0.label>A apprécié une bonne performance</SawGoodPlay.stages.0.label>
+  <SawGoodPlay.stages.0.description>C'est super d'avoir du temps pour l'art!</SawGoodPlay.stages.0.description>
+  <SawAmazingPlay.stages.0.label>J'ai assisté à une merveilleuse performance</SawAmazingPlay.stages.0.label>
+  <SawAmazingPlay.stages.0.description>Cette représentation a changé ma vie.</SawAmazingPlay.stages.0.description>
+  <AttendedBadConcert.stages.0.label>A assisté à un mauvais concert</AttendedBadConcert.stages.0.label>
+  <AttendedBadConcert.stages.0.description>Eh bien, c'est comme une explosion quand Bomalove est mort.</AttendedBadConcert.stages.0.description>
+  <AttendedConcert.stages.0.label>A assisté à un concert</AttendedConcert.stages.0.label>
+  <AttendedConcert.stages.0.description>J'ai écouté de la musique amusante dans un moment de détente.</AttendedConcert.stages.0.description>
+  <AttendedGoodConcert.stages.0.label>A assisté à un bon concert</AttendedGoodConcert.stages.0.label>
+  <AttendedGoodConcert.stages.0.description>C'est du rock!</AttendedGoodConcert.stages.0.description>
+  <AttendedAmazingConcert.stages.0.label>A assisté à un grand concert</AttendedAmazingConcert.stages.0.label>
+  <AttendedAmazingConcert.stages.0.description>C'est ma musique soul!</AttendedAmazingConcert.stages.0.description>
+  <AttendedBadGig.stages.0.label>A assisté à un mauvais concert</AttendedBadGig.stages.0.label>
+  <AttendedBadGig.stages.0.description>C'était très ennuyeux pour les invités de se taire</AttendedBadGig.stages.0.description>
+  <AttendedGig.stages.0.label>A assisté au concert</AttendedGig.stages.0.label>
+  <AttendedGig.stages.0.description>J'ai fait quelques erreurs en jouant, mais c'était plutôt bien.</AttendedGig.stages.0.description>
+  <AttendedGoodGig.stages.0.label>A assisté à un bon concert</AttendedGoodGig.stages.0.label>
+  <AttendedGoodGig.stages.0.description>C'était très habile et intéressant!</AttendedGoodGig.stages.0.description>
+  <AttendedAmazingGig.stages.0.label>A assisté à un merveilleux concert</AttendedAmazingGig.stages.0.label>
+  <AttendedAmazingGig.stages.0.description>Je ne peux plus voir un Muffalo comme avant!</AttendedAmazingGig.stages.0.description>
+</LanguageData>

@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- ArtNameUtility RAZ_ArtName_Composition -->
+  <RAZ_ArtName_Composition.rulePack.rulesStrings>
+    <li>r_art_name-&gt;[musictype1] pour [ANYPAWN_nameIndef]</li>
+    <li>r_art_name-&gt;[musictype1] n° [RomanNumeral]</li>
+    <li>r_art_name-&gt;[musictype1] [musicdesc] n° [RomanNumeral]</li>
+    <li>r_art_name-&gt;[musictype1] n° [RomanNumeral] dans [key] [keyvar]</li>
+    <li>r_art_name-&gt;La suite de [ANYPAWN_nameIndef]</li>
+    <li>r_art_name-&gt;[ConceptAny] et [ConceptAny]</li>
+    <li>r_art_name-&gt;[ConceptAny]</li>
+    <li>r_art_name-&gt;Dance de [characterType]</li>
+    <li>r_art_name-&gt;[objectMaterial] [ConceptAny]</li>
+    <li>r_art_name-&gt;[objectMaterial] [abstractNoun]</li>
+    <li>r_art_name-&gt;[AnimalBadass] [Letter]</li>
+    <li>r_art_name-&gt;[oneSylAdj] [oneSylNoun] pour l'ancien [abstractNoun]</li>
+    <li>r_art_name-&gt;[Animal][twoSylNoun]s</li>
+    <li>musictype1-&gt;Concerto</li>
+    <li>musictype1-&gt;Symphony</li>
+    <li>musictype1-&gt;Adagio</li>
+    <li>musictype1-&gt;Nocturne</li>
+    <li>musictype1-&gt;Meditation</li>
+    <li>musictype1-&gt;Canon</li>
+    <li>musictype1-&gt;Polka</li>
+    <li>musictype1-&gt;Sonata</li>
+    <li>musictype1-&gt;Solo</li>
+    <li>musictype1-&gt;Requiem</li>
+    <li>musictype1-&gt;Gymnopedie</li>
+    <li>musictype1-&gt;Ragtime</li>
+    <li>musictype1-&gt;Serenade</li>
+    <li>musictype2-&gt;Ballad</li>
+    <li>musictype2-&gt;Serenade</li>
+    <li>musictype2-&gt;Serenade</li>
+    <li>musictype2-&gt;Serenade</li>
+    <li>musictype2-&gt;Serenade</li>
+    <li>musictype2-&gt;Serenade</li>
+    <li>musictype2-&gt;Serenade</li>
+    <li>musictype2-&gt;Serenade</li>
+    <li>musictype2-&gt;Serenade</li>
+    <li>musicdesc-&gt;Allegro</li>
+    <li>musicdesc-&gt;Grosso</li>
+    <li>musicdesc-&gt;Arrabbiato</li>
+    <li>musicdesc-&gt;Dolce</li>
+    <li>musicdesc-&gt;Infranto</li>
+    <li>musicdesc-&gt;Lunatico</li>
+    <li>musicdesc-&gt;Piccolo</li>
+    <li>musicdesc-&gt;Scortese</li>
+    <li>musicdesc-&gt;Triste</li>
+    <li>musicdesc-&gt;Nuovo</li>
+    <li>musicdesc-&gt;Azzurro</li>
+    <li>musicdesc-&gt;Rosso</li>
+    <li>musicdesc-&gt;Perduto</li>
+    <li>key-&gt;B flat</li>
+    <li>key-&gt;C</li>
+    <li>key-&gt;D</li>
+    <li>key-&gt;E</li>
+    <li>key-&gt;F sharp</li>
+    <li>key-&gt;G</li>
+    <li>keyvar-&gt;Majeur</li>
+    <li>keyvar-&gt;Miner</li>
+    <li>keyvar-&gt;Majeur</li>
+    <li>keyvar-&gt;Miner</li>
+    <li>keyvar-&gt;Majeur</li>
+    <li>keyvar-&gt;Miner</li>
+    <li>keyvar-&gt;Diminished</li>
+    <li>characterType-&gt;Raider</li>
+    <li>characterType-&gt;Tribesperson</li>
+    <li>characterType-&gt;Colon</li>
+    <li>characterType-&gt;Pirate</li>
+    <li>characterType-&gt;Textiles Trader</li>
+    <li>characterType-&gt;Traveller</li>
+    <li>characterType-&gt;Muffalo Herder</li>
+    <li>characterType-&gt;Thrumbo Charmer</li>
+    <li>characterType-&gt;Boomrat Messiah</li>
+    <li>characterType-&gt;Boomalope Trainer</li>
+    <li>characterType-&gt;Chamane</li>
+    <li>characterType-&gt;Wandering Player</li>
+    <li>characterType-&gt;Devilstrand Farmer</li>
+    <li>characterType-&gt;Megatherum Rider</li>
+    <li>characterType-&gt;Vatgrown Soldier</li>
+    <li>characterType-&gt;Scientifique</li>
+    <li>characterType-&gt;Esclave</li>
+    <li>objectMaterial-&gt;Or</li>
+    <li>objectMaterial-&gt;Rubber</li>
+    <li>objectMaterial-&gt;Epoxy</li>
+    <li>objectMaterial-&gt;Argent</li>
+    <li>objectMaterial-&gt;Acier</li>
+    <li>objectMaterial-&gt;Bronze</li>
+    <li>objectMaterial-&gt;Plastacier</li>
+    <li>objectMaterial-&gt;Uranium</li>
+    <li>objectMaterial-&gt;Tantale</li>
+    <li>objectMaterial-&gt;Titane</li>
+    <li>objectMaterial-&gt;Pierre</li>
+    <li>objectMaterial-&gt;Copper</li>
+    <li>objectMaterial-&gt;Plastique</li>
+    <li>objectMaterial-&gt;Memory Foam</li>
+    <li>objectMaterial-&gt;Sapient Pearwood</li>
+    <li>objectMaterial-&gt;Ash</li>
+    <li>objectMaterial-&gt;Tin</li>
+    <li>objectMaterial-&gt;Aluminium</li>
+    <li>objectMaterial-&gt;Fullerine</li>
+    <li>objectMaterial-&gt;Marbre</li>
+    <li>objectMaterial-&gt;Ardoise</li>
+    <li>objectMaterial-&gt;Granite</li>
+    <li>objectMaterial-&gt;Calcaire</li>
+    <li>abstractNoun-&gt;Ame</li>
+    <li>abstractNoun-&gt;Coeur</li>
+    <li>abstractNoun-&gt;Hunger</li>
+    <li>abstractNoun-&gt;Thirst</li>
+    <li>abstractNoun-&gt;Rédemption</li>
+    <li>abstractNoun-&gt;Amitié</li>
+    <li>abstractNoun-&gt;Transcendence</li>
+    <li>abstractNoun-&gt;Dream State</li>
+    <li>abstractNoun-&gt;Wonder</li>
+    <li>abstractNoun-&gt;Companionship</li>
+    <li>abstractNoun-&gt;Laughter</li>
+    <li>abstractNoun-&gt;Comédie</li>
+    <li>abstractNoun-&gt;Hystérique</li>
+    <li>abstractNoun-&gt;Desperation</li>
+    <li>abstractNoun-&gt;Espoir</li>
+    <li>abstractNoun-&gt;Housekeeping</li>
+    <li>abstractNoun-&gt;Cérémonie</li>
+    <li>abstractNoun-&gt;Play</li>
+    <li>abstractNoun-&gt;Mariage</li>
+    <li>abstractNoun-&gt;Fête</li>
+    <li>abstractNoun-&gt;Jeu</li>
+    <li>abstractNoun-&gt;Remembrance</li>
+    <li>abstractNoun-&gt;Révélation</li>
+    <li>abstractNoun-&gt;Résurrection</li>
+    <li>abstractNoun-&gt;Aventure</li>
+    <li>abstractNoun-&gt;Lune de miel</li>
+    <li>abstractNoun-&gt;Dance</li>
+    <li>abstractNoun-&gt;Amour</li>
+    <li>abstractNoun-&gt;Mensonge</li>
+    <li>abstractNoun-&gt;Révolution</li>
+    <li>abstractNoun-&gt;Réflexion</li>
+    <li>abstractNoun-&gt;Raspoutine</li>
+    <li>abstractNoun-&gt;Chorale</li>
+    <li>abstractNoun-&gt;Temps</li>
+    <li>oneSylAdj-&gt;Nouveau</li>
+    <li>oneSylAdj-&gt;Rouge</li>
+    <li>oneSylAdj-&gt;Bleu</li>
+    <li>oneSylAdj-&gt;Rapide</li>
+    <li>oneSylAdj-&gt;Whole</li>
+    <li>oneSylAdj-&gt;Neat</li>
+    <li>oneSylAdj-&gt;Vert</li>
+    <li>oneSylAdj-&gt;Or</li>
+    <li>oneSylAdj-&gt;Trite</li>
+    <li>oneSylAdj-&gt;One</li>
+    <li>oneSylAdj-&gt;Froid</li>
+    <li>oneSylAdj-&gt;Chaud</li>
+    <li>oneSylAdj-&gt;Fine</li>
+    <li>oneSylAdj-&gt;Bold</li>
+    <li>oneSylAdj-&gt;Soft</li>
+    <li>oneSylAdj-&gt;Dur</li>
+    <li>oneSylAdj-&gt;Rugueux</li>
+    <li>oneSylAdj-&gt;Doux</li>
+    <li>oneSylAdj-&gt;Alcoolisé</li>
+    <li>oneSylAdj-&gt;Lent</li>
+    <li>oneSylAdj-&gt;Noire</li>
+    <li>oneSylAdj-&gt;Sombre</li>
+    <li>oneSylAdj-&gt;Fatiguée</li>
+    <li>oneSylAdj-&gt;pensée</li>
+    <li>oneSylAdj-&gt;Pure</li>
+    <li>oneSylAdj-&gt;Perdu</li>
+    <li>oneSylAdj-&gt;Loathed</li>
+    <li>oneSylAdj-&gt;Aimé</li>
+    <li>oneSylAdj-&gt;Trempé</li>
+    <li>oneSylAdj-&gt;Humide</li>
+    <li>oneSylNoun-&gt;Peau</li>
+    <li>oneSylNoun-&gt;Pistolet</li>
+    <li>oneSylNoun-&gt;Chapeau</li>
+    <li>oneSylNoun-&gt;Chat</li>
+    <li>oneSylNoun-&gt;Fauteuil</li>
+    <li>oneSylNoun-&gt;Pièce</li>
+    <li>oneSylNoun-&gt;Corde</li>
+    <li>oneSylNoun-&gt;Feet</li>
+    <li>oneSylNoun-&gt;Boot</li>
+    <li>oneSylNoun-&gt;Coat</li>
+    <li>oneSylNoun-&gt;Lune</li>
+    <li>oneSylNoun-&gt;Soleil</li>
+    <li>oneSylNoun-&gt;Etoile</li>
+    <li>oneSylNoun-&gt;Ship</li>
+    <li>oneSylNoun-&gt;Plate</li>
+    <li>oneSylNoun-&gt;Couteau</li>
+    <li>oneSylNoun-&gt;Epée</li>
+    <li>oneSylNoun-&gt;Cuillère</li>
+    <li>oneSylNoun-&gt;Wasp</li>
+    <li>oneSylNoun-&gt;Rat</li>
+    <li>oneSylNoun-&gt;Fumée</li>
+    <li>oneSylNoun-&gt;Slab</li>
+    <li>oneSylNoun-&gt;Poisson</li>
+    <li>oneSylNoun-&gt;Card</li>
+    <li>oneSylNoun-&gt;Verre</li>
+    <li>oneSylNoun-&gt;Mug</li>
+    <li>oneSylNoun-&gt;Lumière</li>
+    <li>oneSylNoun-&gt;Lit</li>
+    <li>oneSylNoun-&gt;Lampe</li>
+    <li>oneSylNoun-&gt;Coupe</li>
+    <li>oneSylNoun-&gt;Flamme</li>
+    <li>oneSylNoun-&gt;Feu</li>
+    <li>oneSylNoun-&gt;Arbre</li>
+    <li>oneSylNoun-&gt;Hand</li>
+    <li>oneSylNoun-&gt;Map</li>
+    <li>oneSylNoun-&gt;Clock</li>
+    <li>oneSylNoun-&gt;Blade</li>
+    <li>oneSylNoun-&gt;Shrine</li>
+    <li>oneSylNoun-&gt;Rules</li>
+    <li>oneSylNoun-&gt;Path</li>
+    <li>animalType-&gt;Thrumbo</li>
+    <li>animalType-&gt;Muffalo</li>
+    <li>animalType-&gt;Megatherum</li>
+    <li>animalType-&gt;Renard</li>
+    <li>animalType-&gt;Loup</li>
+    <li>animalType-&gt;Chat</li>
+    <li>animalType-&gt;Swan</li>
+    <li>animalType-&gt;Puffin</li>
+    <li>animalType-&gt;Pingouin</li>
+    <li>animalType-&gt;Warg</li>
+    <li>animalType-&gt;Alphabeaver</li>
+    <li>animalType-&gt;Labrador</li>
+    <li>animalType-&gt;Husky</li>
+    <li>animalType-&gt;Alpaga</li>
+    <li>animalType-&gt;Ecureuil</li>
+    <li>animalType-&gt;Swordfish</li>
+    <li>animalType-&gt;Rat</li>
+    <li>animalType-&gt;poulet</li>
+    <li>twoSylNoun-&gt;trombone</li>
+    <li>twoSylNoun-&gt;clarinette</li>
+    <li>twoSylNoun-&gt;guitare</li>
+    <li>twoSylNoun-&gt;piano</li>
+    <li>twoSylNoun-&gt;tronçonneuse</li>
+    <li>twoSylNoun-&gt;hammock</li>
+    <li>twoSylNoun-&gt;hatstand</li>
+    <li>twoSylNoun-&gt;photographe</li>
+    <li>twoSylNoun-&gt;footrest</li>
+    <li>twoSylNoun-&gt;lampshade</li>
+    <li>twoSylNoun-&gt;spaceship</li>
+    <li>twoSylNoun-&gt;basse</li>
+    <li>twoSylNoun-&gt;oboe</li>
+    <li>twoSylNoun-&gt;tuba</li>
+    <li>twoSylNoun-&gt;trompette</li>
+    <li>twoSylNoun-&gt;doorstop</li>
+  </RAZ_ArtName_Composition.rulePack.rulesStrings>
+  <RAZ_ArtDescription_Composition.rulePack.rulesStrings>
+    <li>r_art_description-&gt;Une pièce musicale qui exprime [Concept Any].</li>
+  </RAZ_ArtDescription_Composition.rulePack.rulesStrings>
+</LanguageData>

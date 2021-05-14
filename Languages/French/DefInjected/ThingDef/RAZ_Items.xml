@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RAZ_UnfinishedPlay.label>Pièce inachevée</RAZ_UnfinishedPlay.label>
+  <RAZ_UnfinishedPlay.description>J'ai pu en écrire la moitié. Seulement à moitié fait.</RAZ_UnfinishedPlay.description>
+  <RAZ_UnfinishedMusic.label>composition inachevée</RAZ_UnfinishedMusic.label>
+  <RAZ_Play.label>Pièce de théâtre</RAZ_Play.label>
+  <RAZ_Play.description>Scénario théâtral écrit par les colons.</RAZ_Play.description>
+  <RAZ_Composition.label>Composition</RAZ_Composition.label>
+  <RAZ_Composition.description>Une composition écrite par un colon</RAZ_Composition.description>
+</LanguageData>

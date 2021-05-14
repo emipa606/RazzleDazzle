@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <WorkGiver_Rehearser.label>répétition</WorkGiver_Rehearser.label>
+  <WorkGiver_Rehearser.verb>répétition</WorkGiver_Rehearser.verb>
+  <WorkGiver_Rehearser.gerund>répète</WorkGiver_Rehearser.gerund>
+  <WorkGiver_PreparePerformance.label>Préparer une performance</WorkGiver_PreparePerformance.label>
+  <WorkGiver_PreparePerformance.verb>Préparer une performance</WorkGiver_PreparePerformance.verb>
+  <WorkGiver_PreparePerformance.gerund>Prépare une performance</WorkGiver_PreparePerformance.gerund>
+  <WorkGiver_DoBillsAtGrandPiano.label>Composer de la musiqueく</WorkGiver_DoBillsAtGrandPiano.label>
+  <WorkGiver_DoBillsAtGrandPiano.verb>Composer de la musique</WorkGiver_DoBillsAtGrandPiano.verb>
+  <WorkGiver_DoBillsAtGrandPiano.gerund>Compose de la musique</WorkGiver_DoBillsAtGrandPiano.gerund>
+</LanguageData>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RAZ_StagePlay.label>Mettre en scène</RAZ_StagePlay.label>
+  <RAZ_StagePlay.description>Mettez en scène une pièce écrite ou achetée par vos colons.</RAZ_StagePlay.description>
+  <RAZ_StagePlay.jobString>met en scène</RAZ_StagePlay.jobString>
+  <RAZ_WritePlay.label>Ecrire une pièceく</RAZ_WritePlay.label>
+  <RAZ_WritePlay.description>Ecrire une oeuvre dramatique pour la scèneく</RAZ_WritePlay.description>
+  <RAZ_WritePlay.jobString>écrit une pièce</RAZ_WritePlay.jobString>
+  <RAZ_ComposeMusic.label>composer de la musique</RAZ_ComposeMusic.label>
+  <RAZ_ComposeMusic.description>Composez un morceau de musique</RAZ_ComposeMusic.description>
+  <RAZ_ComposeMusic.jobString>compose un morceau</RAZ_ComposeMusic.jobString>
+  <BurnPerformance.label>graver une performance</BurnPerformance.label>
+  <BurnPerformance.description>graver une performance</BurnPerformance.description>
+  <BurnPerformance.jobString>grave une performance</BurnPerformance.jobString>
+</LanguageData>

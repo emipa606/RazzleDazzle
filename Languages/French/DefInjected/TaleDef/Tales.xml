@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PerformedPlay.label>Jouer une pièce</PerformedPlay.label>
+  <PerformedPlay.rulePack.rulesStrings.0>tale_noun-&gt;Acteurs célèbres de [lead_nameFull] et [support_nameFull]</PerformedPlay.rulePack.rulesStrings.0>
+  <PerformedPlay.rulePack.rulesStrings.1>image-&gt;[lead_nameShortDef] et [support_nameShortDef] jouent en jouant sur la scène [circumstance_group].</PerformedPlay.rulePack.rulesStrings.1>
+  <PerformedPlay.rulePack.rulesStrings.2>image-&gt;[lead_nameShortDef] et [support_nameShortDef] jouent en jouant sur la scène [circumstance_group].</PerformedPlay.rulePack.rulesStrings.2>
+  <PerformedPlay.rulePack.rulesStrings.3>image-&gt;[circumstance_group] [lead_nameShortDef] regarde dans l'abîme de l'âme, tandis que [support_nameShortDef] danse avec un regard ennuyeux.</PerformedPlay.rulePack.rulesStrings.3>
+  <PerformedPlay.rulePack.rulesStrings.4>image-&gt;[lead_nameShortDef] et [support_nameShortDef] se regardent avec amour tout au long de la scène [circumstance_group].</PerformedPlay.rulePack.rulesStrings.4>
+  <PerformedPlay.rulePack.rulesStrings.5>image-&gt;[lead_nameShortDef] semble méprisé car [circumstance_group] [support_nameShortDef] a manqué la partie [support_possessive]。</PerformedPlay.rulePack.rulesStrings.5>
+  <PerformedPlay.rulePack.rulesStrings.6>image-&gt;[Lead_nameShortDef] a été rapidement masqué car [support_nameShortDef] a manqué la partie [circumstance_group] [support_possessive].</PerformedPlay.rulePack.rulesStrings.6>
+  <PerformedPlay.rulePack.rulesStrings.7>image-&gt;[lead_nameShortDef] s'est caché à la hâte parce que [support_nameShortDef] a manqué la partie [circumstance_group] [support_possessive].</PerformedPlay.rulePack.rulesStrings.7>
+  <PerformedPlay.rulePack.rulesStrings.8>image-&gt;Avant que [support_nameShortDef] regarde [circumstance_group] avec un regard fasciné, [lead_nameShortDef] parle avec des larmes.</PerformedPlay.rulePack.rulesStrings.8>
+  <PerformedPlay.rulePack.rulesStrings.9>image-&gt;[lead_nameShortDef] parle avec des larmes avant que [support_nameShortDef] regarde [circumstance_group] avec un regard fascinant.</PerformedPlay.rulePack.rulesStrings.9>
+  <PerformedPlay.rulePack.rulesStrings.10>image-&gt;[lead_nameShortDef] continue de crier dans des batailles enthousiastes dans différentes performances, et [circumstance_group] tout au long de [support_nameShortDef] passe du temps à cueillir les pétales un par un des roses.</PerformedPlay.rulePack.rulesStrings.10>
+  <PerformedPlay.rulePack.rulesStrings.11>circumstance_phrase-&gt;Pendant que le public bourdonne et tremble</PerformedPlay.rulePack.rulesStrings.11>
+  <PerformedPlay.rulePack.rulesStrings.12>circumstance_phrase-&gt;Dans le support bruyant du public</PerformedPlay.rulePack.rulesStrings.12>
+  <PerformedPlay.rulePack.rulesStrings.13>circumstance_phrase-&gt;Pendant que le dispositif de compression de scène ne fonctionne pas correctement</PerformedPlay.rulePack.rulesStrings.13>
+  <PerformedPlay.rulePack.rulesStrings.14>circumstance_phrase-&gt;Regarder le public étant complètement silencieux</PerformedPlay.rulePack.rulesStrings.14>
+  <PerformedPlay.rulePack.rulesStrings.15>circumstance_phrase-&gt;Les deux ignorent le silencieux que quelqu'un a malicieusement mis</PerformedPlay.rulePack.rulesStrings.15>
+  <PerformedPlay.rulePack.rulesStrings.16>circumstance_phrase-&gt;En portant les costumes les uns des autres en raison de l'erreur de l'administrateur de scène</PerformedPlay.rulePack.rulesStrings.16>
+  <PerformedPlay.rulePack.rulesStrings.17>desc_sentence-&gt;[lead_nameShortDef]Versez une larme dans les joues [lead_possessive].</PerformedPlay.rulePack.rulesStrings.17>
+  <PerformedPlay.rulePack.rulesStrings.18>desc_sentence-&gt;[lead_nameShortDef]Le costume de scène a été déchiré dans une scène passionnée.</PerformedPlay.rulePack.rulesStrings.18>
+  <PerformedPlay.rulePack.rulesStrings.19>desc_sentence-&gt;[lead_nameShortDef]Son attitude était audacieuse et sans vergogne.</PerformedPlay.rulePack.rulesStrings.19>
+  <PerformedPlay.rulePack.rulesStrings.20>desc_sentence-&gt;[support_nameShortDef] est un geste magnifique, essayant d'abaisser [lead_nameStringShort] au fond de la scène.</PerformedPlay.rulePack.rulesStrings.20>
+  <PerformedMusic.label>Jouer de la musique</PerformedMusic.label>
+  <PerformedMusic.rulePack.rulesStrings.0>tale_noun-&gt;Concert de [pawn_nameFull]</PerformedMusic.rulePack.rulesStrings.0>
+  <PerformedMusic.rulePack.rulesStrings.1>image-&gt;[pawn_nameShortDef] joue du piano [circumstance_group].</PerformedMusic.rulePack.rulesStrings.1>
+  <PerformedMusic.rulePack.rulesStrings.2>image-&gt;[pawn_nameShortDef] joue puissamment le clavier de piano [circumstance_group].</PerformedMusic.rulePack.rulesStrings.2>
+  <PerformedMusic.rulePack.rulesStrings.3>image-&gt;[pawn_nameShortDef] joue le score de [circumstance_group] de manière sautante.</PerformedMusic.rulePack.rulesStrings.3>
+  <PerformedMusic.rulePack.rulesStrings.4>image-&gt;[pawn_nameShortDef] joue en passant au mouvement doux [circumstance_group].</PerformedMusic.rulePack.rulesStrings.4>
+  <PerformedMusic.rulePack.rulesStrings.5>circumstance_phrase-&gt;Alors que le public est impressionné et regarde tranquillement</PerformedMusic.rulePack.rulesStrings.5>
+  <PerformedMusic.rulePack.rulesStrings.6>circumstance_phrase-&gt;Alors que le public loue la performance habile</PerformedMusic.rulePack.rulesStrings.6>
+  <PerformedMusic.rulePack.rulesStrings.7>circumstance_phrase-&gt;Alors que le public enthousiaste bouge</PerformedMusic.rulePack.rulesStrings.7>
+  <PerformedMusic.rulePack.rulesStrings.8>desc_sentence-&gt;[pawn_pronoun] jouait avec les yeux de [pawn_possessive] fermés, mais personne autour de [pawn_objective] n'en était conscient.</PerformedMusic.rulePack.rulesStrings.8>
+  <PerformedMusic.rulePack.rulesStrings.9>desc_sentence-&gt;[pawn_possessive] L'expression est une forme de passion et de conviction.</PerformedMusic.rulePack.rulesStrings.9>
+  <PerformedMusic.rulePack.rulesStrings.10>desc_sentence-&gt;La performance de [pawn_pronoun] vous fait ressentir le rythme et l'expressivité terrifiante.</PerformedMusic.rulePack.rulesStrings.10>
+  <PerformedMusic.rulePack.rulesStrings.11>desc_sentence-&gt;[pawn_pronoun] pleura modestement.</PerformedMusic.rulePack.rulesStrings.11>
+  <PerformedMusic.rulePack.rulesStrings.12>desc_sentence-&gt;[pawn_pronoun] s'arrête avec [pawn_possessive] levant son bras au-dessus du clavier et frappant puissamment dans ses mains.</PerformedMusic.rulePack.rulesStrings.12>
+  <PerformedMusic.rulePack.rulesStrings.13>desc_sentence-&gt;[pawn_pronoun] montre son talent musical inimaginable.</PerformedMusic.rulePack.rulesStrings.13>
+  <PerformedMusic.rulePack.rulesStrings.14>desc_sentence-&gt;[Animal] sort doucement du piano.</PerformedMusic.rulePack.rulesStrings.14>
+  <PerformedComedy.label>Jouer la comédie</PerformedComedy.label>
+  <PerformedComedy.rulePack.rulesStrings.0>tale_noun-&gt;Manzai de [pawn_nameFull]</PerformedComedy.rulePack.rulesStrings.0>
+  <PerformedComedy.rulePack.rulesStrings.1>tale_noun-&gt;[pawn_nameFull] narration dans le manga</PerformedComedy.rulePack.rulesStrings.1>
+  <PerformedComedy.rulePack.rulesStrings.2>image-&gt;[pawn_nameShortDef] a réalisé une narration pleine d'esprit [circumstance_group].</PerformedComedy.rulePack.rulesStrings.2>
+  <PerformedComedy.rulePack.rulesStrings.3>image-&gt;[pawn_nameShortDef] était obsédé par la narration de [circumstance_group] utilisant une mauvaise utilisation des mots parfaitement calculée.</PerformedComedy.rulePack.rulesStrings.3>
+  <PerformedComedy.rulePack.rulesStrings.4>image-&gt;[pawn_nameShortDef] a surmonté la phobie du stade [circumstance_group].</PerformedComedy.rulePack.rulesStrings.4>
+  <PerformedComedy.rulePack.rulesStrings.5>image-&gt;[pawn_nameShortDef] [circonstance_group] a choisi des spectateurs et juré.</PerformedComedy.rulePack.rulesStrings.5>
+  <PerformedComedy.rulePack.rulesStrings.6>circumstance_phrase-&gt;En réponse aux applaudissements tonitruants du public</PerformedComedy.rulePack.rulesStrings.6>
+  <PerformedComedy.rulePack.rulesStrings.7>circumstance_phrase-&gt;Le ventre du public est ri et tordu</PerformedComedy.rulePack.rulesStrings.7>
+  <PerformedComedy.rulePack.rulesStrings.8>circumstance_phrase-&gt;Confondre le public</PerformedComedy.rulePack.rulesStrings.8>
+  <PerformedComedy.rulePack.rulesStrings.9>desc_sentence-&gt;[pawn_nameShortDef] s'accroche au micro comme s'il s'agissait de sa vie</PerformedComedy.rulePack.rulesStrings.9>
+  <PerformedComedy.rulePack.rulesStrings.10>desc_sentence-&gt;[pawn_nameShortDef] balance le microphone comme une arme.</PerformedComedy.rulePack.rulesStrings.10>
+  <PerformedComedy.rulePack.rulesStrings.11>desc_sentence-&gt;[pawn_nameShortDef] rit comme un fou.</PerformedComedy.rulePack.rulesStrings.11>
+  <PerformedComedy.rulePack.rulesStrings.12>desc_sentence-&gt;[pawn_pronoun] pleure alors que [les animaux] qui entrent soudainement errent.</PerformedComedy.rulePack.rulesStrings.12>
+  <PerformedComedy.rulePack.rulesStrings.13>desc_sentence-&gt;[pawn_pronoun] exprime verbalement la fatigue motivée par le doute de soi, comme s'il y avait différents visages derrière la tête [pawn_possessive].</PerformedComedy.rulePack.rulesStrings.13>
+  <PerformedComedy.rulePack.rulesStrings.14>desc_sentence-&gt;[pawn_pronoun] décrit verbalement les voix des autres colons dans la tête de [pawn_pronoun].</PerformedComedy.rulePack.rulesStrings.14>
+</LanguageData>

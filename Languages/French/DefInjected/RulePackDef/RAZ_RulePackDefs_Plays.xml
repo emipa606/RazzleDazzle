@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- ArtNameUtility RAZ_ArtName_Composition -->
+  <RAZ_ArtName_Play.rulePack.rulesStrings>
+    <li>r_art_name-&gt;[ANYPAWN_nameIndef]</li>
+    <li>r_art_name-&gt;[drug]</li>
+    <li>r_art_name-&gt;[disease]</li>
+    <li>r_art_name-&gt;[disease] &amp; [drug]</li>
+    <li>r_art_name-&gt;[material] &amp; [drug]</li>
+    <li>r_art_name-&gt;[weapon] s &amp; [drug]</li>
+    <li>r_art_name-&gt;Le [material] [weapon]</li>
+    <li>r_art_name-&gt;[ANYPAWN_nameIndef] [romannumeral] (Part I)</li>
+    <li>r_art_name-&gt;[relationType] [ANYPAWN_nameIndef]</li>
+    <li>r_art_name-&gt;[prename] [ANYPAWN_nameIndef]</li>
+    <li>r_art_name-&gt;[preplace] [place]</li>
+    <li>r_art_name-&gt;Le [material] [furniture]</li>
+    <li>r_art_name-&gt;Le [adjective] [animal]</li>
+    <li>r_art_name-&gt;Le [adjective] [weapon]</li>
+    <li>r_art_name-&gt;Le [adjective] [furniture]</li>
+    <li>r_art_name-&gt;[preconcept] [ConceptAny]</li>
+    <li>r_art_name-&gt;[ConceptAny]</li>
+    <li>r_art_name-&gt;[prenoun] [animalType]</li>
+    <li>r_art_name-&gt;[prenoun] [weapon]</li>
+    <li>r_art_name-&gt;[animalType] sur un toit [oneSylAdj] [material]</li>
+    <li>r_art_name-&gt;Tous mes [relationType] s</li>
+    <li>r_art_name-&gt;Tous mes [animalType] s</li>
+    <li>relationType-&gt;Frère</li>
+    <li>relationType-&gt;Soeur</li>
+    <li>relationType-&gt;Oncle</li>
+    <li>relationType-&gt;tante</li>
+    <li>relationType-&gt;Cousin</li>
+    <li>drug-&gt;Cannabis</li>
+    <li>drug-&gt;Go-Juice</li>
+    <li>drug-&gt;Cocaïne</li>
+    <li>drug-&gt;Whisky</li>
+    <li>drug-&gt;Luciferum</li>
+    <li>drug-&gt;Flocon</li>
+    <li>drug-&gt;Café</li>
+    <li>disease-&gt;crise cardiaque</li>
+    <li>disease-&gt;Hypothermie</li>
+    <li>disease-&gt;coup de chaleur</li>
+    <li>disease-&gt;grippe</li>
+    <li>disease-&gt;Mécanites</li>
+    <li>disease-&gt;Parasites</li>
+    <li>disease-&gt;Paludisme</li>
+    <li>disease-&gt;maladie du sommeil</li>
+    <li>disease-&gt;démence</li>
+    <li>disease-&gt;carcinome</li>
+    <li>material-&gt;Acier</li>
+    <li>material-&gt;Or</li>
+    <li>material-&gt;Argent</li>
+    <li>material-&gt;Cuivre</li>
+    <li>material-&gt;Titane</li>
+    <li>material-&gt;Uranium</li>
+    <li>material-&gt;étain</li>
+    <li>material-&gt;marbre</li>
+    <li>material-&gt;Devilstrand</li>
+    <li>material-&gt;Synthread</li>
+    <li>material-&gt;Tantale</li>
+    <li>material-&gt;Obsidienne</li>
+    <li>material-&gt;Corne de Thrumbo</li>
+    <li>material-&gt;Verre</li>
+    <li>weapon-&gt;Pistolet</li>
+    <li>weapon-&gt;Gladius</li>
+    <li>weapon-&gt;Épée longue</li>
+    <li>weapon-&gt;Club</li>
+    <li>weapon-&gt;fusil de survie</li>
+    <li>weapon-&gt;fusil de précision</li>
+    <li>weapon-&gt;Pistolet</li>
+    <li>weapon-&gt;couteau</li>
+    <li>prename-&gt;L'histoire tragique de la vie et de la mort de</li>
+    <li>prename-&gt;Les aventures passionnantes de</li>
+    <li>prename-&gt;L'importance d'être</li>
+    <li>prename-&gt;Qui a peur de</li>
+    <li>prename-&gt;En attente de</li>
+    <li>preplace-&gt;La bonne personne de</li>
+    <li>preplace-&gt;Les joyeuses épouses de</li>
+    <li>preplace-&gt;Les pirates de</li>
+    <li>preplace-&gt;Les pillards de</li>
+    <li>preplace-&gt;Le marchand de</li>
+    <li>preplace-&gt;Une histoire de</li>
+    <li>preplace-&gt;Deux messieurs de</li>
+    <li>place-&gt;Glasgow</li>
+    <li>place-&gt;l'installation d'Orion</li>
+    <li>place-&gt;la jante</li>
+    <li>place-&gt;le village</li>
+    <li>place-&gt;la salle à manger</li>
+    <li>place-&gt;Vieille Terre</li>
+    <li>place-&gt;Prison</li>
+    <li>place-&gt;la salle de jeux</li>
+    <li>place-&gt;le désert</li>
+    <li>place-&gt;l'océan</li>
+    <li>place-&gt;les anneaux de l'Imperium</li>
+    <li>furniture-&gt;lit</li>
+    <li>furniture-&gt;bureau</li>
+    <li>furniture-&gt;Mur</li>
+    <li>furniture-&gt;chaise</li>
+    <li>furniture-&gt;Lampe</li>
+    <li>furniture-&gt;Miroir</li>
+    <li>furniture-&gt;Lazy Susan</li>
+    <li>furniture-&gt;Console de communication</li>
+    <li>animalType-&gt;Thrumbo</li>
+    <li>animalType-&gt;Muffalo</li>
+    <li>animalType-&gt;Furet</li>
+    <li>animalType-&gt;Cheval</li>
+    <li>animalType-&gt;Megaatherum</li>
+    <li>animalType-&gt;Renard</li>
+    <li>animalType-&gt;Loup</li>
+    <li>animalType-&gt;Chat</li>
+    <li>animalType-&gt;Swan</li>
+    <li>animalType-&gt;Macareux</li>
+    <li>animalType-&gt;Pingouin</li>
+    <li>animalType-&gt;Warg</li>
+    <li>animalType-&gt;Alphabeaver</li>
+    <li>animalType-&gt;Labrador</li>
+    <li>animalType-&gt;Husky</li>
+    <li>animalType-&gt;Alpaga</li>
+    <li>animalType-&gt;Écureuil</li>
+    <li>animalType-&gt;Espadon</li>
+    <li>animalType-&gt;Rat</li>
+    <li>prenoun-&gt;de Lady Windemere</li>
+    <li>prenoun-&gt;Le</li>
+    <li>prenoun-&gt;Une poupée</li>
+    <li>preconcept-&gt;Une nuit d'été</li>
+    <li>preconcept-&gt;Un hiver</li>
+    <li>preconcept-&gt;Une [arme] nommée</li>
+    <li>preconcept-&gt;A [animalType] Nommé</li>
+    <li>preconcept-&gt;Un tramway nommé</li>
+    <li>preconcept-&gt;Beaucoup de bruit pour</li>
+    <li>adjective-&gt;Heureux</li>
+    <li>adjective-&gt;malheureux</li>
+    <li>adjective-&gt;non pertinent</li>
+    <li>adjective-&gt;Caché</li>
+    <li>adjective-&gt;manquant</li>
+    <li>adjective-&gt;Dernier</li>
+    <li>adjective-&gt;Espoir</li>
+    <li>oneSylAdj-&gt;Nouveau</li>
+    <li>oneSylAdj-&gt;Rouge</li>
+    <li>oneSylAdj-&gt;Bleu</li>
+    <li>oneSylAdj-&gt;Rapide</li>
+    <li>oneSylAdj-&gt;Whole</li>
+    <li>oneSylAdj-&gt;Neat</li>
+    <li>oneSylAdj-&gt;Vert</li>
+    <li>oneSylAdj-&gt;Or</li>
+    <li>oneSylAdj-&gt;Trite</li>
+    <li>oneSylAdj-&gt;One</li>
+    <li>oneSylAdj-&gt;Cold</li>
+    <li>oneSylAdj-&gt;Chaud</li>
+    <li>oneSylAdj-&gt;Raffiné</li>
+    <li>oneSylAdj-&gt;Gras</li>
+    <li>oneSylAdj-&gt;Soft</li>
+    <li>oneSylAdj-&gt;Difficile</li>
+    <li>oneSylAdj-&gt;Rough</li>
+    <li>oneSylAdj-&gt;Smooth</li>
+    <li>oneSylAdj-&gt;ivre</li>
+    <li>oneSylAdj-&gt;Lent</li>
+    <li>oneSylAdj-&gt;Noir</li>
+    <li>oneSylAdj-&gt;Dark</li>
+    <li>oneSylAdj-&gt;Fatigué</li>
+    <li>oneSylAdj-&gt;Tough</li>
+    <li>oneSylAdj-&gt;Pure</li>
+    <li>oneSylAdj-&gt;Perdu</li>
+    <li>oneSylAdj-&gt;Détesté</li>
+    <li>oneSylAdj-&gt;Aimé</li>
+    <li>oneSylAdj-&gt;Sec</li>
+    <li>oneSylAdj-&gt;Humide</li>
+  </RAZ_ArtName_Play.rulePack.rulesStrings>
+  <!-- ArtNameUtility RAZ_ArtDescription_Play -->
+  <RAZ_ArtDescription_Play.rulePack.rulesStrings>
+    <li>r_art_description-&gt;Ce [playType] est défini [setting] et explore les thèmes de [theme] et [theme] [secondSentencePart]. [Play_tale_context]</li>
+    <li>r_art_description-&gt;Ce [playType] est défini [setting] et explore les thèmes de [theme] et [theme] [secondSentencePart]. [Play_tale_context]</li>
+    <li>r_art_description-&gt;Ce [playType] est défini [setting] et explore les thèmes de [theme] et [theme] [secondSentencePart]. [Play_tale_context]</li>
+    <li>r_art_description-&gt;Ce [playType] est défini [setting] et explore les thèmes de [theme] et [theme] [secondSentencePart]. [Play_tale_context]</li>
+    <li>r_art_description-&gt;Ce [playType] est défini [setting] et explore les thèmes de [theme] et [theme] [secondSentencePart]. [Play_tale_context]</li>
+    <li>r_art_description-&gt;Ce [playType] est défini [setting] et explore les thèmes de [theme] et [theme] [secondSentencePart]. [Play_tale_context]</li>
+    <li>r_art_description-&gt;Ce [playType] est défini [setting], et explore les thèmes de [theme] et [theme] [secondSentencePart].</li>
+    <li>r_art_description-&gt;Ce [playType] est défini [setting], et explore les thèmes de [theme] et [theme] [secondSentencePart].</li>
+    <li>r_art_description-&gt;Ce [playType] est défini [setting], et explore les thèmes de [theme] et [theme] [secondSentencePart].</li>
+    <li>r_art_description-&gt;Ce [playType] est défini [setting], et explore les thèmes de [theme] et [theme] [secondSentencePart].</li>
+    <li>r_art_description-&gt;Ce [playType] est défini [setting], et explore les thèmes de [theme] et [theme] [secondSentencePart].</li>
+    <li>r_art_description-&gt;Ce [playType] est défini [setting], et explore les thèmes de [theme] et [theme] [secondSentencePart].</li>
+    <li>play_tale_context- &gt; Cette [depiction] est inspirée de [tale_noun] le [DATE].</li>
+    <li>playType-&gt;Cette [depiction] parodie sans subtilité [tale_noun] le [DATE].</li>
+    <li>playType-&gt;L'intrigue fait de nombreuses références à [tale_noun] le [DATE].</li>
+    <li>playType-&gt;comédie</li>
+    <li>playType-&gt;comédie</li>
+    <li>playType-&gt;comédie</li>
+    <li>playType-&gt;farme</li>
+    <li>playType-&gt;farme</li>
+    <li>playType-&gt;satire</li>
+    <li>playType-&gt;satire</li>
+    <li>playType-&gt;tragédie</li>
+    <li>playType-&gt;tragédie</li>
+    <li>playType-&gt;tragédie</li>
+    <li>playType-&gt;historique</li>
+    <li>playType-&gt;historique</li>
+    <li>playType-&gt;mélodrame</li>
+    <li>playType-&gt;mélodrame</li>
+    <li>playType-&gt;comédie tragique</li>
+    <li>playType-&gt;drame didactique</li>
+    <li>playType-&gt;burlesque</li>
+    <li>playType-&gt;travestissement</li>
+    <li>playType-&gt;kabuki</li>
+    <li>playType-&gt;drame nuo</li>
+    <li>playType-&gt;egungun mascarade</li>
+    <li>playType-&gt;kathakali</li>
+    <li>theme-&gt;sexualité</li>
+    <li>theme-&gt;religion</li>
+    <li>theme-&gt;identité</li>
+    <li>theme-&gt;joie</li>
+    <li>theme-&gt;déterminisme</li>
+    <li>theme-&gt;bigoterie</li>
+    <li>theme-&gt;préjugés</li>
+    <li>theme-&gt;jingoïsme</li>
+    <li>theme-&gt;violence</li>
+    <li>theme-&gt;genre</li>
+    <li>theme-&gt;mortalité</li>
+    <li>theme-&gt;amélioration bionique</li>
+    <li>theme-&gt;intelligence artificielle</li>
+    <li>theme-&gt;abandon</li>
+    <li>theme-&gt;isolation</li>
+    <li>theme-&gt;communauté</li>
+    <li>theme-&gt;chaos</li>
+    <li>theme-&gt;beauté</li>
+    <li>theme-&gt;puissance</li>
+    <li>theme-&gt;caractère</li>
+    <li>theme-&gt;courage</li>
+    <li>theme-&gt;maladie</li>
+    <li>theme-&gt;objectif perdu</li>
+    <li>theme-&gt;immortalité</li>
+    <li>theme-&gt;transhumanisme</li>
+    <li>theme-&gt;injustice</li>
+    <li>theme-&gt;innocence perdue</li>
+    <li>theme-&gt;solece</li>
+    <li>theme-&gt;espoir</li>
+    <li>theme-&gt;amour</li>
+    <li>theme-&gt;personnalité animale</li>
+    <li>theme-&gt;personnalité robotique</li>
+    <li>theme-&gt;personnalité</li>
+    <li>theme-&gt;sexisme</li>
+    <li>theme-&gt;matérialisme</li>
+    <li>theme-&gt;démocratie</li>
+    <li>theme-&gt;sectarisme</li>
+    <li>theme-&gt;corruption</li>
+    <li>theme-&gt;connaissances incomplètes</li>
+    <li>theme-&gt;technologie</li>
+    <li>theme-&gt;totalitarisme</li>
+    <li>theme-&gt;guerre de classe</li>
+    <li>theme-&gt;vulnérabilité</li>
+    <li>theme-&gt;mégalomanie</li>
+    <li>theme-&gt;traditionalisme</li>
+    <li>theme-&gt;parentalité</li>
+    <li>theme-&gt;trahison</li>
+    <li>theme-&gt;amitié</li>
+    <li>theme-&gt;confiance</li>
+    <li>theme-&gt;déplacement</li>
+    <li>theme-&gt;salut</li>
+    <li>theme-&gt;famille</li>
+    <li>theme-&gt;objectif</li>
+    <li>theme-&gt;dépendance</li>
+    <li>theme-&gt;autonomie</li>
+    <li>theme-&gt;conséquence</li>
+    <li>theme-&gt;santé mentale</li>
+    <li>theme-&gt;expérience subjective</li>
+    <li>theme-&gt;tolérance</li>
+    <li>theme-&gt;anarcho-syndicalisme</li>
+    <li>theme-&gt;crime urbworld</li>
+    <li>theme-&gt;linguistique</li>
+    <li>theme-&gt;apprentissage</li>
+    <li>theme-&gt;fidélité</li>
+    <li>theme-&gt;environnementalisme</li>
+    <li>theme-&gt;consommation de drogues</li>
+    <li>theme-&gt;rationalisme</li>
+    <li>theme-&gt;science</li>
+    <li>theme-&gt;surveillance</li>
+    <li>theme-&gt;culture</li>
+    <li>theme-&gt;valeur</li>
+    <li>theme-&gt;guerre</li>
+    <li>theme-&gt;spiritualité</li>
+    <li>theme-&gt;dépression</li>
+    <li>theme-&gt;transcendance</li>
+    <li>theme-&gt;anxiété sociale</li>
+    <li>setting-&gt;sur un [shipAdj] [shipType] [shipLocation] </li>
+    <li>setting-&gt;dans un [worldDescription] [iWorldType] [worldLocationType]</li>
+    <li>shipAdj-&gt;mystérieux</li>
+    <li>shipAdj-&gt;sentient</li>
+    <li>shipAdj-&gt;labyrinthique</li>
+    <li>shipAdj-&gt;abandonné</li>
+    <li>shipAdj-&gt;énorme</li>
+    <li>shipAdj-&gt;beau</li>
+    <li>shipAdj-&gt;animé</li>
+    <li>shipAdj-&gt;battu</li>
+    <li>shipAdj-&gt;mis hors service</li>
+    <li>shipType-&gt;station spatiale</li>
+    <li>shipType-&gt;navire commercial</li>
+    <li>shipType-&gt;time clipper</li>
+    <li>shipType-&gt;cargo</li>
+    <li>shipType-&gt;bateau de plaisance</li>
+    <li>shipType-&gt;transporteur de commandes</li>
+    <li>shipType-&gt;extraction de déchets</li>
+    <li>shipType-&gt;corsaire doré</li>
+    <li>shipType-&gt;navire de guerre</li>
+    <li>shipType-&gt;corvette plasteel</li>
+    <li>shipType-&gt;paquebot</li>
+    <li>shipType-&gt;canonnière</li>
+    <li>shipLocation-&gt;en orbite autour d'un [worldType]</li>
+    <li>shipLocation-&gt;s'est écrasé sur un [worldType]</li>
+    <li>shipLocation-&gt;en route vers un [worldType]</li>
+    <li>shipLocation-&gt;en spirale vers un [worldType]</li>
+    <li>shipLocation-&gt;perdu dans [spaceLocation]</li>
+    <li>shipLocation-&gt;exploration de [spaceLocation]</li>
+    <li>shipLocation-&gt;voyage à travers [spaceLocation]</li>
+    <li>worldType-&gt;GlitterWorld</li>
+    <li>worldType-&gt;MidWorld</li>
+    <li>worldType-&gt;RimWorld</li>
+    <li>worldType-&gt;HiveWorld</li>
+    <li>worldType-&gt;TunnelWorld</li>
+    <li>worldType-&gt;CoreWorld</li>
+    <li>worldType-&gt;[worldDescription] planète</li>
+    <li>worldType-&gt;[worldDescription] géante du gaz</li>
+    <li>worldType-&gt;[worldDescription] lune</li>
+    <li>worldType-&gt;[worldDescription] astéroïde</li>
+    <li>iWorldType-&gt;GlitterWorld</li>
+    <li>iWorldType-&gt;MidWorld</li>
+    <li>iWorldType-&gt;RimWorld</li>
+    <li>iWorldType-&gt;HiveWorld</li>
+    <li>iWorldType-&gt;TunnelWorld</li>
+    <li>iWorldType-&gt;CoreWorld</li>
+    <li>worldDescription-&gt;voyou</li>
+    <li>worldDescription-&gt;mystérieux</li>
+    <li>worldDescription-&gt;perdu</li>
+    <li>worldDescription-&gt;beau</li>
+    <li>worldDescription-&gt;dystopique</li>
+    <li>worldDescription-&gt;portable</li>
+    <li>worldDescription-&gt;étrange</li>
+    <li>worldDescription-&gt;fracturé</li>
+    <li>worldDescription-&gt;maudit</li>
+    <li>spaceLocation-&gt;une nébuleuse</li>
+    <li>spaceLocation-&gt;une pépinière stellaire</li>
+    <li>spaceLocation-&gt;un système de matière noire</li>
+    <li>spaceLocation-&gt;une chaîne cosmique</li>
+    <li>spaceLocation-&gt;un univers parallèle</li>
+    <li>worldLocationType-&gt; ville</li>
+    <li>worldLocationType-&gt; désert</li>
+    <li>worldLocationType-&gt; ruine</li>
+    <li>worldLocationType-&gt; mountaininside</li>
+    <li>worldLocationType-&gt; cuisine</li>
+    <li>worldLocationType-&gt; bar</li>
+    <li>worldLocationType-&gt; home</li>
+    <li>worldLocationType-&gt; caserne</li>
+    <li>worldLocationType-&gt; municipalipality</li>
+    <li>worldLocationType-&gt; bâtiment gouvernemental</li>
+    <li>secondSentencePart-&gt;par le [characterInteraction] de ses caractères, un [characterType] et un [characterType]</li>
+    <li>secondSentencePart-&gt;via l'image [imageAdj] de [imageType]</li>
+    <li>secondSentencePart-&gt;grâce à son utilisation de [languageType] et [meterType]</li>
+    <li>characterInteraction-&gt;amitié</li>
+    <li>characterInteraction-&gt;romance florissante</li>
+    <li>characterInteraction-&gt;juxtaposition</li>
+    <li>characterInteraction-&gt;antagonistisme</li>
+    <li>characterInteraction-&gt;rivalité</li>
+    <li>characterInteraction-&gt;hostilité, puis respect mutuel</li>
+    <li>characterInteraction-&gt;affaire secrète</li>
+    <li>characterInteraction-&gt;malentendus comiques</li>
+    <li>characterInteraction-&gt;amertume de création</li>
+    <li>characterType-&gt;raider</li>
+    <li>characterType-&gt;tribesperson</li>
+    <li>characterType-&gt;colon</li>
+    <li>characterType-&gt;pirate</li>
+    <li>characterType-&gt;commerçant de textiles</li>
+    <li>characterType-&gt;voyageur</li>
+    <li>characterType-&gt;éleveur de muffles</li>
+    <li>characterType-&gt;charmeur thrumbo</li>
+    <li>characterType-&gt;boomrat messiah</li>
+    <li>characterType-&gt;entraîneur boomalope</li>
+    <li>characterType-&gt;chaman</li>
+    <li>characterType-&gt;joueur errant</li>
+    <li>characterType-&gt;devilstrand farmer</li>
+    <li>characterType-&gt;cavalier megatherum</li>
+    <li>characterType-&gt;soldat de la cuve</li>
+    <li>characterType-&gt;scientifique</li>
+    <li>characterType-&gt;esclave</li>
+    <li>imageAdj-&gt;répété</li>
+    <li>imageAdj-&gt;hantise</li>
+    <li>imageAdj-&gt;émoussé</li>
+    <li>imageAdj-&gt;déconcertant</li>
+    <li>imageAdj-&gt;subtile</li>
+    <li>imageAdj-&gt;dadaesque</li>
+    <li>imageAdj-&gt;sombre</li>
+    <li>imageType-&gt;un [animalType] [animalDoing] </li>
+    <li>imageType-&gt;a [objectAdj] [objectMaterial] [objectType]</li>
+    <li>animalType-&gt; thrumbo</li>
+    <li>animalType-&gt; muffalo</li>
+    <li>animalType-&gt; loup</li>
+    <li>animalType-&gt; renard</li>
+    <li>animalType-&gt; boomrat</li>
+    <li>animalType-&gt; boomalope</li>
+    <li>animalType-&gt; megatherum</li>
+    <li>animalType-&gt; chat</li>
+    <li>animalType-&gt; cygne</li>
+    <li>animalType-&gt; macareux</li>
+    <li>animalType-&gt; pingouin</li>
+    <li>animalType-&gt; gamma développé en cuve</li>
+    <li>animalType-&gt; roomba</li>
+    <li>animalType-&gt; warg</li>
+    <li>animalDoing-&gt; couché sur le sol</li>
+    <li>animalDoing-&gt; consommer un [objet]</li>
+    <li>animalDoing-&gt; gémissements</li>
+    <li>animalFaisant- &gt; mourant</li>
+    <li>animalDoing-&gt; noyade</li>
+    <li>animalDoing-&gt; brûler</li>
+    <li>animalDoing-&gt; regarder</li>
+    <li>animalDoing-&gt; attente interminable</li>
+    <li>objectAdj-&gt;cassé</li>
+    <li>objectAdj-&gt;grand</li>
+    <li>objectAdj-&gt;caricatural</li>
+    <li>objectAdj-&gt;peint</li>
+    <li>objectAdj-&gt;gelé</li>
+    <li>objectAdj-&gt;volé</li>
+    <li>objectMaterial-&gt; or</li>
+    <li>objectMaterial-&gt; argent</li>
+    <li>objectMaterial-&gt; acier</li>
+    <li>objectMaterial-&gt; bronze</li>
+    <li>objectMaterial-&gt;plasteel</li>
+    <li>objectMaterial-&gt;uranium</li>
+    <li>objectMaterial-&gt; tantale</li>
+    <li>objectMaterial-&gt;titane</li>
+    <li>objectMaterial-&gt; pierre</li>
+    <li>objectMaterial-&gt;cuivre</li>
+    <li>objectMaterial-&gt; plastique</li>
+    <li>objectType-&gt; fusil</li>
+    <li>objectType-&gt; bouclier</li>
+    <li>objectType-&gt; lit</li>
+    <li>objectType-&gt; pistolet</li>
+    <li>objectType-&gt; pot de fleurs</li>
+    <li>objectType-&gt; statue</li>
+    <li>objectType-&gt; masque</li>
+    <li>objectType-&gt; casque</li>
+    <li>objectType-&gt; marteau</li>
+    <li>objectType-&gt; épée</li>
+    <li>languageType-&gt;worldplay rapide</li>
+    <li>languageType-&gt;prose violette</li>
+    <li>languageType-&gt;prose fleurie</li>
+    <li>languageType-&gt;texte lyrique</li>
+    <li>languageType-&gt;monologuation sans fin</li>
+    <li>languageType-&gt;conversation naturaliste guindée</li>
+    <li>languageType-&gt;silence inattendu</li>
+    <li>meterType-&gt;verset vide</li>
+    <li>meterType-&gt;dialogue rythmique et percutant</li>
+    <li>meterType-&gt;chanter des chansons</li>
+    <li>meterType-&gt;mètre trochaique</li>
+    <li>meterType-&gt;forme dactylique</li>
+  </RAZ_ArtDescription_Play.rulePack.rulesStrings>
+</LanguageData>

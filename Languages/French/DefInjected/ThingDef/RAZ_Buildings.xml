@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Performance buildings tables -->
+  <StageDef.label>scène</StageDef.label>
+  <StageDef.description>Une scène sur laquelle organiser des spectacles</StageDef.description>
+  <Blueprint_StageDef.label>scène (plan)</Blueprint_StageDef.label>
+  <Frame_StageDef.label>scène (construction)</Frame_StageDef.label>
+  <Frame_StageDef.description>Une scène où les interprètes organisent des performances telles que des pièces de théâtre et des concerts.</Frame_StageDef.description>
+  <GrandPianoDef.label>Grand piano</GrandPianoDef.label>
+  <GrandPianoDef.description>Un piano à queue qui vous permet de composer et de jouer de la musique.</GrandPianoDef.description>
+  <Blueprint_GrandPianoDef.label>grand piano(plan)</Blueprint_GrandPianoDef.label>
+  <Frame_GrandPianoDef.label>grand piano (construction)</Frame_GrandPianoDef.label>
+  <Frame_GrandPianoDef.description>Un piano à queue qui vous permet de composer et de jouer de la musique.</Frame_GrandPianoDef.description>
+  <RazMicrophoneDef.label>Micro</RazMicrophoneDef.label>
+  <RazMicrophoneDef.description>Un microphone sur pied qui vous permet de répéter et d'exécuter des one man show.</RazMicrophoneDef.description>
+  <Blueprint_RazMicrophoneDef.label>micro (plan)</Blueprint_RazMicrophoneDef.label>
+  <Frame_RazMicrophoneDef.label>micro (construction)</Frame_RazMicrophoneDef.label>
+  <Frame_RazMicrophoneDef.description>Un microphone sur pied qui vous permet de répéter et d'exécuter des one man show.</Frame_RazMicrophoneDef.description>
+  <!-- Broadcast! -->
+  <BroadcastTowerDef.label>Diffuseur</BroadcastTowerDef.label>
+  <BroadcastTowerDef.description>Tour pour l'envoi d'émissions radio aux colonies environnantes.</BroadcastTowerDef.description>
+  <Blueprint_BroadcastTowerDef.label>diffuseur (plan)</Blueprint_BroadcastTowerDef.label>
+  <Frame_BroadcastTowerDef.label>diffuseur (construction)</Frame_BroadcastTowerDef.label>
+  <Frame_BroadcastTowerDef.description>Une tour pour envoyer des émissions radio aux colonies environnantes.</Frame_BroadcastTowerDef.description>
+</LanguageData>

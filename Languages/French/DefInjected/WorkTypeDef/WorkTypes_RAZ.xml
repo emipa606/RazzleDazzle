@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Performance.label>performance</Performance.label>
+  <Performance.description>Les artistes interprètes ou exécutants présentent des pièces de théâtre, des récitals et des concerts pour se divertir.</Performance.description>
+  <Performance.labelShort>performance</Performance.labelShort>
+  <Performance.pawnLabel>performer</Performance.pawnLabel>
+  <Performance.gerundLabel>performe</Performance.gerundLabel>
+  <Performance.verb>performer</Performance.verb>
+</LanguageData>
