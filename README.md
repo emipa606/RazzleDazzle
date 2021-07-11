@@ -7,9 +7,19 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1778162471
 
 - Removed the production-tag for all entertainment buildnings making them ok in thronerooms
 - Added the Grand Piano as a valid piano-requirement for thronerooms
+- Added french translation, thanks qux!
 
 ![Image](https://i.imgur.com/7Gzt3Rg.png)
 
+
+[table]
+	[tr]
+		[td]https://invite.gg/Mlie]![Image](https://i.imgur.com/zdzzBrc.png)
+[/td]
+		[td]https://github.com/emipa606/RazzleDazzle]![Image](https://i.imgur.com/kTkpTOE.png)
+[/td]
+	[/tr]
+[/table]
 	
 ![Image](https://i.imgur.com/NOW7jU1.png)
 
@@ -24,7 +34,7 @@ Stand-up: Rehearsed and performed at the microphone stand (Social).
 
 Radio: Performances from all of the above will be automatically broadcast if you have a broadcaster, with subscription payments sent in by nearby settlements based on the quality of your broadcast.
 
-Now you can keep your colonists from ever doing a real day's work!
+Now you can keep your colonists from ever doing a real day&apos;s work!
   	
 Credits: Original was created by http://steamcommunity.com/profiles/76561198018142626]SeveralPuffins, Japanese translation by http://steamcommunity.com/profiles/76561198257945076]Proxyer.
 
@@ -41,6 +51,7 @@ Direct Download: https://www.dropbox.com/sh/fmbh06zqkki2a9d/AAAcyZXk2wrpxerH1-ao
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
+
 
 
 
