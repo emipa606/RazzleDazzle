@@ -1,32 +1,26 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using RimWorld;
 using Verse.AI;
 
-namespace RazzleDazzle
+namespace RazzleDazzle;
+
+public class JobDriver_PerformPlay : JobDriver
 {
-    // Token: 0x02000012 RID: 18
-    public class JobDriver_PerformPlay : JobDriver
+    private Building_Performance Stage => (Building_Performance)job.targetA.Thing;
+
+    public override bool TryMakePreToilReservations(bool errorOnFailed)
     {
-        // Token: 0x17000010 RID: 16
-        // (get) Token: 0x06000057 RID: 87 RVA: 0x000033F5 File Offset: 0x000015F5
-        private Building_Performance Stage => (Building_Performance) job.targetA.Thing;
+        return pawn.Reserve(Stage, job, 2, 0, null, errorOnFailed);
+    }
 
-        // Token: 0x06000058 RID: 88 RVA: 0x000037D4 File Offset: 0x000019D4
-        public override bool TryMakePreToilReservations(bool errorOnFailed)
+    protected override IEnumerable<Toil> MakeNewToils()
+    {
+        var list = Stage.Director.RequestPlayToils(GetActor(), Stage);
+        foreach (var toil in list)
         {
-            return pawn.Reserve(Stage, job, 2, 0, null, errorOnFailed);
-        }
-
-        // Token: 0x06000059 RID: 89 RVA: 0x00003803 File Offset: 0x00001A03
-        protected override IEnumerable<Toil> MakeNewToils()
-        {
-            var list = Stage.Director.RequestPlayToils(GetActor(), Stage);
-            foreach (var toil in list)
-            {
-                toil.AddFailCondition(() =>
-                    !GatheringsUtility.AcceptableGameConditionsToContinueGathering(GetActor().Map));
-                yield return toil;
-            }
+            toil.AddFailCondition(() =>
+                !GatheringsUtility.AcceptableGameConditionsToContinueGathering(GetActor().Map));
+            yield return toil;
         }
     }
 }

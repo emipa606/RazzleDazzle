@@ -1,73 +1,62 @@
-﻿using RimWorld;
+using RimWorld;
 using Verse;
 using Verse.AI;
 using Verse.AI.Group;
 
-namespace RazzleDazzle
+namespace RazzleDazzle;
+
+public class LordToil_SettleForPlay : LordToil
 {
-    // Token: 0x02000027 RID: 39
-    public class LordToil_SettleForPlay : LordToil
+    public Pawn lead;
+
+    public Thing performThing;
+
+    public CellRect spectateRect;
+
+    public Pawn support;
+
+    public LordToil_SettleForPlay(Pawn lead, Pawn support, Thing performThing)
     {
-        // Token: 0x04000039 RID: 57
-        public Pawn lead;
+        this.lead = lead;
+        this.support = support;
+        this.performThing = performThing;
+    }
 
-        // Token: 0x0400003B RID: 59
-        public Thing performThing;
+    private CellRect CalculateSpectateRect()
+    {
+        return CellRect.CenteredOn(performThing.Position, 8);
+    }
 
-        // Token: 0x0400003C RID: 60
-        public CellRect spectateRect;
 
-        // Token: 0x0400003A RID: 58
-        public Pawn support;
-
-        // Token: 0x060000CA RID: 202 RVA: 0x0000514C File Offset: 0x0000334C
-        public LordToil_SettleForPlay(Pawn lead, Pawn support, Thing performThing)
+    public override void UpdateAllDuties()
+    {
+        foreach (var pawn in lord.ownedPawns)
         {
-            this.lead = lead;
-            this.support = support;
-            this.performThing = performThing;
-        }
-
-        // Token: 0x060000CB RID: 203 RVA: 0x00005169 File Offset: 0x00003369
-        private CellRect CalculateSpectateRect()
-        {
-            return CellRect.CenteredOn(performThing.Position, 8);
-        }
-
-        // Token: 0x060000CC RID: 204 RVA: 0x0000517C File Offset: 0x0000337C
-
-        // Token: 0x060000CD RID: 205 RVA: 0x00005184 File Offset: 0x00003384
-        public override void UpdateAllDuties()
-        {
-            foreach (var pawn in lord.ownedPawns)
+            if (pawn == lead || pawn == support)
             {
-                if (pawn == lead || pawn == support)
-                {
-                    pawn.mindState.duty.focus = performThing;
-                    pawn.mindState.duty = new PawnDuty(DutyDefOfRazzleDazzle.GoToStageAndWait, performThing);
-                }
-                else
-                {
-                    var duty = new PawnDuty(DutyDefOfRazzleDazzle.FindSeatWithStageViewAndChat, performThing);
-                    pawn.mindState.duty = duty;
-                }
-            }
-        }
-
-        // Token: 0x060000CE RID: 206 RVA: 0x00005240 File Offset: 0x00003440
-        public override ThinkTreeDutyHook VoluntaryJoinDutyHookFor(Pawn p)
-        {
-            ThinkTreeDutyHook hook;
-            if (p == lead || p == support)
-            {
-                hook = DutyDefOfRazzleDazzle.PerformConcert.hook;
+                pawn.mindState.duty.focus = performThing;
+                pawn.mindState.duty = new PawnDuty(DutyDefOfRazzleDazzle.GoToStageAndWait, performThing);
             }
             else
             {
-                hook = DutyDefOf.Spectate.hook;
+                var duty = new PawnDuty(DutyDefOfRazzleDazzle.FindSeatWithStageViewAndChat, performThing);
+                pawn.mindState.duty = duty;
             }
-
-            return hook;
         }
+    }
+
+    public override ThinkTreeDutyHook VoluntaryJoinDutyHookFor(Pawn p)
+    {
+        ThinkTreeDutyHook hook;
+        if (p == lead || p == support)
+        {
+            hook = DutyDefOfRazzleDazzle.PerformConcert.hook;
+        }
+        else
+        {
+            hook = DutyDefOf.Spectate.hook;
+        }
+
+        return hook;
     }
 }

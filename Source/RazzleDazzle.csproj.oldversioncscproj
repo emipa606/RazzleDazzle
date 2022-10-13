@@ -1,97 +1,20 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F987227A-3602-48FF-A43B-1FCDB38E6C84}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>RazzleDazzle</RootNamespace>
-    <AssemblyName>RazzleDazzle</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\..\1.2\Assemblies\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+    <OutputPath>..\..\1.3\Assemblies</OutputPath>
+    <TargetFramework>net472</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <DebugType>None</DebugType>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>1.2.2753</Version>
+       <Version>*</Version> 
+      <!--<Version>1.3.3056-beta</Version>-->
       <ExcludeAssets>runtime</ExcludeAssets>
       <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <AppDesigner Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Building_BroadcastTower.cs" />
-    <Compile Include="Building_GrandPiano.cs" />
-    <Compile Include="Building_Microphone.cs" />
-    <Compile Include="Building_Performance.cs" />
-    <Compile Include="Building_Stage.cs" />
-    <Compile Include="DutyDefOfRazzleDazzle.cs" />
-    <Compile Include="IncidentWorker_RAZSubscription.cs" />
-    <Compile Include="JobDefOfRazzleDazzle.cs" />
-    <Compile Include="JobDriver_DoRehearsePlayBill.cs" />
-    <Compile Include="JobDriver_FaceObject.cs" />
-    <Compile Include="JobDriver_MuckAroundOnStage.cs" />
-    <Compile Include="JobDriver_NoodleOnPiano.cs" />
-    <Compile Include="JobDriver_PerformComedy.cs" />
-    <Compile Include="JobDriver_PerformMusic.cs" />
-    <Compile Include="JobDriver_PerformPlay.cs" />
-    <Compile Include="JobDriver_PrepareConcert.cs" />
-    <Compile Include="JobDriver_Rehearse.cs" />
-    <Compile Include="JobDriver_StartRehearseDirectly.cs" />
-    <Compile Include="JobGiver_FaceObject.cs" />
-    <Compile Include="JobGiver_FindChairIfNotInOne.cs" />
-    <Compile Include="JobGiver_PerformComedy.cs" />
-    <Compile Include="JobGiver_PerformMusic.cs" />
-    <Compile Include="JobGiver_PerformPlay.cs" />
-    <Compile Include="JobGiver_PrepareConcert.cs" />
-    <Compile Include="LordJob_Performance.cs" />
-    <Compile Include="LordJob_PerformComedySet.cs" />
-    <Compile Include="LordJob_PerformConcert.cs" />
-    <Compile Include="LordJob_PerformPlay.cs" />
-    <Compile Include="LordToil_AfterConcert.cs" />
-    <Compile Include="LordToil_ComedySet.cs" />
-    <Compile Include="LordToil_Concert.cs" />
-    <Compile Include="LordToil_EndPerformance.cs" />
-    <Compile Include="LordToil_PerformPlay.cs" />
-    <Compile Include="LordToil_PrePerformance.cs" />
-    <Compile Include="LordToil_SettleForPerformance.cs" />
-    <Compile Include="LordToil_SettleForPlay.cs" />
-    <Compile Include="PerformanceVenueDef.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RazzleDazzleUtilities.cs" />
-    <Compile Include="RazzleDazzle_Director.cs" />
-    <Compile Include="RoomRoleDefOfRazzleDazzle.cs" />
-    <Compile Include="RoomRoleWorker_ConcertHall.cs" />
-    <Compile Include="RoomRoleWorker_Theatre.cs" />
-    <Compile Include="ThingDefOf_RazzleDazzle.cs" />
-    <Compile Include="ThoughtDefOfRazzleDazzle.cs" />
-    <Compile Include="WorkGiver_PreparePerformance.cs" />
-    <Compile Include="WorkGiver_Rehearser.cs" />
-    <Compile Include="WorkTypeDefOfRazzleDazzle.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- 1.3.3056-beta -->
 </Project>

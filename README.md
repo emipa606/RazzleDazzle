@@ -1,6 +1,6 @@
 # RazzleDazzle
 
-![Image](https://i.imgur.com/WAEzk68.png)
+![Image](https://i.imgur.com/buuPQel.png)
 
 Update of Bar0ths mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1778162471
@@ -9,19 +9,10 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1778162471
 - Added the Grand Piano as a valid piano-requirement for thronerooms
 - Added french translation, thanks qux!
 
-![Image](https://i.imgur.com/7Gzt3Rg.png)
+![Image](https://i.imgur.com/pufA0kM.png)
 
-
-[table]
-	[tr]
-		[td]https://invite.gg/Mlie]![Image](https://i.imgur.com/zdzzBrc.png)
-[/td]
-		[td]https://github.com/emipa606/RazzleDazzle]![Image](https://i.imgur.com/kTkpTOE.png)
-[/td]
-	[/tr]
-[/table]
 	
-![Image](https://i.imgur.com/NOW7jU1.png)
+![Image](https://i.imgur.com/Z4GOv8H.png)
 
 
 For those players who want a little more song and dance in the lives of their colonies! This mod introduces a range of performing arts:
@@ -34,14 +25,14 @@ Stand-up: Rehearsed and performed at the microphone stand (Social).
 
 Radio: Performances from all of the above will be automatically broadcast if you have a broadcaster, with subscription payments sent in by nearby settlements based on the quality of your broadcast.
 
-Now you can keep your colonists from ever doing a real day&apos;s work!
+Now you can keep your colonists from ever doing a real day's work!
   	
 Credits: Original was created by http://steamcommunity.com/profiles/76561198018142626]SeveralPuffins, Japanese translation by http://steamcommunity.com/profiles/76561198257945076]Proxyer.
 
 Direct Download: https://www.dropbox.com/sh/fmbh06zqkki2a9d/AAAcyZXk2wrpxerH1-aohLJUa?dl=0]Dropbox
 
 
-![Image](https://i.imgur.com/Rs6T6cr.png)
+![Image](https://i.imgur.com/PwoNOj4.png)
 
 
 
