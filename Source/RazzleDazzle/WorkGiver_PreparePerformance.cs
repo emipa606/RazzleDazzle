@@ -8,9 +8,9 @@ namespace RazzleDazzle;
 
 public class WorkGiver_PreparePerformance : WorkGiver_Scanner
 {
-    private static readonly List<Thing> correctArt = new List<Thing>();
+    private static readonly List<Thing> correctArt = [];
 
-    private static readonly List<Thing> newCorrectArt = new List<Thing>();
+    private static readonly List<Thing> newCorrectArt = [];
 
     public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
     {
@@ -40,7 +40,7 @@ public class WorkGiver_PreparePerformance : WorkGiver_Scanner
         {
             result = !pawn.workSettings.WorkIsActive(def.workType)
                 ? null
-                : AssignRehearsalDirectJob(pawn, building_Performance);
+                : AssignRehearsalDirectJob(building_Performance);
         }
         else
         {
@@ -57,7 +57,7 @@ public class WorkGiver_PreparePerformance : WorkGiver_Scanner
             select t;
     }
 
-    private Job AssignRehearsalDirectJob(Pawn pawn, Building_Performance giver)
+    private Job AssignRehearsalDirectJob(Building_Performance giver)
     {
         return new Job(JobDefOfRazzleDazzle.JobDef_DoStartRehearsalDirectly, giver);
     }
@@ -122,13 +122,6 @@ public class WorkGiver_PreparePerformance : WorkGiver_Scanner
                     return false;
                 }
 
-                int comparison(Thing t1, Thing t2)
-                {
-                    var num = (float)(t1.Position - pawn.Position).LengthHorizontalSquared;
-                    var value = (float)(t2.Position - pawn.Position).LengthHorizontalSquared;
-                    return num.CompareTo(value);
-                }
-
                 newCorrectArt.Sort(comparison);
                 correctArt.AddRange(newCorrectArt);
                 newCorrectArt.Clear();
@@ -139,6 +132,13 @@ public class WorkGiver_PreparePerformance : WorkGiver_Scanner
 
                 found = true;
                 return true;
+
+                int comparison(Thing t1, Thing t2)
+                {
+                    var num = (float)(t1.Position - pawn.Position).LengthHorizontalSquared;
+                    var value = (float)(t2.Position - pawn.Position).LengthHorizontalSquared;
+                    return num.CompareTo(value);
+                }
             }
 
             var traverseParams = TraverseParms.For(pawn, Danger.Some);

@@ -4,20 +4,13 @@ using Verse.AI.Group;
 
 namespace RazzleDazzle;
 
-public class LordToil_PerformPlay : LordToil
+public class LordToil_PerformPlay(Pawn lead, Pawn support, Thing stage) : LordToil
 {
-    public Pawn lead;
+    public readonly Pawn lead = lead;
 
-    public Thing stage;
+    public readonly Thing stage = stage;
 
-    public Pawn support;
-
-    public LordToil_PerformPlay(Pawn lead, Pawn support, Thing stage)
-    {
-        this.lead = lead;
-        this.support = support;
-        this.stage = stage;
-    }
+    public readonly Pawn support = support;
 
     public bool HasPlayFinished()
     {

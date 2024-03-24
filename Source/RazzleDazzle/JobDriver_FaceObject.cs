@@ -29,7 +29,7 @@ public class JobDriver_FaceObject : JobDriver
                     return;
                 }
 
-                if (lj is not LordJob_PerformComedySet { Lead: { } } lordJob_PerformComedySet)
+                if (lj is not LordJob_PerformComedySet { Lead: not null } lordJob_PerformComedySet)
                 {
                     return;
                 }

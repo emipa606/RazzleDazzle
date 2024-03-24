@@ -5,19 +5,13 @@ using Verse.AI.Group;
 
 namespace RazzleDazzle;
 
-public class LordToil_Concert : LordToil
+public class LordToil_Concert(Pawn performer, Thing performThing) : LordToil
 {
-    public Pawn performer;
+    public readonly Pawn performer = performer;
 
-    public Thing performThing;
+    public readonly Thing performThing = performThing;
 
     public CellRect spectateRect;
-
-    public LordToil_Concert(Pawn performer, Thing performThing)
-    {
-        this.performer = performer;
-        this.performThing = performThing;
-    }
 
     private CellRect CalculateSpectateRect()
     {

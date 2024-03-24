@@ -125,8 +125,8 @@ public class RazzleDazzle_Director
 
     public void ConstructPlay()
     {
-        lToils = new List<Toil>();
-        sToils = new List<Toil>();
+        lToils = [];
+        sToils = [];
         lToils.Add(GoToStageLocation(stage, StageLocations.BACKSTAGE));
         sToils.Add(GoToStageLocation(stage, StageLocations.BACKSTAGE));
         lToils.Add(Synchronise());
@@ -151,17 +151,17 @@ public class RazzleDazzle_Director
         }
     }
 
-    public List<Toil> RequestPlayToils(Pawn pawn, Building_Performance stage)
+    public List<Toil> RequestPlayToils(Pawn pawn, Building_Performance buildingPerformance)
     {
         if (lToils == null || lToils.Count == 0)
         {
-            this.stage = stage;
+            stage = buildingPerformance;
             ConstructPlay();
         }
 
         if ((Lead is { Dead: false } || pawn == Support) && (Support == null || Support.Dead))
         {
-            var unused = Lead;
+            _ = Lead;
         }
 
         List<Toil> result;
@@ -175,7 +175,7 @@ public class RazzleDazzle_Director
         }
         else
         {
-            result = new List<Toil>();
+            result = [];
         }
 
         return result;
@@ -246,18 +246,18 @@ public class RazzleDazzle_Director
         return toil;
     }
 
-    public Toil GoToStageLocation(Building_Performance stage, StageLocations loc)
+    public Toil GoToStageLocation(Building_Performance buildingPerformance, StageLocations loc)
     {
-        var toil = Toils_Goto.GotoCell(GetStageCell(loc, stage), PathEndMode.OnCell);
-        toil.tickAction = delegate { stage.ticksIntoThisPerformance++; };
+        var toil = Toils_Goto.GotoCell(GetStageCell(loc, buildingPerformance), PathEndMode.OnCell);
+        toil.tickAction = delegate { buildingPerformance.ticksIntoThisPerformance++; };
         return toil;
     }
 
-    public void Romance(List<Toil> leadToils, List<Toil> supportToils, Building_Performance stage)
+    public void Romance(List<Toil> leadToils, List<Toil> supportToils, Building_Performance buildingPerformance)
     {
-        leadToils.Add(GoToStageLocation(stage, StageLocations.STAGE_L));
+        leadToils.Add(GoToStageLocation(buildingPerformance, StageLocations.STAGE_L));
         leadToils.Add(FaceDirection(StageRight));
-        supportToils.Add(GoToStageLocation(stage, StageLocations.STAGE_R));
+        supportToils.Add(GoToStageLocation(buildingPerformance, StageLocations.STAGE_R));
         supportToils.Add(FaceDirection(StageLeft));
         leadToils.Add(Synchronise());
         supportToils.Add(Synchronise());
@@ -266,8 +266,8 @@ public class RazzleDazzle_Director
         supportToils.Add(ThrowDramaticMote(Support, FleckDefOf.Heart, 151));
         leadToils.Add(Synchronise());
         supportToils.Add(Synchronise());
-        leadToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_C));
-        supportToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_C));
+        leadToils.Add(GoToStageLocation(buildingPerformance, StageLocations.DOWNSTAGE_C));
+        supportToils.Add(GoToStageLocation(buildingPerformance, StageLocations.DOWNSTAGE_C));
         leadToils.Add(FaceDirection(StageRight));
         supportToils.Add(FaceDirection(StageLeft));
         leadToils.Add(ThrowDramaticMote(Lead, FleckDefOf.Heart, 351));
@@ -276,39 +276,39 @@ public class RazzleDazzle_Director
         supportToils.Add(Synchronise());
     }
 
-    public void Tragedy(List<Toil> leadToils, List<Toil> supportToils, Building_Performance stage)
+    public void Tragedy(List<Toil> leadToils, List<Toil> supportToils, Building_Performance buildingPerformance)
     {
-        leadToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_C));
-        supportToils.Add(GoToStageLocation(stage, StageLocations.UPSTAGE_L));
+        leadToils.Add(GoToStageLocation(buildingPerformance, StageLocations.DOWNSTAGE_C));
+        supportToils.Add(GoToStageLocation(buildingPerformance, StageLocations.UPSTAGE_L));
         leadToils.Add(Synchronise());
         supportToils.Add(Synchronise());
         leadToils.Add(ThrowDramaticMote(Lead, ThingDefOf_RazzleDazzle.Mote_Tragedy, 201));
-        leadToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_L));
+        leadToils.Add(GoToStageLocation(buildingPerformance, StageLocations.DOWNSTAGE_L));
         leadToils.Add(FaceDirection(StageForward));
         leadToils.Add(ThrowDramaticMote(Lead, ThingDefOf_RazzleDazzle.Mote_Tragedy, 401));
-        leadToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_R));
+        leadToils.Add(GoToStageLocation(buildingPerformance, StageLocations.DOWNSTAGE_R));
         leadToils.Add(FaceDirection(StageForward));
         leadToils.Add(ThrowDramaticMote(Lead, ThingDefOf_RazzleDazzle.Mote_Tragedy, 251));
         leadToils.Add(Synchronise());
         supportToils.Add(Synchronise());
-        supportToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_L));
+        supportToils.Add(GoToStageLocation(buildingPerformance, StageLocations.DOWNSTAGE_L));
         supportToils.Add(FaceDirection(StageRight));
         supportToils.Add(ThrowDramaticMote(Support, FleckDefOf.Heart, 201));
         leadToils.Add(Synchronise());
         supportToils.Add(Synchronise());
     }
 
-    public void Comedy(List<Toil> leadToils, List<Toil> supportToils, Building_Performance stage)
+    public void Comedy(List<Toil> leadToils, List<Toil> supportToils, Building_Performance buildingPerformance)
     {
-        leadToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_R));
-        supportToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_L));
+        leadToils.Add(GoToStageLocation(buildingPerformance, StageLocations.DOWNSTAGE_R));
+        supportToils.Add(GoToStageLocation(buildingPerformance, StageLocations.DOWNSTAGE_L));
         leadToils.Add(Synchronise());
         supportToils.Add(Synchronise());
-        leadToils.Add(GoToStageLocation(stage, StageLocations.STAGE_C));
-        supportToils.Add(GoToStageLocation(stage, StageLocations.STAGE_C));
+        leadToils.Add(GoToStageLocation(buildingPerformance, StageLocations.STAGE_C));
+        supportToils.Add(GoToStageLocation(buildingPerformance, StageLocations.STAGE_C));
         leadToils.Add(Synchronise());
         supportToils.Add(Synchronise());
-        leadToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_L));
+        leadToils.Add(GoToStageLocation(buildingPerformance, StageLocations.DOWNSTAGE_L));
         leadToils.Add(Synchronise());
         supportToils.Add(Synchronise());
         leadToils.Add(ThrowDramaticMote(Lead, ThingDefOf_RazzleDazzle.Mote_Comedy, 401));
@@ -317,11 +317,11 @@ public class RazzleDazzle_Director
         supportToils.Add(Synchronise());
     }
 
-    public void MusicalDance(List<Toil> leadToils, List<Toil> supportToils, Building_Performance stage)
+    public void MusicalDance(List<Toil> leadToils, List<Toil> supportToils, Building_Performance buildingPerformance)
     {
-        leadToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_C));
+        leadToils.Add(GoToStageLocation(buildingPerformance, StageLocations.DOWNSTAGE_C));
         leadToils.Add(FaceDirection(StageRight));
-        supportToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_C));
+        supportToils.Add(GoToStageLocation(buildingPerformance, StageLocations.DOWNSTAGE_C));
         supportToils.Add(FaceDirection(StageLeft));
         leadToils.Add(Synchronise());
         supportToils.Add(Synchronise());
@@ -329,25 +329,25 @@ public class RazzleDazzle_Director
         supportToils.Add(ThrowDramaticMote(Support, ThingDefOf_RazzleDazzle.Mote_Music, 401));
         leadToils.Add(Synchronise());
         supportToils.Add(Synchronise());
-        leadToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_L));
-        supportToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_R));
+        leadToils.Add(GoToStageLocation(buildingPerformance, StageLocations.DOWNSTAGE_L));
+        supportToils.Add(GoToStageLocation(buildingPerformance, StageLocations.DOWNSTAGE_R));
         leadToils.Add(Synchronise());
         supportToils.Add(Synchronise());
         leadToils.Add(ThrowDramaticMote(Lead, ThingDefOf_RazzleDazzle.Mote_Music, 401));
         supportToils.Add(ThrowDramaticMote(Support, ThingDefOf_RazzleDazzle.Mote_Music, 401));
         leadToils.Add(Synchronise());
         supportToils.Add(Synchronise());
-        leadToils.Add(GoToStageLocation(stage, StageLocations.UPSTAGE_R));
-        supportToils.Add(GoToStageLocation(stage, StageLocations.UPSTAGE_L));
+        leadToils.Add(GoToStageLocation(buildingPerformance, StageLocations.UPSTAGE_R));
+        supportToils.Add(GoToStageLocation(buildingPerformance, StageLocations.UPSTAGE_L));
         leadToils.Add(Synchronise());
         supportToils.Add(Synchronise());
         leadToils.Add(ThrowDramaticMote(Lead, ThingDefOf_RazzleDazzle.Mote_Music, 401));
         supportToils.Add(ThrowDramaticMote(Support, ThingDefOf_RazzleDazzle.Mote_Music, 401));
         leadToils.Add(Synchronise());
         supportToils.Add(Synchronise());
-        leadToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_C));
+        leadToils.Add(GoToStageLocation(buildingPerformance, StageLocations.DOWNSTAGE_C));
         leadToils.Add(FaceDirection(StageRight));
-        supportToils.Add(GoToStageLocation(stage, StageLocations.DOWNSTAGE_C));
+        supportToils.Add(GoToStageLocation(buildingPerformance, StageLocations.DOWNSTAGE_C));
         supportToils.Add(FaceDirection(StageLeft));
         leadToils.Add(Synchronise());
         supportToils.Add(Synchronise());

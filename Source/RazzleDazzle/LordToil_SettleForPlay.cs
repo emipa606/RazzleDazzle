@@ -5,22 +5,15 @@ using Verse.AI.Group;
 
 namespace RazzleDazzle;
 
-public class LordToil_SettleForPlay : LordToil
+public class LordToil_SettleForPlay(Pawn lead, Pawn support, Thing performThing) : LordToil
 {
-    public Pawn lead;
+    public readonly Pawn lead = lead;
 
-    public Thing performThing;
+    public readonly Thing performThing = performThing;
+
+    public readonly Pawn support = support;
 
     public CellRect spectateRect;
-
-    public Pawn support;
-
-    public LordToil_SettleForPlay(Pawn lead, Pawn support, Thing performThing)
-    {
-        this.lead = lead;
-        this.support = support;
-        this.performThing = performThing;
-    }
 
     private CellRect CalculateSpectateRect()
     {

@@ -5,14 +5,9 @@ using Verse.AI.Group;
 
 namespace RazzleDazzle;
 
-public class LordToil_SettleForPerformance : LordToil
+public class LordToil_SettleForPerformance(Building_Performance venue) : LordToil
 {
-    public LordToil_SettleForPerformance(Building_Performance venue)
-    {
-        Venue = venue;
-    }
-
-    public Building_Performance Venue { get; }
+    public Building_Performance Venue { get; } = venue;
 
     public Pawn Lead => Venue.Lead;
 

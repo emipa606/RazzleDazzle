@@ -3,15 +3,8 @@ using Verse.AI.Group;
 
 namespace RazzleDazzle;
 
-public class LordToil_EndPerformance : LordToil
+public class LordToil_EndPerformance(Building_Performance venue) : LordToil
 {
-    private readonly Building_Performance venue;
-
-    public LordToil_EndPerformance(Building_Performance venue)
-    {
-        this.venue = venue;
-    }
-
     public override bool ShouldFail => true;
 
     public void CleanUpStage()

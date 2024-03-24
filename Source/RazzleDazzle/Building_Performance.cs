@@ -10,13 +10,12 @@ namespace RazzleDazzle;
 [StaticConstructorOnStartup]
 public class Building_Performance : Building_WorkTable
 {
+    public readonly bool canPerformSwitch = true;
     public string artistName = "";
 
     public QualityCategory artQuality = QualityCategory.Normal;
 
     public string artTitle = "";
-
-    public bool canPerformSwitch = true;
 
     private RazzleDazzle_Director director;
 
@@ -342,7 +341,7 @@ public class Building_Performance : Building_WorkTable
         ticksSinceLastPerformance = 0;
         var thing = SelectPerformThing();
         return Lead != null && thing != null && (Support != null || VenueDef.performersNeeded <= 1) &&
-               !Lead.InMentalState && (Support == null || !Support.InMentalState) && Lead.mindState.duty == null &&
+               !Lead.InMentalState && Support is not { InMentalState: true } && Lead.mindState.duty == null &&
                Support?.mindState.duty == null;
     }
 

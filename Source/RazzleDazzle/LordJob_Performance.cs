@@ -174,7 +174,7 @@ public class LordJob_Performance : LordJob_VoluntarilyJoinable
             select t).ToList();
         if (!list.NullOrEmpty())
         {
-            (list.FirstOrDefault() as Building_BroadcastTower).qualityValue +=
+            ((Building_BroadcastTower)list.FirstOrDefault())!.qualityValue +=
                 Venue.VenueDef.entertainmentWeight * (qualityScore - 5f);
         }
     }
