@@ -7,11 +7,11 @@ namespace RazzleDazzle;
 
 public class LordToil_SettleForPlay(Pawn lead, Pawn support, Thing performThing) : LordToil
 {
-    public readonly Pawn lead = lead;
+    private readonly Pawn lead = lead;
 
-    public readonly Thing performThing = performThing;
+    private readonly Thing performThing = performThing;
 
-    public readonly Pawn support = support;
+    private readonly Pawn support = support;
 
     public CellRect spectateRect;
 

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!-- ================= Performance buildings tables ===================-->
   <ThingDef Name="PerformanceBuildingBase" ParentName="BenchBase" Class="RazzleDazzle.PerformanceVenueDef" Abstract="True">

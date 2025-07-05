@@ -20,7 +20,7 @@ public class LordJob_PerformConcert : LordJob_Performance
         return Lead.health.capacities.GetLevel(PawnCapacityDefOf.Manipulation);
     }
 
-    public override string GetMessageForQualityLevel(float fQ)
+    protected override string GetMessageForQualityLevel(float fQ)
     {
         string text;
         switch (fQ)
@@ -42,7 +42,7 @@ public class LordJob_PerformConcert : LordJob_Performance
         return "RAZ_ConcertFinished".Translate(text.Translate());
     }
 
-    public override ThoughtDef GetThoughtForQualityLevel(float fQ)
+    protected override ThoughtDef GetThoughtForQualityLevel(float fQ)
     {
         ThoughtDef result;
         switch (fQ)

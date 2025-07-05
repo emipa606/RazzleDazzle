@@ -9,7 +9,7 @@ public class LordJob_Performance : LordJob_VoluntarilyJoinable
 {
     protected Building_Performance venue;
 
-    public LordJob_Performance()
+    protected LordJob_Performance()
     {
     }
 
@@ -18,11 +18,11 @@ public class LordJob_Performance : LordJob_VoluntarilyJoinable
         this.venue = venue;
     }
 
-    public Building_Performance Venue => venue;
+    protected Building_Performance Venue => venue;
 
     public Pawn Lead => venue.Lead;
 
-    public Pawn Support => venue.Support;
+    protected Pawn Support => venue.Support;
 
     public override void ExposeData()
     {
@@ -30,34 +30,26 @@ public class LordJob_Performance : LordJob_VoluntarilyJoinable
         base.ExposeData();
     }
 
-    public bool IsPerformanceValid()
+    private bool IsPerformanceValid()
     {
         return Venue != null && Lead != null && (Venue.VenueDef.performersNeeded <= 1 || Support != null) &&
                Venue.artTitle != "";
     }
 
-    public bool HasPerformanceFinished()
+    private bool HasPerformanceFinished()
     {
         return lord.ticksInToil > Venue.VenueDef.minTicksInPerformance && Rand.Chance(0.01f);
     }
 
-    public bool TryStartPerformance()
+    public void TryStartPerformance()
     {
-        bool result;
-        if (!IsPerformanceValid())
-        {
-            result = false;
-        }
-        else
+        if (IsPerformanceValid())
         {
             LordMaker.MakeNewLord(Faction.OfPlayer, this, Venue.Map);
-            result = true;
         }
-
-        return result;
     }
 
-    public bool PerformersAreReady()
+    private bool PerformersAreReady()
     {
         bool result;
         if (!IsValidLead(Lead) || !GatheringsUtility.InGatheringArea(Lead.Position, Venue.Position, Venue.Map))
@@ -125,7 +117,7 @@ public class LordJob_Performance : LordJob_VoluntarilyJoinable
         return Rand.Range(num2, num2 + num);
     }
 
-    protected int GetQualityModifier(QualityCategory qc)
+    protected static int GetQualityModifier(QualityCategory qc)
     {
         var result = 0;
         switch (qc)
@@ -156,12 +148,12 @@ public class LordJob_Performance : LordJob_VoluntarilyJoinable
         return result;
     }
 
-    public virtual string GetMessageForQualityLevel(float fQ)
+    protected virtual string GetMessageForQualityLevel(float fQ)
     {
         return "";
     }
 
-    public virtual ThoughtDef GetThoughtForQualityLevel(float fQ)
+    protected virtual ThoughtDef GetThoughtForQualityLevel(float fQ)
     {
         return ThoughtDefOfRazzleDazzle.AttendedConcert;
     }
@@ -179,7 +171,7 @@ public class LordJob_Performance : LordJob_VoluntarilyJoinable
         }
     }
 
-    public virtual void GiveWatchedPlayThoughts()
+    protected virtual void GiveWatchedPlayThoughts()
     {
         var finalQuality = GetFinalQuality();
         if (finalQuality >= 14f)

@@ -33,21 +33,18 @@ public class Building_Performance : Building_WorkTable
 
     public int ticksIntoThisPerformance;
 
-    public int ticksSinceLastPerformance = 5000;
+    private int ticksSinceLastPerformance = 5000;
 
-    protected PerformanceVenueDef venDef;
+    private PerformanceVenueDef venDef;
 
     public RazzleDazzle_Director Director
     {
         get
         {
-            if (director == null)
+            director ??= new RazzleDazzle_Director
             {
-                director = new RazzleDazzle_Director
-                {
-                    stage = this
-                };
-            }
+                stage = this
+            };
 
             return director;
         }
@@ -140,10 +137,7 @@ public class Building_Performance : Building_WorkTable
     {
         get
         {
-            if (venDef == null)
-            {
-                venDef = (PerformanceVenueDef)def;
-            }
+            venDef ??= (PerformanceVenueDef)def;
 
             return venDef;
         }
@@ -151,7 +145,7 @@ public class Building_Performance : Building_WorkTable
 
     protected virtual string BasicInspectString => "RAZ_VenueBasicInspectString".Translate();
 
-    protected FloatMenuOption SetAsLead(Pawn pawn)
+    private FloatMenuOption SetAsLead(Pawn pawn)
     {
         return new FloatMenuOption("RAZ_ReplaceLead".Translate(), delegate
         {
@@ -163,7 +157,7 @@ public class Building_Performance : Building_WorkTable
         });
     }
 
-    protected FloatMenuOption SetAsSupport(Pawn pawn)
+    private FloatMenuOption SetAsSupport(Pawn pawn)
     {
         return new FloatMenuOption("RAZ_ReplaceSupport".Translate(), delegate
         {
@@ -213,7 +207,7 @@ public class Building_Performance : Building_WorkTable
         return result;
     }
 
-    protected static Pawn FindColonistByID(int IDnum)
+    private static Pawn FindColonistByID(int IDnum)
     {
         if (IDnum == -1)
         {
@@ -276,20 +270,20 @@ public class Building_Performance : Building_WorkTable
         Scribe_Values.Look(ref supportIndex, "supportIndex", -1);
     }
 
-    public Thing SelectPerformThing()
+    private Thing SelectPerformThing()
     {
         Thing result = CurrentlyUsableForBills() ? this : null;
 
         return result;
     }
 
-    public bool IsGoodAndSafeTimeForPerformance()
+    private bool IsGoodAndSafeTimeForPerformance()
     {
         return GenLocalDate.HourOfDay(Map) >= 13 && GenLocalDate.HourOfDay(Map) <= 21 &&
                Map.dangerWatcher.DangerRating == StoryDanger.None && Map.mapPawns.FreeColonistsSpawnedCount >= 4;
     }
 
-    public IEnumerable<Pawn> ColonistsAvailableToPerform()
+    private IEnumerable<Pawn> ColonistsAvailableToPerform()
     {
         IEnumerable<Pawn> result;
         if (Map?.mapPawns == null)
@@ -323,20 +317,20 @@ public class Building_Performance : Building_WorkTable
         return false;
     }
 
-    public virtual bool IsForbidden()
+    protected virtual bool IsForbidden()
     {
         var comp = GetComp<CompForbiddable>();
         return comp is { Forbidden: true };
     }
 
-    public virtual bool CanDoPerformanceNow()
+    protected virtual bool CanDoPerformanceNow()
     {
         return !IsForbidden() && canPerformSwitch && rehearsing &&
                ColonistsAvailableToPerform().Count() >= VenueDef.performersNeeded &&
                ticksSinceLastPerformance >= VenueDef.ticksBetweenPerformances && IsGoodAndSafeTimeForPerformance();
     }
 
-    public virtual bool TryToStartPerformance()
+    protected virtual bool TryToStartPerformance()
     {
         ticksSinceLastPerformance = 0;
         var thing = SelectPerformThing();

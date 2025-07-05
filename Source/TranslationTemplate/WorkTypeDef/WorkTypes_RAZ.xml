@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Performers put on plays, recitals and gigs for entertainment. -->
+  <Performance.description>Performers put on plays, recitals and gigs for entertainment.</Performance.description>
+  <!-- EN: Performing -->
+  <Performance.gerundLabel>Performing</Performance.gerundLabel>
+  <!-- EN: Perform -->
+  <Performance.labelShort>Perform</Performance.labelShort>
+  <!-- EN: Performer -->
+  <Performance.pawnLabel>Performer</Performance.pawnLabel>
+  <!-- EN: Perform -->
+  <Performance.verb>Perform</Performance.verb>
+</LanguageData>

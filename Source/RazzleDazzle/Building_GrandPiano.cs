@@ -5,7 +5,7 @@ namespace RazzleDazzle;
 [StaticConstructorOnStartup]
 public class Building_GrandPiano : Building_Performance
 {
-    public override bool TryToStartPerformance()
+    protected override bool TryToStartPerformance()
     {
         bool result;
         if (base.TryToStartPerformance())

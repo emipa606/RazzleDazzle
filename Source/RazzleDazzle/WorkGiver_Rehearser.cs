@@ -19,50 +19,49 @@ public class WorkGiver_Rehearser : WorkGiver_Scanner
 
     public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
     {
-        bool result;
         if (t is not Building_Performance buildingPerformance)
         {
-            result = false;
+            return false;
         }
-        else
+
+        if (pawn.Dead || pawn.Downed || pawn.IsBurning())
         {
-            if (pawn.Dead || pawn.Downed || pawn.IsBurning())
-            {
-                result = false;
-            }
-            else if (!buildingPerformance.rehearsing)
-            {
-                result = false;
-            }
-            else if (!buildingPerformance.canPerformSwitch || buildingPerformance.IsForbidden(pawn))
-            {
-                result = false;
-            }
-            else if (buildingPerformance.rehearsedFraction > 1f)
-            {
-                result = false;
-            }
-            else
-            {
-                if (buildingPerformance.Lead != null && buildingPerformance.Lead != pawn)
-                {
-                    if (buildingPerformance.VenueDef.performersNeeded <= 1)
-                    {
-                        return false;
-                    }
-
-                    if (buildingPerformance.Support != null && buildingPerformance.Support != pawn)
-                    {
-                        return false;
-                    }
-                }
-
-                result = pawn.CanReserveAndReach(buildingPerformance, PathEndMode, Danger.Some,
-                    buildingPerformance.VenueDef.performersNeeded);
-            }
+            return false;
         }
 
-        return result;
+        if (!buildingPerformance.rehearsing)
+        {
+            return false;
+        }
+
+        if (!buildingPerformance.canPerformSwitch || buildingPerformance.IsForbidden(pawn))
+        {
+            return false;
+        }
+
+        if (buildingPerformance.rehearsedFraction > 1f)
+        {
+            return false;
+        }
+
+        if (buildingPerformance.Lead == null || buildingPerformance.Lead == pawn)
+        {
+            return pawn.CanReserveAndReach(buildingPerformance, PathEndMode, Danger.Some,
+                buildingPerformance.VenueDef.performersNeeded);
+        }
+
+        if (buildingPerformance.VenueDef.performersNeeded <= 1)
+        {
+            return false;
+        }
+
+        if (buildingPerformance.Support != null && buildingPerformance.Support != pawn)
+        {
+            return false;
+        }
+
+        return pawn.CanReserveAndReach(buildingPerformance, PathEndMode, Danger.Some,
+            buildingPerformance.VenueDef.performersNeeded);
     }
 
     public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)

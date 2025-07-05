@@ -8,7 +8,7 @@ public class Building_Microphone : Building_Performance
 {
     protected override string BasicInspectString => "RAZ_MicrophoneBasicInpectString".Translate();
 
-    public override bool TryToStartPerformance()
+    protected override bool TryToStartPerformance()
     {
         bool result;
         if (base.TryToStartPerformance())

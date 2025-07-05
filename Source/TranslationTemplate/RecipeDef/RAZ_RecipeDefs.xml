@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: burn performance -->
+  <BurnPerformance.label>burn performance</BurnPerformance.label>
+  <!-- EN: Burn a performance. -->
+  <BurnPerformance.description>Burn a performance.</BurnPerformance.description>
+  <!-- EN: Burning a performance. -->
+  <BurnPerformance.jobString>Burning a performance.</BurnPerformance.jobString>
+  <!-- EN: compose music -->
+  <RAZ_ComposeMusic.label>compose music</RAZ_ComposeMusic.label>
+  <!-- EN: Compose a piece of music. -->
+  <RAZ_ComposeMusic.description>Compose a piece of music.</RAZ_ComposeMusic.description>
+  <!-- EN: Composing music. -->
+  <RAZ_ComposeMusic.jobString>Composing music.</RAZ_ComposeMusic.jobString>
+  <!-- EN: Stage a play -->
+  <RAZ_StagePlay.label>Stage a play</RAZ_StagePlay.label>
+  <!-- EN: Stage a play written or bought by your colonists. -->
+  <RAZ_StagePlay.description>Stage a play written or bought by your colonists.</RAZ_StagePlay.description>
+  <!-- EN: Staging play. -->
+  <RAZ_StagePlay.jobString>Staging play.</RAZ_StagePlay.jobString>
+  <!-- EN: write a play -->
+  <RAZ_WritePlay.label>write a play</RAZ_WritePlay.label>
+  <!-- EN: Write a dramatic work for the stage. -->
+  <RAZ_WritePlay.description>Write a dramatic work for the stage.</RAZ_WritePlay.description>
+  <!-- EN: Writing play. -->
+  <RAZ_WritePlay.jobString>Writing play.</RAZ_WritePlay.jobString>
+</LanguageData>

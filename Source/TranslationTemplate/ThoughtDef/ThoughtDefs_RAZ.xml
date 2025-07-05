@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: attended amazing concert -->
+  <AttendedAmazingConcert.stages.attended_amazing_concert.label>attended amazing concert</AttendedAmazingConcert.stages.attended_amazing_concert.label>
+  <!-- EN: That music is in my soul! -->
+  <AttendedAmazingConcert.stages.attended_amazing_concert.description>That music is in my soul!</AttendedAmazingConcert.stages.attended_amazing_concert.description>
+  <!-- EN: attended amazing gig -->
+  <AttendedAmazingGig.stages.attended_amazing_gig.label>attended amazing gig</AttendedAmazingGig.stages.attended_amazing_gig.label>
+  <!-- EN: I'll never look at a muffalo the same way again! -->
+  <AttendedAmazingGig.stages.attended_amazing_gig.description>I'll never look at a muffalo the same way again!</AttendedAmazingGig.stages.attended_amazing_gig.description>
+  <!-- EN: attended bad concert -->
+  <AttendedBadConcert.stages.attended_bad_concert.label>attended bad concert</AttendedBadConcert.stages.attended_bad_concert.label>
+  <!-- EN: Uugh. It sounded like a boomalope's death throws. -->
+  <AttendedBadConcert.stages.attended_bad_concert.description>Uugh. It sounded like a boomalope's death throws.</AttendedBadConcert.stages.attended_bad_concert.description>
+  <!-- EN: attended bad gig -->
+  <AttendedBadGig.stages.attended_bad_gig.label>attended bad gig</AttendedBadGig.stages.attended_bad_gig.label>
+  <!-- EN: The silence was so awkward. -->
+  <AttendedBadGig.stages.attended_bad_gig.description>The silence was so awkward.</AttendedBadGig.stages.attended_bad_gig.description>
+  <!-- EN: attended concert -->
+  <AttendedConcert.stages.attended_concert.label>attended concert</AttendedConcert.stages.attended_concert.label>
+  <!-- EN: A pleasant evening's music. -->
+  <AttendedConcert.stages.attended_concert.description>A pleasant evening's music.</AttendedConcert.stages.attended_concert.description>
+  <!-- EN: attended gig -->
+  <AttendedGig.stages.attended_gig.label>attended gig</AttendedGig.stages.attended_gig.label>
+  <!-- EN: A few duff lines, but it was pretty good. -->
+  <AttendedGig.stages.attended_gig.description>A few duff lines, but it was pretty good.</AttendedGig.stages.attended_gig.description>
+  <!-- EN: attended good concert -->
+  <AttendedGoodConcert.stages.attended_good_concert.label>attended good concert</AttendedGoodConcert.stages.attended_good_concert.label>
+  <!-- EN: That rocked! -->
+  <AttendedGoodConcert.stages.attended_good_concert.description>That rocked!</AttendedGoodConcert.stages.attended_good_concert.description>
+  <!-- EN: attended good gig -->
+  <AttendedGoodGig.stages.attended_good_gig.label>attended good gig</AttendedGoodGig.stages.attended_good_gig.label>
+  <!-- EN: So clever and funny! -->
+  <AttendedGoodGig.stages.attended_good_gig.description>So clever and funny!</AttendedGoodGig.stages.attended_good_gig.description>
+  <!-- EN: performed for the colony -->
+  <Performed.stages.performed_for_the_colony.label>performed for the colony</Performed.stages.performed_for_the_colony.label>
+  <!-- EN: I got to share my art with the world! -->
+  <Performed.stages.performed_for_the_colony.description>I got to share my art with the world!</Performed.stages.performed_for_the_colony.description>
+  <!-- EN: performed in extremely impressive environment -->
+  <PerformedInExtremelyImpressiveSpace.stages.performed_in_extremely_impressive_environment.label>performed in extremely impressive environment</PerformedInExtremelyImpressiveSpace.stages.performed_in_extremely_impressive_environment.label>
+  <!-- EN: I always dreamed I would perform somewhere like that -->
+  <PerformedInExtremelyImpressiveSpace.stages.performed_in_extremely_impressive_environment.description>I always dreamed I would perform somewhere like that</PerformedInExtremelyImpressiveSpace.stages.performed_in_extremely_impressive_environment.description>
+  <!-- EN: performed in impressive environment -->
+  <PerformedInImpressiveSpace.stages.performed_in_impressive_environment.label>performed in impressive environment</PerformedInImpressiveSpace.stages.performed_in_impressive_environment.label>
+  <!-- EN: I enjoy performing in in that lovely environment -->
+  <PerformedInImpressiveSpace.stages.performed_in_impressive_environment.description>I enjoy performing in in that lovely environment</PerformedInImpressiveSpace.stages.performed_in_impressive_environment.description>
+  <!-- EN: performed in very impressive environment -->
+  <PerformedInVeryImpressiveSpace.stages.performed_in_very_impressive_environment.label>performed in very impressive environment</PerformedInVeryImpressiveSpace.stages.performed_in_very_impressive_environment.label>
+  <!-- EN: What an incredible place to perform -->
+  <PerformedInVeryImpressiveSpace.stages.performed_in_very_impressive_environment.description>What an incredible place to perform</PerformedInVeryImpressiveSpace.stages.performed_in_very_impressive_environment.description>
+  <!-- EN: saw amazing play -->
+  <SawAmazingPlay.stages.saw_amazing_play.label>saw amazing play</SawAmazingPlay.stages.saw_amazing_play.label>
+  <!-- EN: That performance was life-changing. -->
+  <SawAmazingPlay.stages.saw_amazing_play.description>That performance was life-changing.</SawAmazingPlay.stages.saw_amazing_play.description>
+  <!-- EN: saw bad play -->
+  <SawBadPlay.stages.saw_bad_play.label>saw bad play</SawBadPlay.stages.saw_bad_play.label>
+  <!-- EN: I can't believe I had to sit through that! -->
+  <SawBadPlay.stages.saw_bad_play.description>I can't believe I had to sit through that!</SawBadPlay.stages.saw_bad_play.description>
+  <!-- EN: saw play -->
+  <SawGoodPlay.stages.saw_play.label>saw play</SawGoodPlay.stages.saw_play.label>
+  <!-- EN: It's wonderful to have time for the arts! -->
+  <SawGoodPlay.stages.saw_play.description>It's wonderful to have time for the arts!</SawGoodPlay.stages.saw_play.description>
+  <!-- EN: saw play -->
+  <SawPlay.stages.saw_play.label>saw play</SawPlay.stages.saw_play.label>
+  <!-- EN: It was nice to get to do something diverting. -->
+  <SawPlay.stages.saw_play.description>It was nice to get to do something diverting.</SawPlay.stages.saw_play.description>
+</LanguageData>

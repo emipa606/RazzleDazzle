@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 2427847841
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 56cb3b38c49206a1256d5ae89e877f63
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 56cb3b38c49206a1256d5ae89e877f63
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.RazzleDazzle/Textures/Things/Building/Stage_south.png
+- Assets/Data/Mlie.RazzleDazzle/Textures/Things/Items/RAZ_Play.png
+- Assets/Data/Mlie.RazzleDazzle/Textures/Things/Motes/RAZ_Mote_Comedy.png
+- Assets/Data/Mlie.RazzleDazzle/Textures/Things/Building/RAZ_Mic.png
+- Assets/Data/Mlie.RazzleDazzle/Textures/Things/Building/RAZ_GrandPiano.png
+- Assets/Data/Mlie.RazzleDazzle/Textures/Things/Motes/RAZ_Mote_Music.png
+- Assets/Data/Mlie.RazzleDazzle/Textures/Things/Building/Stage_east.png
+- Assets/Data/Mlie.RazzleDazzle/Textures/Things/Items/RAZ_UnfinishedPlay.png
+- Assets/Data/Mlie.RazzleDazzle/Textures/Things/Items/RAZ_UnfinishedMusic.png
+- Assets/Data/Mlie.RazzleDazzle/Textures/Things/Building/Broadcaster.png
+- Assets/Data/Mlie.RazzleDazzle/Textures/Things/Items/RAZ_SheetMusic.png
+- Assets/Data/Mlie.RazzleDazzle/Textures/Things/Motes/RAZ_Mote_Tragedy.png
+- Assets/Data/Mlie.RazzleDazzle/Textures/Things/Building/Stage_north.png
+Dependencies: []

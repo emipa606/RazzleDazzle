@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: composition -->
+  <RAZ_Composition.label>composition</RAZ_Composition.label>
+  <!-- EN: A composition written by a colonist. -->
+  <RAZ_Composition.description>A composition written by a colonist.</RAZ_Composition.description>
+  <!-- EN: play -->
+  <RAZ_Play.label>play</RAZ_Play.label>
+  <!-- EN: A play written by a colonist. -->
+  <RAZ_Play.description>A play written by a colonist.</RAZ_Play.description>
+  <!-- EN: unfinished music -->
+  <RAZ_UnfinishedMusic.label>unfinished music</RAZ_UnfinishedMusic.label>
+  <!-- EN: unfinished play -->
+  <RAZ_UnfinishedPlay.label>unfinished play</RAZ_UnfinishedPlay.label>
+  <!-- EN: half-written. half-baked. -->
+  <RAZ_UnfinishedPlay.description>half-written. half-baked.</RAZ_UnfinishedPlay.description>
+</LanguageData>

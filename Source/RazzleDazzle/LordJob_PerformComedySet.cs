@@ -25,7 +25,7 @@ public class LordJob_PerformComedySet : LordJob_Performance
         return Lead.health.capacities.GetLevel(PawnCapacityDefOf.Talking) * Rand.Range(num, num + num2);
     }
 
-    public override string GetMessageForQualityLevel(float fQ)
+    protected override string GetMessageForQualityLevel(float fQ)
     {
         string text;
         switch (fQ)
@@ -47,7 +47,7 @@ public class LordJob_PerformComedySet : LordJob_Performance
         return "RAZ_ComedyFinished".Translate(text.Translate());
     }
 
-    public override ThoughtDef GetThoughtForQualityLevel(float fQ)
+    protected override ThoughtDef GetThoughtForQualityLevel(float fQ)
     {
         ThoughtDef result;
         switch (fQ)

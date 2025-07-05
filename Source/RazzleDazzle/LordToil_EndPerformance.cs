@@ -7,7 +7,7 @@ public class LordToil_EndPerformance(Building_Performance venue) : LordToil
 {
     public override bool ShouldFail => true;
 
-    public void CleanUpStage()
+    private void CleanUpStage()
     {
         venue.rehearsing = false;
         venue.rehearsedFraction = 0f;

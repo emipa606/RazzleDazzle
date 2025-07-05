@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <RulePackDef>
     <defName>RAZ_ArtName_Play</defName>
@@ -7,168 +7,168 @@
     </include>
     <rulePack>
       <rulesStrings>
-        <li>r_art_name-&gt;[ANYPAWN_nameIndef]</li>
-        <li>r_art_name-&gt;[drug]</li>
-        <li>r_art_name-&gt;[disease]</li>
-        <li>r_art_name-&gt;[disease] &amp; [drug]</li>
-        <li>r_art_name-&gt;[material] &amp; [drug]</li>
-        <li>r_art_name-&gt;[weapon]s &amp; [drug]</li>
-        <li>r_art_name-&gt;The [material] [weapon]</li>
-        <li>r_art_name-&gt;[ANYPAWN_nameIndef] [romannumeral] (Part I)</li>
-        <li>r_art_name-&gt;[relationType] [ANYPAWN_nameIndef]</li>
-        <li>r_art_name-&gt;[prename] [ANYPAWN_nameIndef]</li>
-        <li>r_art_name-&gt;[preplace] [place]</li>
-        <li>r_art_name-&gt;The [material] [furniture]</li>
-        <li>r_art_name-&gt;The [adjective] [animal]</li>
-        <li>r_art_name-&gt;The [adjective] [weapon]</li>
-        <li>r_art_name-&gt;The [adjective] [furniture]</li>
-        <li>r_art_name-&gt;[preconcept] [ConceptAny]</li>
-        <li>r_art_name-&gt;[ConceptAny]</li>
-        <li>r_art_name-&gt;[prenoun] [animalType]</li>
-        <li>r_art_name-&gt;[prenoun] [weapon]</li>
-        <li>r_art_name-&gt;[animalType] on a [oneSylAdj] [material] roof</li>
-        <li>r_art_name-&gt;All My [relationType]s</li>
-        <li>r_art_name-&gt;All My [animalType]s</li>
-        <li>relationType-&gt;Brother</li>
-        <li>relationType-&gt;Sister</li>
-        <li>relationType-&gt;Uncle</li>
-        <li>relationType-&gt;Aunt</li>
-        <li>relationType-&gt;Cousin</li>
-        <li>drug-&gt;Smokeleaf</li>
-        <li>drug-&gt;Go-Juice</li>
-        <li>drug-&gt;Yayo</li>
-        <li>drug-&gt;Whisky</li>
-        <li>drug-&gt;Luciferum</li>
-        <li>drug-&gt;Flake</li>
-        <li>drug-&gt;Coffee</li>
-        <li>disease-&gt;Heart Attack</li>
-        <li>disease-&gt;Hypothermia</li>
-        <li>disease-&gt;Heatstroke</li>
-        <li>disease-&gt;Influenza</li>
-        <li>disease-&gt;Mechanites</li>
-        <li>disease-&gt;Parasites</li>
-        <li>disease-&gt;Malaria</li>
-        <li>disease-&gt;Sleeping Sickness</li>
-        <li>disease-&gt;Dementia</li>
-        <li>disease-&gt;Carcinoma</li>
-        <li>material-&gt;Steel</li>
-        <li>material-&gt;Gold</li>
-        <li>material-&gt;Silver</li>
-        <li>material-&gt;Copper</li>
-        <li>material-&gt;Titanium</li>
-        <li>material-&gt;Uranium</li>
-        <li>material-&gt;Tin</li>
-        <li>material-&gt;Marble</li>
-        <li>material-&gt;Devilstrand</li>
-        <li>material-&gt;Synthread</li>
-        <li>material-&gt;Tantalum</li>
-        <li>material-&gt;Obsidian</li>
-        <li>material-&gt;Thrumbohorn</li>
-        <li>material-&gt;Glass</li>
-        <li>weapon-&gt;Gun</li>
-        <li>weapon-&gt;Gladius</li>
-        <li>weapon-&gt;Longsword</li>
-        <li>weapon-&gt;Club</li>
-        <li>weapon-&gt;Survival Rifle</li>
-        <li>weapon-&gt;Sniper Rifle</li>
-        <li>weapon-&gt;Pistol</li>
-        <li>weapon-&gt;Knife</li>
-        <li>prename-&gt;The Tragical History of the Life and Death of</li>
-        <li>prename-&gt;The Exciting Adventures of</li>
-        <li>prename-&gt;The Importance of Being</li>
-        <li>prename-&gt;Who's Afraid of</li>
-        <li>prename-&gt;Waiting for </li>
-        <li>preplace-&gt;The Good Person of</li>
-        <li>preplace-&gt;The Merry Wives of</li>
-        <li>preplace-&gt;The Pirates of</li>
-        <li>preplace-&gt;The Raiders of</li>
-        <li>preplace-&gt;The Merchant of</li>
-        <li>preplace-&gt;A Tale of</li>
-        <li>preplace-&gt;Two Gentlemen of</li>
-        <li>place-&gt;Glasgow</li>
-        <li>place-&gt;the Orion Installation</li>
-        <li>place-&gt;the Rim</li>
-        <li>place-&gt;the Village</li>
-        <li>place-&gt;the Dining Room</li>
-        <li>place-&gt;Old Earth</li>
-        <li>place-&gt;Prison</li>
-        <li>place-&gt;the Rec Room</li>
-        <li>place-&gt;the Desert</li>
-        <li>place-&gt;the Ocean</li>
-        <li>place-&gt;the Rings of the Imperium</li>
-        <li>furniture-&gt;Bed</li>
-        <li>furniture-&gt;Desk</li>
-        <li>furniture-&gt;Wall</li>
-        <li>furniture-&gt;Chair</li>
-        <li>furniture-&gt;Lamp</li>
-        <li>furniture-&gt;Mirror</li>
-        <li>furniture-&gt;Lazy Susan</li>
-        <li>furniture-&gt;Comm Console</li>
-        <li>animalType-&gt;Thrumbo</li>
-        <li>animalType-&gt;Muffalo</li>
-        <li>animalType-&gt;Boomrat</li>
-        <li>animalType-&gt;Boomalope</li>
-        <li>animalType-&gt;Megatherum</li>
-        <li>animalType-&gt;Fox</li>
-        <li>animalType-&gt;Wolf</li>
-        <li>animalType-&gt;Cat</li>
-        <li>animalType-&gt;Swan</li>
-        <li>animalType-&gt;Puffin</li>
-        <li>animalType-&gt;Penguin</li>
-        <li>animalType-&gt;Warg</li>
-        <li>animalType-&gt;Alphabeaver</li>
-        <li>animalType-&gt;Labrador</li>
-        <li>animalType-&gt;Husky</li>
-        <li>animalType-&gt;Alpaca</li>
-        <li>animalType-&gt;Squirrel</li>
-        <li>animalType-&gt;Swordfish</li>
-        <li>animalType-&gt;Rat</li>
-        <li>prenoun-&gt;Lady Windemere's</li>
-        <li>prenoun-&gt;The </li>
-        <li>prenoun-&gt;A Doll's</li>
-        <li>preconcept-&gt;A Midsummer Night's</li>
-        <li>preconcept-&gt;A Winter's </li>
-        <li>preconcept-&gt;A [weapon] Named</li>
-        <li>preconcept-&gt;A [animalType] Named</li>
-        <li>preconcept-&gt;A Streetcar Named</li>
-        <li>preconcept-&gt;Much Ado About</li>
-        <li>adjective-&gt;Happy</li>
-        <li>adjective-&gt;Unfortunate</li>
-        <li>adjective-&gt;Irrelevant</li>
-        <li>adjective-&gt;Hidden</li>
-        <li>adjective-&gt;Missing</li>
-        <li>adjective-&gt;Last</li>
-        <li>adjective-&gt;Hopeful</li>
-        <li>oneSylAdj-&gt;New</li>
-        <li>oneSylAdj-&gt;Red</li>
-        <li>oneSylAdj-&gt;Blue</li>
-        <li>oneSylAdj-&gt;Fast</li>
-        <li>oneSylAdj-&gt;Whole</li>
-        <li>oneSylAdj-&gt;Neat</li>
-        <li>oneSylAdj-&gt;Green</li>
-        <li>oneSylAdj-&gt;Gold</li>
-        <li>oneSylAdj-&gt;Trite</li>
-        <li>oneSylAdj-&gt;One</li>
-        <li>oneSylAdj-&gt;Cold</li>
-        <li>oneSylAdj-&gt;Hot</li>
-        <li>oneSylAdj-&gt;Fine</li>
-        <li>oneSylAdj-&gt;Bold</li>
-        <li>oneSylAdj-&gt;Soft</li>
-        <li>oneSylAdj-&gt;Hard</li>
-        <li>oneSylAdj-&gt;Rough</li>
-        <li>oneSylAdj-&gt;Smooth</li>
-        <li>oneSylAdj-&gt;Drunk</li>
-        <li>oneSylAdj-&gt;Slow</li>
-        <li>oneSylAdj-&gt;Black</li>
-        <li>oneSylAdj-&gt;Dark</li>
-        <li>oneSylAdj-&gt;Tired</li>
-        <li>oneSylAdj-&gt;Tough</li>
-        <li>oneSylAdj-&gt;Pure</li>
-        <li>oneSylAdj-&gt;Lost</li>
-        <li>oneSylAdj-&gt;Loathed</li>
-        <li>oneSylAdj-&gt;Loved</li>
-        <li>oneSylAdj-&gt;Dry</li>
-        <li>oneSylAdj-&gt;Wet</li>
+        <li>r_art_name->[ANYPAWN_nameIndef]</li>
+        <li>r_art_name->[drug]</li>
+        <li>r_art_name->[disease]</li>
+        <li>r_art_name->[disease] &amp; [drug]</li>
+        <li>r_art_name->[material] &amp; [drug]</li>
+        <li>r_art_name->[weapon]s &amp; [drug]</li>
+        <li>r_art_name->The [material] [weapon]</li>
+        <li>r_art_name->[ANYPAWN_nameIndef] [romannumeral] (Part I)</li>
+        <li>r_art_name->[relationType] [ANYPAWN_nameIndef]</li>
+        <li>r_art_name->[prename] [ANYPAWN_nameIndef]</li>
+        <li>r_art_name->[preplace] [place]</li>
+        <li>r_art_name->The [material] [furniture]</li>
+        <li>r_art_name->The [adjective] [animal]</li>
+        <li>r_art_name->The [adjective] [weapon]</li>
+        <li>r_art_name->The [adjective] [furniture]</li>
+        <li>r_art_name->[preconcept] [ConceptAny]</li>
+        <li>r_art_name->[ConceptAny]</li>
+        <li>r_art_name->[prenoun] [animalType]</li>
+        <li>r_art_name->[prenoun] [weapon]</li>
+        <li>r_art_name->[animalType] on a [oneSylAdj] [material] roof</li>
+        <li>r_art_name->All My [relationType]s</li>
+        <li>r_art_name->All My [animalType]s</li>
+        <li>relationType->Brother</li>
+        <li>relationType->Sister</li>
+        <li>relationType->Uncle</li>
+        <li>relationType->Aunt</li>
+        <li>relationType->Cousin</li>
+        <li>drug->Smokeleaf</li>
+        <li>drug->Go-Juice</li>
+        <li>drug->Yayo</li>
+        <li>drug->Whisky</li>
+        <li>drug->Luciferum</li>
+        <li>drug->Flake</li>
+        <li>drug->Coffee</li>
+        <li>disease->Heart Attack</li>
+        <li>disease->Hypothermia</li>
+        <li>disease->Heatstroke</li>
+        <li>disease->Influenza</li>
+        <li>disease->Mechanites</li>
+        <li>disease->Parasites</li>
+        <li>disease->Malaria</li>
+        <li>disease->Sleeping Sickness</li>
+        <li>disease->Dementia</li>
+        <li>disease->Carcinoma</li>
+        <li>material->Steel</li>
+        <li>material->Gold</li>
+        <li>material->Silver</li>
+        <li>material->Copper</li>
+        <li>material->Titanium</li>
+        <li>material->Uranium</li>
+        <li>material->Tin</li>
+        <li>material->Marble</li>
+        <li>material->Devilstrand</li>
+        <li>material->Synthread</li>
+        <li>material->Tantalum</li>
+        <li>material->Obsidian</li>
+        <li>material->Thrumbohorn</li>
+        <li>material->Glass</li>
+        <li>weapon->Gun</li>
+        <li>weapon->Gladius</li>
+        <li>weapon->Longsword</li>
+        <li>weapon->Club</li>
+        <li>weapon->Survival Rifle</li>
+        <li>weapon->Sniper Rifle</li>
+        <li>weapon->Pistol</li>
+        <li>weapon->Knife</li>
+        <li>prename->The Tragical History of the Life and Death of</li>
+        <li>prename->The Exciting Adventures of</li>
+        <li>prename->The Importance of Being</li>
+        <li>prename->Who's Afraid of</li>
+        <li>prename->Waiting for </li>
+        <li>preplace->The Good Person of</li>
+        <li>preplace->The Merry Wives of</li>
+        <li>preplace->The Pirates of</li>
+        <li>preplace->The Raiders of</li>
+        <li>preplace->The Merchant of</li>
+        <li>preplace->A Tale of</li>
+        <li>preplace->Two Gentlemen of</li>
+        <li>place->Glasgow</li>
+        <li>place->the Orion Installation</li>
+        <li>place->the Rim</li>
+        <li>place->the Village</li>
+        <li>place->the Dining Room</li>
+        <li>place->Old Earth</li>
+        <li>place->Prison</li>
+        <li>place->the Rec Room</li>
+        <li>place->the Desert</li>
+        <li>place->the Ocean</li>
+        <li>place->the Rings of the Imperium</li>
+        <li>furniture->Bed</li>
+        <li>furniture->Desk</li>
+        <li>furniture->Wall</li>
+        <li>furniture->Chair</li>
+        <li>furniture->Lamp</li>
+        <li>furniture->Mirror</li>
+        <li>furniture->Lazy Susan</li>
+        <li>furniture->Comm Console</li>
+        <li>animalType->Thrumbo</li>
+        <li>animalType->Muffalo</li>
+        <li>animalType->Boomrat</li>
+        <li>animalType->Boomalope</li>
+        <li>animalType->Megatherum</li>
+        <li>animalType->Fox</li>
+        <li>animalType->Wolf</li>
+        <li>animalType->Cat</li>
+        <li>animalType->Swan</li>
+        <li>animalType->Puffin</li>
+        <li>animalType->Penguin</li>
+        <li>animalType->Warg</li>
+        <li>animalType->Alphabeaver</li>
+        <li>animalType->Labrador</li>
+        <li>animalType->Husky</li>
+        <li>animalType->Alpaca</li>
+        <li>animalType->Squirrel</li>
+        <li>animalType->Swordfish</li>
+        <li>animalType->Rat</li>
+        <li>prenoun->Lady Windemere's</li>
+        <li>prenoun->The </li>
+        <li>prenoun->A Doll's</li>
+        <li>preconcept->A Midsummer Night's</li>
+        <li>preconcept->A Winter's </li>
+        <li>preconcept->A [weapon] Named</li>
+        <li>preconcept->A [animalType] Named</li>
+        <li>preconcept->A Streetcar Named</li>
+        <li>preconcept->Much Ado About</li>
+        <li>adjective->Happy</li>
+        <li>adjective->Unfortunate</li>
+        <li>adjective->Irrelevant</li>
+        <li>adjective->Hidden</li>
+        <li>adjective->Missing</li>
+        <li>adjective->Last</li>
+        <li>adjective->Hopeful</li>
+        <li>oneSylAdj->New</li>
+        <li>oneSylAdj->Red</li>
+        <li>oneSylAdj->Blue</li>
+        <li>oneSylAdj->Fast</li>
+        <li>oneSylAdj->Whole</li>
+        <li>oneSylAdj->Neat</li>
+        <li>oneSylAdj->Green</li>
+        <li>oneSylAdj->Gold</li>
+        <li>oneSylAdj->Trite</li>
+        <li>oneSylAdj->One</li>
+        <li>oneSylAdj->Cold</li>
+        <li>oneSylAdj->Hot</li>
+        <li>oneSylAdj->Fine</li>
+        <li>oneSylAdj->Bold</li>
+        <li>oneSylAdj->Soft</li>
+        <li>oneSylAdj->Hard</li>
+        <li>oneSylAdj->Rough</li>
+        <li>oneSylAdj->Smooth</li>
+        <li>oneSylAdj->Drunk</li>
+        <li>oneSylAdj->Slow</li>
+        <li>oneSylAdj->Black</li>
+        <li>oneSylAdj->Dark</li>
+        <li>oneSylAdj->Tired</li>
+        <li>oneSylAdj->Tough</li>
+        <li>oneSylAdj->Pure</li>
+        <li>oneSylAdj->Lost</li>
+        <li>oneSylAdj->Loathed</li>
+        <li>oneSylAdj->Loved</li>
+        <li>oneSylAdj->Dry</li>
+        <li>oneSylAdj->Wet</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
@@ -176,290 +176,290 @@
     <defName>RAZ_ArtDescription_Play</defName>
     <rulePack>
       <rulesStrings>
-        <li>r_art_description-&gt;This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart]. [play_tale_context]</li>
-        <li>r_art_description-&gt;This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart]. [play_tale_context]</li>
-        <li>r_art_description-&gt;This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart]. [play_tale_context]</li>
-        <li>r_art_description-&gt;This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart]. [play_tale_context]</li>
-        <li>r_art_description-&gt;This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart]. [play_tale_context]</li>
-        <li>r_art_description-&gt;This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart]. [play_tale_context]</li>
-        <li>r_art_description-&gt;This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart].</li>
-        <li>r_art_description-&gt;This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart].</li>
-        <li>r_art_description-&gt;This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart].</li>
-        <li>r_art_description-&gt;This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart].</li>
-        <li>r_art_description-&gt;This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart].</li>
-        <li>r_art_description-&gt;This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart].</li>
-        <li>play_tale_context-&gt;This [depiction] is inspired by [tale_noun] on [DATE].</li>
-        <li>play_tale_context-&gt;This [depiction] unsubtly parodies [tale_noun] on [DATE].</li>
-        <li>play_tale_context-&gt;The plot makes numerous references to [tale_noun] on [DATE].</li>
-        <li>playType-&gt;comedy</li>
-        <li>playType-&gt;comedy</li>
-        <li>playType-&gt;comedy</li>
-        <li>playType-&gt;farce</li>
-        <li>playType-&gt;farce</li>
-        <li>playType-&gt;satire</li>
-        <li>playType-&gt;satire</li>
-        <li>playType-&gt;tragedy</li>
-        <li>playType-&gt;tragedy</li>
-        <li>playType-&gt;tragedy</li>
-        <li>playType-&gt;history</li>
-        <li>playType-&gt;history</li>
-        <li>playType-&gt;melodrama</li>
-        <li>playType-&gt;melodrama</li>
-        <li>playType-&gt;tragic comedy</li>
-        <li>playType-&gt;didactic drama</li>
-        <li>playType-&gt;burlesque</li>
-        <li>playType-&gt;travesty</li>
-        <li>playType-&gt;kabuki</li>
-        <li>playType-&gt;nuo drama</li>
-        <li>playType-&gt;egungun masquerade</li>
-        <li>playType-&gt;kathakali</li>
-        <li>theme-&gt;sexuality</li>
-        <li>theme-&gt;religion</li>
-        <li>theme-&gt;identity</li>
-        <li>theme-&gt;joy</li>
-        <li>theme-&gt;determinism</li>
-        <li>theme-&gt;bigotry</li>
-        <li>theme-&gt;prejudice</li>
-        <li>theme-&gt;jingoism</li>
-        <li>theme-&gt;violence</li>
-        <li>theme-&gt;gender</li>
-        <li>theme-&gt;mortality</li>
-        <li>theme-&gt;bionic enhancement</li>
-        <li>theme-&gt;artificial intelligence</li>
-        <li>theme-&gt;abandonment</li>
-        <li>theme-&gt;isolation</li>
-        <li>theme-&gt;community</li>
-        <li>theme-&gt;chaos</li>
-        <li>theme-&gt;beauty</li>
-        <li>theme-&gt;power</li>
-        <li>theme-&gt;character</li>
-        <li>theme-&gt;courage</li>
-        <li>theme-&gt;sickness</li>
-        <li>theme-&gt;lost purpose</li>
-        <li>theme-&gt;immortality</li>
-        <li>theme-&gt;transhumanism</li>
-        <li>theme-&gt;injustice</li>
-        <li>theme-&gt;lost innocence</li>
-        <li>theme-&gt;solace</li>
-        <li>theme-&gt;hope</li>
-        <li>theme-&gt;love</li>
-        <li>theme-&gt;animal personhood</li>
-        <li>theme-&gt;robotic personhood</li>
-        <li>theme-&gt;personhood</li>
-        <li>theme-&gt;sexism</li>
-        <li>theme-&gt;materialism</li>
-        <li>theme-&gt;democracy</li>
-        <li>theme-&gt;sectarianism</li>
-        <li>theme-&gt;corruption</li>
-        <li>theme-&gt;incomplete knowledge</li>
-        <li>theme-&gt;technology</li>
-        <li>theme-&gt;totalitarianism</li>
-        <li>theme-&gt;class warfare</li>
-        <li>theme-&gt;vulnerability</li>
-        <li>theme-&gt;megalomania</li>
-        <li>theme-&gt;traditionalism</li>
-        <li>theme-&gt;parenthood</li>
-        <li>theme-&gt;betrayal</li>
-        <li>theme-&gt;friendship</li>
-        <li>theme-&gt;trust</li>
-        <li>theme-&gt;displacement</li>
-        <li>theme-&gt;salvation</li>
-        <li>theme-&gt;family</li>
-        <li>theme-&gt;purpose</li>
-        <li>theme-&gt;addiction</li>
-        <li>theme-&gt;autonomy</li>
-        <li>theme-&gt;consequence</li>
-        <li>theme-&gt;sanity</li>
-        <li>theme-&gt;subjective experience</li>
-        <li>theme-&gt;tolerance</li>
-        <li>theme-&gt;anarcho-syndicalism</li>
-        <li>theme-&gt;urbworld crime</li>
-        <li>theme-&gt;linguistics</li>
-        <li>theme-&gt;learning</li>
-        <li>theme-&gt;loyalty</li>
-        <li>theme-&gt;environmentalism</li>
-        <li>theme-&gt;drug use</li>
-        <li>theme-&gt;rationalism</li>
-        <li>theme-&gt;science</li>
-        <li>theme-&gt;surveillance</li>
-        <li>theme-&gt;culture</li>
-        <li>theme-&gt;valor</li>
-        <li>theme-&gt;war</li>
-        <li>theme-&gt;spirituality</li>
-        <li>theme-&gt;depression</li>
-        <li>theme-&gt;transcendence</li>
-        <li>theme-&gt;social anxiety</li>
-        <li>setting-&gt;on a [shipAdj] [shipType] [shipLocation]</li>
-        <li>setting-&gt;in a [worldDescription] [iWorldType] [worldLocationType]</li>
-        <li>shipAdj-&gt;mysterious</li>
-        <li>shipAdj-&gt;sentient</li>
-        <li>shipAdj-&gt;labyrinthine</li>
-        <li>shipAdj-&gt;derelict</li>
-        <li>shipAdj-&gt;huge</li>
-        <li>shipAdj-&gt;beautiful</li>
-        <li>shipAdj-&gt;lively</li>
-        <li>shipAdj-&gt;battered</li>
-        <li>shipAdj-&gt;decommissioned</li>
-        <li>shipType-&gt;space station</li>
-        <li>shipType-&gt;trade ship</li>
-        <li>shipType-&gt;time clipper</li>
-        <li>shipType-&gt;freighter</li>
-        <li>shipType-&gt;pleasure cruiser</li>
-        <li>shipType-&gt;command carrier</li>
-        <li>shipType-&gt;mining junk</li>
-        <li>shipType-&gt;gilded corsair</li>
-        <li>shipType-&gt;warship</li>
-        <li>shipType-&gt;plasteel corvette</li>
-        <li>shipType-&gt;passenger liner</li>
-        <li>shipType-&gt;gunboat</li>
-        <li>shipLocation-&gt;orbiting a [worldType]</li>
-        <li>shipLocation-&gt;crashed on a [worldType]</li>
-        <li>shipLocation-&gt;en route to a [worldType]</li>
-        <li>shipLocation-&gt;spiralling toward a [worldType]</li>
-        <li>shipLocation-&gt;lost in [spaceLocation]</li>
-        <li>shipLocation-&gt;exploring [spaceLocation]</li>
-        <li>shipLocation-&gt;travelling through [spaceLocation]</li>
-        <li>worldType-&gt;GlitterWorld</li>
-        <li>worldType-&gt;MidWorld</li>
-        <li>worldType-&gt;RimWorld</li>
-        <li>worldType-&gt;HiveWorld</li>
-        <li>worldType-&gt;TunnelWorld</li>
-        <li>worldType-&gt;CoreWorld</li>
-        <li>worldType-&gt;[worldDescription] planet</li>
-        <li>worldType-&gt;[worldDescription] gas giant</li>
-        <li>worldType-&gt;[worldDescription] moon</li>
-        <li>worldType-&gt;[worldDescription] asteroid</li>
-        <li>iWorldType-&gt;GlitterWorld</li>
-        <li>iWorldType-&gt;MidWorld</li>
-        <li>iWorldType-&gt;RimWorld</li>
-        <li>iWorldType-&gt;HiveWorld</li>
-        <li>iWorldType-&gt;TunnelWorld</li>
-        <li>iWorldType-&gt;CoreWorld</li>
-        <li>worldDescription-&gt;rogue</li>
-        <li>worldDescription-&gt;mysterious</li>
-        <li>worldDescription-&gt;lost</li>
-        <li>worldDescription-&gt;beautiful</li>
-        <li>worldDescription-&gt;dystopian</li>
-        <li>worldDescription-&gt;portentous</li>
-        <li>worldDescription-&gt;strange</li>
-        <li>worldDescription-&gt;fractured</li>
-        <li>worldDescription-&gt;cursed</li>
-        <li>spaceLocation-&gt;an asteroid belt</li>
-        <li>spaceLocation-&gt;deep space</li>
-        <li>spaceLocation-&gt;a nebula</li>
-        <li>spaceLocation-&gt;a stellar nursery</li>
-        <li>spaceLocation-&gt;a dark matter system</li>
-        <li>spaceLocation-&gt;a cosmic string</li>
-        <li>spaceLocation-&gt;a parallel universe</li>
-        <li>worldLocationType-&gt;city</li>
-        <li>worldLocationType-&gt;desert</li>
-        <li>worldLocationType-&gt;ruin</li>
-        <li>worldLocationType-&gt;mountainside</li>
-        <li>worldLocationType-&gt;kitchen</li>
-        <li>worldLocationType-&gt;bar</li>
-        <li>worldLocationType-&gt;home</li>
-        <li>worldLocationType-&gt;barrack</li>
-        <li>worldLocationType-&gt;municipality</li>
-        <li>worldLocationType-&gt;government building</li>
-        <li>secondSentencePart-&gt; through the [characterInteraction] of its characters, a [characterType] and a [characterType]</li>
-        <li>secondSentencePart-&gt; through the [imageAdj] image of [imageType]</li>
-        <li>secondSentencePart-&gt; through its use of [languageType] and [meterType]</li>
-        <li>characterInteraction-&gt;friendship</li>
-        <li>characterInteraction-&gt;blooming romance</li>
-        <li>characterInteraction-&gt;juxtaposition</li>
-        <li>characterInteraction-&gt;antagonism</li>
-        <li>characterInteraction-&gt;rivalry</li>
-        <li>characterInteraction-&gt;hostility, then mutual respect</li>
-        <li>characterInteraction-&gt;secret affair</li>
-        <li>characterInteraction-&gt;comedic misunderstandings</li>
-        <li>characterInteraction-&gt;creeping embitterment</li>
-        <li>characterType-&gt;raider</li>
-        <li>characterType-&gt;tribesperson</li>
-        <li>characterType-&gt;colonist</li>
-        <li>characterType-&gt;pirate</li>
-        <li>characterType-&gt;textiles trader</li>
-        <li>characterType-&gt;traveller</li>
-        <li>characterType-&gt;muffalo herder</li>
-        <li>characterType-&gt;thrumbo charmer</li>
-        <li>characterType-&gt;boomrat messiah</li>
-        <li>characterType-&gt;boomalope trainer</li>
-        <li>characterType-&gt;shaman</li>
-        <li>characterType-&gt;wandering player</li>
-        <li>characterType-&gt;devilstrand farmer</li>
-        <li>characterType-&gt;megatherum rider</li>
-        <li>characterType-&gt;vatgrown soldier</li>
-        <li>characterType-&gt;scientist</li>
-        <li>characterType-&gt;slave</li>
-        <li>imageAdj-&gt;repeated</li>
-        <li>imageAdj-&gt;haunting</li>
-        <li>imageAdj-&gt;blunt</li>
-        <li>imageAdj-&gt;unnerving</li>
-        <li>imageAdj-&gt;subtle</li>
-        <li>imageAdj-&gt;dadaesque</li>
-        <li>imageAdj-&gt;dark</li>
-        <li>imageType-&gt;a [animalType] [animalDoing].</li>
-        <li>imageType-&gt;a [objectAdj] [objectMaterial] [objectType]</li>
-        <li>animalType-&gt;thrumbo</li>
-        <li>animalType-&gt;muffalo</li>
-        <li>animalType-&gt;wolf</li>
-        <li>animalType-&gt;fox</li>
-        <li>animalType-&gt;boomrat</li>
-        <li>animalType-&gt;boomalope</li>
-        <li>animalType-&gt;megatherum</li>
-        <li>animalType-&gt;cat</li>
-        <li>animalType-&gt;swan</li>
-        <li>animalType-&gt;puffin</li>
-        <li>animalType-&gt;penguin</li>
-        <li>animalType-&gt;vatgrown gamma</li>
-        <li>animalType-&gt;roomba</li>
-        <li>animalType-&gt;warg</li>
-        <li>animalDoing-&gt;lying on the ground</li>
-        <li>animalDoing-&gt;consuming a [object]</li>
-        <li>animalDoing-&gt;wailing</li>
-        <li>animalDoing-&gt;dying</li>
-        <li>animalDoing-&gt;drowning</li>
-        <li>animalDoing-&gt;burning</li>
-        <li>animalDoing-&gt;watching</li>
-        <li>animalDoing-&gt;interminably waiting</li>
-        <li>objectAdj-&gt;broken</li>
-        <li>objectAdj-&gt;large</li>
-        <li>objectAdj-&gt;cartoonish</li>
-        <li>objectAdj-&gt;painted</li>
-        <li>objectAdj-&gt;frozen</li>
-        <li>objectAdj-&gt;stolen</li>
-        <li>objectMaterial-&gt;gold</li>
-        <li>objectMaterial-&gt;silver</li>
-        <li>objectMaterial-&gt;steel</li>
-        <li>objectMaterial-&gt;bronze</li>
-        <li>objectMaterial-&gt;plasteel</li>
-        <li>objectMaterial-&gt;uranium</li>
-        <li>objectMaterial-&gt;tantalum</li>
-        <li>objectMaterial-&gt;titanium</li>
-        <li>objectMaterial-&gt;stone</li>
-        <li>objectMaterial-&gt;copper</li>
-        <li>objectMaterial-&gt;plastic</li>
-        <li>objectType-&gt;rifle</li>
-        <li>objectType-&gt;shield</li>
-        <li>objectType-&gt;bed</li>
-        <li>objectType-&gt;pistol</li>
-        <li>objectType-&gt;plant pot</li>
-        <li>objectType-&gt;statue</li>
-        <li>objectType-&gt;mask</li>
-        <li>objectType-&gt;helmet</li>
-        <li>objectType-&gt;hammer</li>
-        <li>objectType-&gt;sword</li>
-        <li>languageType-&gt;speedy worldplay</li>
-        <li>languageType-&gt;purple prose</li>
-        <li>languageType-&gt;flowery prose</li>
-        <li>languageType-&gt;lyrical text</li>
-        <li>languageType-&gt;endless monologuing</li>
-        <li>languageType-&gt;stilted, naturalistic conversation</li>
-        <li>languageType-&gt;unexpected silence</li>
-        <li>meterType-&gt;blank verse</li>
-        <li>meterType-&gt;rhythmic, punchy dialogue</li>
-        <li>meterType-&gt;patter songs</li>
-        <li>meterType-&gt;trochaic meter</li>
-        <li>meterType-&gt;dactylic form</li>
+        <li>r_art_description->This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart]. [play_tale_context]</li>
+        <li>r_art_description->This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart]. [play_tale_context]</li>
+        <li>r_art_description->This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart]. [play_tale_context]</li>
+        <li>r_art_description->This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart]. [play_tale_context]</li>
+        <li>r_art_description->This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart]. [play_tale_context]</li>
+        <li>r_art_description->This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart]. [play_tale_context]</li>
+        <li>r_art_description->This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart].</li>
+        <li>r_art_description->This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart].</li>
+        <li>r_art_description->This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart].</li>
+        <li>r_art_description->This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart].</li>
+        <li>r_art_description->This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart].</li>
+        <li>r_art_description->This [playType] is set [setting], and explores themes of [theme] and [theme] [secondSentencePart].</li>
+        <li>play_tale_context->This [depiction] is inspired by [tale_noun] on [DATE].</li>
+        <li>play_tale_context->This [depiction] unsubtly parodies [tale_noun] on [DATE].</li>
+        <li>play_tale_context->The plot makes numerous references to [tale_noun] on [DATE].</li>
+        <li>playType->comedy</li>
+        <li>playType->comedy</li>
+        <li>playType->comedy</li>
+        <li>playType->farce</li>
+        <li>playType->farce</li>
+        <li>playType->satire</li>
+        <li>playType->satire</li>
+        <li>playType->tragedy</li>
+        <li>playType->tragedy</li>
+        <li>playType->tragedy</li>
+        <li>playType->history</li>
+        <li>playType->history</li>
+        <li>playType->melodrama</li>
+        <li>playType->melodrama</li>
+        <li>playType->tragic comedy</li>
+        <li>playType->didactic drama</li>
+        <li>playType->burlesque</li>
+        <li>playType->travesty</li>
+        <li>playType->kabuki</li>
+        <li>playType->nuo drama</li>
+        <li>playType->egungun masquerade</li>
+        <li>playType->kathakali</li>
+        <li>theme->sexuality</li>
+        <li>theme->religion</li>
+        <li>theme->identity</li>
+        <li>theme->joy</li>
+        <li>theme->determinism</li>
+        <li>theme->bigotry</li>
+        <li>theme->prejudice</li>
+        <li>theme->jingoism</li>
+        <li>theme->violence</li>
+        <li>theme->gender</li>
+        <li>theme->mortality</li>
+        <li>theme->bionic enhancement</li>
+        <li>theme->artificial intelligence</li>
+        <li>theme->abandonment</li>
+        <li>theme->isolation</li>
+        <li>theme->community</li>
+        <li>theme->chaos</li>
+        <li>theme->beauty</li>
+        <li>theme->power</li>
+        <li>theme->character</li>
+        <li>theme->courage</li>
+        <li>theme->sickness</li>
+        <li>theme->lost purpose</li>
+        <li>theme->immortality</li>
+        <li>theme->transhumanism</li>
+        <li>theme->injustice</li>
+        <li>theme->lost innocence</li>
+        <li>theme->solace</li>
+        <li>theme->hope</li>
+        <li>theme->love</li>
+        <li>theme->animal personhood</li>
+        <li>theme->robotic personhood</li>
+        <li>theme->personhood</li>
+        <li>theme->sexism</li>
+        <li>theme->materialism</li>
+        <li>theme->democracy</li>
+        <li>theme->sectarianism</li>
+        <li>theme->corruption</li>
+        <li>theme->incomplete knowledge</li>
+        <li>theme->technology</li>
+        <li>theme->totalitarianism</li>
+        <li>theme->class warfare</li>
+        <li>theme->vulnerability</li>
+        <li>theme->megalomania</li>
+        <li>theme->traditionalism</li>
+        <li>theme->parenthood</li>
+        <li>theme->betrayal</li>
+        <li>theme->friendship</li>
+        <li>theme->trust</li>
+        <li>theme->displacement</li>
+        <li>theme->salvation</li>
+        <li>theme->family</li>
+        <li>theme->purpose</li>
+        <li>theme->addiction</li>
+        <li>theme->autonomy</li>
+        <li>theme->consequence</li>
+        <li>theme->sanity</li>
+        <li>theme->subjective experience</li>
+        <li>theme->tolerance</li>
+        <li>theme->anarcho-syndicalism</li>
+        <li>theme->urbworld crime</li>
+        <li>theme->linguistics</li>
+        <li>theme->learning</li>
+        <li>theme->loyalty</li>
+        <li>theme->environmentalism</li>
+        <li>theme->drug use</li>
+        <li>theme->rationalism</li>
+        <li>theme->science</li>
+        <li>theme->surveillance</li>
+        <li>theme->culture</li>
+        <li>theme->valor</li>
+        <li>theme->war</li>
+        <li>theme->spirituality</li>
+        <li>theme->depression</li>
+        <li>theme->transcendence</li>
+        <li>theme->social anxiety</li>
+        <li>setting->on a [shipAdj] [shipType] [shipLocation]</li>
+        <li>setting->in a [worldDescription] [iWorldType] [worldLocationType]</li>
+        <li>shipAdj->mysterious</li>
+        <li>shipAdj->sentient</li>
+        <li>shipAdj->labyrinthine</li>
+        <li>shipAdj->derelict</li>
+        <li>shipAdj->huge</li>
+        <li>shipAdj->beautiful</li>
+        <li>shipAdj->lively</li>
+        <li>shipAdj->battered</li>
+        <li>shipAdj->decommissioned</li>
+        <li>shipType->space station</li>
+        <li>shipType->trade ship</li>
+        <li>shipType->time clipper</li>
+        <li>shipType->freighter</li>
+        <li>shipType->pleasure cruiser</li>
+        <li>shipType->command carrier</li>
+        <li>shipType->mining junk</li>
+        <li>shipType->gilded corsair</li>
+        <li>shipType->warship</li>
+        <li>shipType->plasteel corvette</li>
+        <li>shipType->passenger liner</li>
+        <li>shipType->gunboat</li>
+        <li>shipLocation->orbiting a [worldType]</li>
+        <li>shipLocation->crashed on a [worldType]</li>
+        <li>shipLocation->en route to a [worldType]</li>
+        <li>shipLocation->spiralling toward a [worldType]</li>
+        <li>shipLocation->lost in [spaceLocation]</li>
+        <li>shipLocation->exploring [spaceLocation]</li>
+        <li>shipLocation->travelling through [spaceLocation]</li>
+        <li>worldType->GlitterWorld</li>
+        <li>worldType->MidWorld</li>
+        <li>worldType->RimWorld</li>
+        <li>worldType->HiveWorld</li>
+        <li>worldType->TunnelWorld</li>
+        <li>worldType->CoreWorld</li>
+        <li>worldType->[worldDescription] planet</li>
+        <li>worldType->[worldDescription] gas giant</li>
+        <li>worldType->[worldDescription] moon</li>
+        <li>worldType->[worldDescription] asteroid</li>
+        <li>iWorldType->GlitterWorld</li>
+        <li>iWorldType->MidWorld</li>
+        <li>iWorldType->RimWorld</li>
+        <li>iWorldType->HiveWorld</li>
+        <li>iWorldType->TunnelWorld</li>
+        <li>iWorldType->CoreWorld</li>
+        <li>worldDescription->rogue</li>
+        <li>worldDescription->mysterious</li>
+        <li>worldDescription->lost</li>
+        <li>worldDescription->beautiful</li>
+        <li>worldDescription->dystopian</li>
+        <li>worldDescription->portentous</li>
+        <li>worldDescription->strange</li>
+        <li>worldDescription->fractured</li>
+        <li>worldDescription->cursed</li>
+        <li>spaceLocation->an asteroid belt</li>
+        <li>spaceLocation->deep space</li>
+        <li>spaceLocation->a nebula</li>
+        <li>spaceLocation->a stellar nursery</li>
+        <li>spaceLocation->a dark matter system</li>
+        <li>spaceLocation->a cosmic string</li>
+        <li>spaceLocation->a parallel universe</li>
+        <li>worldLocationType->city</li>
+        <li>worldLocationType->desert</li>
+        <li>worldLocationType->ruin</li>
+        <li>worldLocationType->mountainside</li>
+        <li>worldLocationType->kitchen</li>
+        <li>worldLocationType->bar</li>
+        <li>worldLocationType->home</li>
+        <li>worldLocationType->barrack</li>
+        <li>worldLocationType->municipality</li>
+        <li>worldLocationType->government building</li>
+        <li>secondSentencePart-> through the [characterInteraction] of its characters, a [characterType] and a [characterType]</li>
+        <li>secondSentencePart-> through the [imageAdj] image of [imageType]</li>
+        <li>secondSentencePart-> through its use of [languageType] and [meterType]</li>
+        <li>characterInteraction->friendship</li>
+        <li>characterInteraction->blooming romance</li>
+        <li>characterInteraction->juxtaposition</li>
+        <li>characterInteraction->antagonism</li>
+        <li>characterInteraction->rivalry</li>
+        <li>characterInteraction->hostility, then mutual respect</li>
+        <li>characterInteraction->secret affair</li>
+        <li>characterInteraction->comedic misunderstandings</li>
+        <li>characterInteraction->creeping embitterment</li>
+        <li>characterType->raider</li>
+        <li>characterType->tribesperson</li>
+        <li>characterType->colonist</li>
+        <li>characterType->pirate</li>
+        <li>characterType->textiles trader</li>
+        <li>characterType->traveller</li>
+        <li>characterType->muffalo herder</li>
+        <li>characterType->thrumbo charmer</li>
+        <li>characterType->boomrat messiah</li>
+        <li>characterType->boomalope trainer</li>
+        <li>characterType->shaman</li>
+        <li>characterType->wandering player</li>
+        <li>characterType->devilstrand farmer</li>
+        <li>characterType->megatherum rider</li>
+        <li>characterType->vatgrown soldier</li>
+        <li>characterType->scientist</li>
+        <li>characterType->slave</li>
+        <li>imageAdj->repeated</li>
+        <li>imageAdj->haunting</li>
+        <li>imageAdj->blunt</li>
+        <li>imageAdj->unnerving</li>
+        <li>imageAdj->subtle</li>
+        <li>imageAdj->dadaesque</li>
+        <li>imageAdj->dark</li>
+        <li>imageType->a [animalType] [animalDoing].</li>
+        <li>imageType->a [objectAdj] [objectMaterial] [objectType]</li>
+        <li>animalType->thrumbo</li>
+        <li>animalType->muffalo</li>
+        <li>animalType->wolf</li>
+        <li>animalType->fox</li>
+        <li>animalType->boomrat</li>
+        <li>animalType->boomalope</li>
+        <li>animalType->megatherum</li>
+        <li>animalType->cat</li>
+        <li>animalType->swan</li>
+        <li>animalType->puffin</li>
+        <li>animalType->penguin</li>
+        <li>animalType->vatgrown gamma</li>
+        <li>animalType->roomba</li>
+        <li>animalType->warg</li>
+        <li>animalDoing->lying on the ground</li>
+        <li>animalDoing->consuming a [object]</li>
+        <li>animalDoing->wailing</li>
+        <li>animalDoing->dying</li>
+        <li>animalDoing->drowning</li>
+        <li>animalDoing->burning</li>
+        <li>animalDoing->watching</li>
+        <li>animalDoing->interminably waiting</li>
+        <li>objectAdj->broken</li>
+        <li>objectAdj->large</li>
+        <li>objectAdj->cartoonish</li>
+        <li>objectAdj->painted</li>
+        <li>objectAdj->frozen</li>
+        <li>objectAdj->stolen</li>
+        <li>objectMaterial->gold</li>
+        <li>objectMaterial->silver</li>
+        <li>objectMaterial->steel</li>
+        <li>objectMaterial->bronze</li>
+        <li>objectMaterial->plasteel</li>
+        <li>objectMaterial->uranium</li>
+        <li>objectMaterial->tantalum</li>
+        <li>objectMaterial->titanium</li>
+        <li>objectMaterial->stone</li>
+        <li>objectMaterial->copper</li>
+        <li>objectMaterial->plastic</li>
+        <li>objectType->rifle</li>
+        <li>objectType->shield</li>
+        <li>objectType->bed</li>
+        <li>objectType->pistol</li>
+        <li>objectType->plant pot</li>
+        <li>objectType->statue</li>
+        <li>objectType->mask</li>
+        <li>objectType->helmet</li>
+        <li>objectType->hammer</li>
+        <li>objectType->sword</li>
+        <li>languageType->speedy worldplay</li>
+        <li>languageType->purple prose</li>
+        <li>languageType->flowery prose</li>
+        <li>languageType->lyrical text</li>
+        <li>languageType->endless monologuing</li>
+        <li>languageType->stilted, naturalistic conversation</li>
+        <li>languageType->unexpected silence</li>
+        <li>meterType->blank verse</li>
+        <li>meterType->rhythmic, punchy dialogue</li>
+        <li>meterType->patter songs</li>
+        <li>meterType->trochaic meter</li>
+        <li>meterType->dactylic form</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

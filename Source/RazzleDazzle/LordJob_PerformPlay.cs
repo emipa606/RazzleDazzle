@@ -24,7 +24,7 @@ public class LordJob_PerformPlay : LordJob_Performance
         return (0.3f * (level + level2)) + (0.2f * (level3 + level4));
     }
 
-    public override string GetMessageForQualityLevel(float fQ)
+    protected override string GetMessageForQualityLevel(float fQ)
     {
         string text;
         switch (fQ)
@@ -46,7 +46,7 @@ public class LordJob_PerformPlay : LordJob_Performance
         return "RAZ_PlayFinished".Translate(text.Translate());
     }
 
-    public override ThoughtDef GetThoughtForQualityLevel(float fQ)
+    protected override ThoughtDef GetThoughtForQualityLevel(float fQ)
     {
         ThoughtDef result;
         switch (fQ)

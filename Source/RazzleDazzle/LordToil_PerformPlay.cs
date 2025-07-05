@@ -6,11 +6,11 @@ namespace RazzleDazzle;
 
 public class LordToil_PerformPlay(Pawn lead, Pawn support, Thing stage) : LordToil
 {
-    public readonly Pawn lead = lead;
+    private readonly Pawn lead = lead;
 
-    public readonly Thing stage = stage;
+    private readonly Thing stage = stage;
 
-    public readonly Pawn support = support;
+    private readonly Pawn support = support;
 
     public bool HasPlayFinished()
     {

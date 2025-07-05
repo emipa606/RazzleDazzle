@@ -7,11 +7,11 @@ namespace RazzleDazzle;
 
 public class LordToil_SettleForPerformance(Building_Performance venue) : LordToil
 {
-    public Building_Performance Venue { get; } = venue;
+    private Building_Performance Venue { get; } = venue;
 
-    public Pawn Lead => Venue.Lead;
+    private Pawn Lead => Venue.Lead;
 
-    public Pawn Support => Venue.Support;
+    private Pawn Support => Venue.Support;
 
     public override void UpdateAllDuties()
     {

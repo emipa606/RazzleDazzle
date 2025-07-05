@@ -21,10 +21,7 @@ public class JobDriver_Rehearse : JobDriver
         {
             initAction = delegate
             {
-                if (Venue.Director.stage == null)
-                {
-                    Venue.Director.stage = Venue;
-                }
+                Venue.Director.stage ??= Venue;
 
                 if ((Venue.Lead == null || Venue.Lead.Dead) && Venue.Support != GetActor())
                 {

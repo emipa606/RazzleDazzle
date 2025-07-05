@@ -16,9 +16,9 @@ public class Building_BroadcastTower : Building
 
     public float qualityValue;
 
-    protected float seasonScore;
+    private float seasonScore;
 
-    public float serviceRegularity = 1f;
+    private float serviceRegularity = 1f;
 
     private string BroadcastQualityString()
     {
@@ -73,7 +73,7 @@ public class Building_BroadcastTower : Building
         return text ?? "RAZ_BroadcastRegularity_OffAir".Translate();
     }
 
-    public void IncrementGoodwill()
+    private void IncrementGoodwill()
     {
         var num = (int)(seasonScore * serviceRegularity * goodwill_multiplier);
         if (num > 12f)
@@ -159,7 +159,7 @@ public class Building_BroadcastTower : Building
         Scribe_Values.Look(ref qualityValue, "qualityValue", 1f);
     }
 
-    protected void ChangeSeasons(int originTile)
+    private void ChangeSeasons(int originTile)
     {
         CallInSubscriptions(originTile);
         seasonScore = 0f;

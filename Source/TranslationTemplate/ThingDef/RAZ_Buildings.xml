@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Broadcaster -->
+  <BroadcastTowerDef.label>Broadcaster</BroadcastTowerDef.label>
+  <!-- EN: A device for sending radio broadcasts. -->
+  <BroadcastTowerDef.description>A device for sending radio broadcasts.</BroadcastTowerDef.description>
+  <!-- EN: grand piano -->
+  <GrandPianoDef.label>grand piano</GrandPianoDef.label>
+  <!-- EN: A grand piano. -->
+  <GrandPianoDef.description>A grand piano.</GrandPianoDef.description>
+  <!-- EN: microphone -->
+  <RazMicrophoneDef.label>microphone</RazMicrophoneDef.label>
+  <!-- EN: A microphone. -->
+  <RazMicrophoneDef.description>A microphone.</RazMicrophoneDef.description>
+  <!-- EN: Stage -->
+  <StageDef.label>Stage</StageDef.label>
+  <!-- EN: A stage on which to hold performances. -->
+  <StageDef.description>A stage on which to hold performances.</StageDef.description>
+</LanguageData>

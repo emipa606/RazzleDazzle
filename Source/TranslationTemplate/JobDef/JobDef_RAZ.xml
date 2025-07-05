@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Staging a play. -->
+  <JobDef_DoRehearsePlayBill.reportString>Staging a play.</JobDef_DoRehearsePlayBill.reportString>
+  <!-- EN: Rehearsing on TargetA. -->
+  <JobDef_DoStartRehearsalDirectly.reportString>Rehearsing on TargetA.</JobDef_DoStartRehearsalDirectly.reportString>
+  <!-- EN: Woo! -->
+  <JobDef_FaceObject.reportString>Woo!</JobDef_FaceObject.reportString>
+  <!-- EN: Performing stand-up. -->
+  <JobDef_PerformComedy.reportString>Performing stand-up.</JobDef_PerformComedy.reportString>
+  <!-- EN: Playing music. -->
+  <JobDef_PerformMusic.reportString>Playing music.</JobDef_PerformMusic.reportString>
+  <!-- EN: Performing play. -->
+  <JobDef_PerformPlay.reportString>Performing play.</JobDef_PerformPlay.reportString>
+  <!-- EN: Preparing for concert. -->
+  <JobDef_PrepareConcert.reportString>Preparing for concert.</JobDef_PrepareConcert.reportString>
+  <!-- EN: Rehearsing on TargetA. -->
+  <JobDef_Rehearse.reportString>Rehearsing on TargetA.</JobDef_Rehearse.reportString>
+  <!-- EN: Mucking about. -->
+  <MuckAroundOnStage.reportString>Mucking about.</MuckAroundOnStage.reportString>
+  <!-- EN: Noodling on the piano. -->
+  <NoodleOnPiano.reportString>Noodling on the piano.</NoodleOnPiano.reportString>
+</LanguageData>

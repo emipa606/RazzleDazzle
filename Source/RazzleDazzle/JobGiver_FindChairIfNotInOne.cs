@@ -12,7 +12,7 @@ public class JobGiver_FindChairIfNotInOne : ThinkNode_JobGiver
 
     private static readonly List<IntVec3> rpo = GenRadial.RadialPattern.Take(numCellsInRadius).ToList();
 
-    public bool CellHasChair(IntVec3 pos, Map m)
+    private bool CellHasChair(IntVec3 pos, Map m)
     {
         var edifice = pos.GetEdifice(m);
         return edifice != null && edifice.def.category == ThingCategory.Building && edifice.def.building.isSittable;

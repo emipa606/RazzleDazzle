@@ -8,15 +8,15 @@ namespace RazzleDazzle;
 
 public static class RazzleDazzleUtilities
 {
-    public static IEnumerable<Map> GetAllMapsContainingFreeSpawnedColonists => from map in Find.Maps
+    private static IEnumerable<Map> GetAllMapsContainingFreeSpawnedColonists => from map in Find.Maps
         where map.mapPawns.FreeColonistsSpawnedCount > 0
         select map;
 
-    public static IEnumerable<Caravan> GetAllPlayerCaravans => from car in Find.WorldObjects.Caravans
+    private static IEnumerable<Caravan> GetAllPlayerCaravans => from car in Find.WorldObjects.Caravans
         where car.Faction == Faction.OfPlayer
         select car;
 
-    public static IEnumerable<Pawn> GetAllColonistsInCaravans => from car in GetAllPlayerCaravans
+    private static IEnumerable<Pawn> GetAllColonistsInCaravans => from car in GetAllPlayerCaravans
         from col in car.PawnsListForReading
         select new
         {
@@ -27,7 +27,7 @@ public static class RazzleDazzleUtilities
         where x.col.RaceProps.Humanlike && !x.col.Dead && x.col.Faction == Faction.OfPlayer
         select x.col;
 
-    public static IEnumerable<Pawn> GetAllFreeSpawnedColonistsOnMaps =>
+    private static IEnumerable<Pawn> GetAllFreeSpawnedColonistsOnMaps =>
         from map in GetAllMapsContainingFreeSpawnedColonists
         from col in map.mapPawns.FreeColonistsSpawned
         select new

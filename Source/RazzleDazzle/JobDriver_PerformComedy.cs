@@ -41,18 +41,18 @@ public class JobDriver_PerformComedy : JobDriver
                     else if (Rand.Chance(0.01f))
                     {
                         var value = Rand.Value;
-                        if (value < 0.25f)
+                        switch (value)
                         {
-                            FleckMaker.ThrowMetaIcon(GetActor().Position, GetActor().Map, FleckDefOf.IncapIcon);
-                        }
-                        else if (value < 0.5f)
-                        {
-                            FleckMaker.ThrowMetaIcon(GetActor().Position, GetActor().Map, FleckDefOf.Heart);
-                        }
-                        else
-                        {
-                            FleckMaker.ThrowMetaIcon(GetActor().Position, GetActor().Map,
-                                ThingDefOf_RazzleDazzle.Mote_Tragedy);
+                            case < 0.25f:
+                                FleckMaker.ThrowMetaIcon(GetActor().Position, GetActor().Map, FleckDefOf.IncapIcon);
+                                break;
+                            case < 0.5f:
+                                FleckMaker.ThrowMetaIcon(GetActor().Position, GetActor().Map, FleckDefOf.Heart);
+                                break;
+                            default:
+                                FleckMaker.ThrowMetaIcon(GetActor().Position, GetActor().Map,
+                                    ThingDefOf_RazzleDazzle.Mote_Tragedy);
+                                break;
                         }
                     }
 

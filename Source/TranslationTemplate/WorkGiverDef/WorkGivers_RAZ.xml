@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Do bills at Grand Piano -->
+  <WorkGiver_DoBillsAtGrandPiano.label>Do bills at Grand Piano</WorkGiver_DoBillsAtGrandPiano.label>
+  <!-- EN: Composing music -->
+  <WorkGiver_DoBillsAtGrandPiano.gerund>Composing music</WorkGiver_DoBillsAtGrandPiano.gerund>
+  <!-- EN: Compose Music -->
+  <WorkGiver_DoBillsAtGrandPiano.verb>Compose Music</WorkGiver_DoBillsAtGrandPiano.verb>
+  <!-- EN: Prepare Performance -->
+  <WorkGiver_PreparePerformance.label>Prepare Performance</WorkGiver_PreparePerformance.label>
+  <!-- EN: Preparing for a performance -->
+  <WorkGiver_PreparePerformance.gerund>Preparing for a performance</WorkGiver_PreparePerformance.gerund>
+  <!-- EN: Perparing for a performance -->
+  <WorkGiver_PreparePerformance.verb>Perparing for a performance</WorkGiver_PreparePerformance.verb>
+  <!-- EN: Rehearse -->
+  <WorkGiver_Rehearser.label>Rehearse</WorkGiver_Rehearser.label>
+  <!-- EN: rehearsing -->
+  <WorkGiver_Rehearser.gerund>rehearsing</WorkGiver_Rehearser.gerund>
+  <!-- EN: rehearse -->
+  <WorkGiver_Rehearser.verb>rehearse</WorkGiver_Rehearser.verb>
+</LanguageData>
