@@ -7,9 +7,8 @@ namespace RazzleDazzle;
 
 public class LordToil_Concert(Pawn performer, Thing performThing) : LordToil
 {
-    private readonly Pawn performer = performer;
-
     private readonly Thing performThing = performThing;
+    private readonly Pawn performer = performer;
 
     public CellRect spectateRect;
 

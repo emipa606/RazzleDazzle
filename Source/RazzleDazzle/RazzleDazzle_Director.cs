@@ -10,40 +10,17 @@ public class RazzleDazzle_Director
     public delegate void DramaticExchange(Pawn p1, Pawn p2, List<Toil> leadToils, List<Toil> supportToils,
         Building_Stage stage);
 
-    public enum StageLocations
-    {
-        STAGE_R,
-
-        STAGE_L,
-
-        STAGE_C,
-
-        UPSTAGE_R,
-
-        UPSTAGE_L,
-
-        UPSTAGE_C,
-
-        DOWNSTAGE_R,
-
-        DOWNSTAGE_L,
-
-        DOWNSTAGE_C,
-
-        BACKSTAGE
-    }
-
     private const int nScenes = 6;
 
     public IEnumerable<DramaticExchange> allExchanges;
 
-    private bool leadReady;
-
     private List<Toil> lToils;
 
-    public Building_Performance stage;
+    private bool leadReady;
 
     private List<Toil> sToils;
+
+    public Building_Performance stage;
 
     private bool supportReady;
 
@@ -103,7 +80,7 @@ public class RazzleDazzle_Director
 
     private Pawn Support => stage.Support;
 
-    private Toil FaceDirection(Rot4 dir)
+    private static Toil FaceDirection(Rot4 dir)
     {
         var t = new Toil
         {
@@ -246,7 +223,7 @@ public class RazzleDazzle_Director
         return toil;
     }
 
-    private Toil GoToStageLocation(Building_Performance buildingPerformance, StageLocations loc)
+    private static Toil GoToStageLocation(Building_Performance buildingPerformance, StageLocations loc)
     {
         var toil = Toils_Goto.GotoCell(GetStageCell(loc, buildingPerformance), PathEndMode.OnCell);
         toil.tickAction = delegate { buildingPerformance.ticksIntoThisPerformance++; };
@@ -474,5 +451,28 @@ public class RazzleDazzle_Director
         }
 
         return result;
+    }
+
+    private enum StageLocations
+    {
+        STAGE_R,
+
+        STAGE_L,
+
+        STAGE_C,
+
+        UPSTAGE_R,
+
+        UPSTAGE_L,
+
+        UPSTAGE_C,
+
+        DOWNSTAGE_R,
+
+        DOWNSTAGE_L,
+
+        DOWNSTAGE_C,
+
+        BACKSTAGE
     }
 }

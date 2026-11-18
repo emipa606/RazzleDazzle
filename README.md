@@ -45,4 +45,4 @@ Direct Download: [Dropbox](https://www.dropbox.com/sh/fmbh06zqkki2a9d/AAAcyZXk2w
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/RazzleDazzle?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2024612321) | tags: performing arts, theater, music
+[![Image](https://img.shields.io/github/v/release/emipa606/RazzleDazzle?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2024612321) | music, performing arts, theater

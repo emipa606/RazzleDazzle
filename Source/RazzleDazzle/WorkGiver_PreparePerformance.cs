@@ -32,9 +32,9 @@ public class WorkGiver_PreparePerformance : WorkGiver_Scanner
         return result;
     }
 
-    public override Job JobOnThing(Pawn pawn, Thing thing, bool forced = false)
+    public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
     {
-        var building_Performance = thing as Building_Performance;
+        var building_Performance = t as Building_Performance;
         Job result;
         if (building_Performance?.VenueDef.artDef == null)
         {
@@ -57,12 +57,12 @@ public class WorkGiver_PreparePerformance : WorkGiver_Scanner
             select t;
     }
 
-    private Job AssignRehearsalDirectJob(Building_Performance giver)
+    private static Job AssignRehearsalDirectJob(Building_Performance giver)
     {
         return new Job(JobDefOfRazzleDazzle.JobDef_DoStartRehearsalDirectly, giver);
     }
 
-    private Job ChooseArtAndCarryItJob(Pawn pawn, Building_Performance giver)
+    private static Job ChooseArtAndCarryItJob(Pawn pawn, Building_Performance giver)
     {
         correctArt.Clear();
         Job result;

@@ -11,13 +11,11 @@ namespace RazzleDazzle;
 public class Building_Performance : Building_WorkTable
 {
     public readonly bool canPerformSwitch = true;
-    public string artistName = "";
 
     public QualityCategory artQuality = QualityCategory.Normal;
 
     public string artTitle = "";
-
-    private RazzleDazzle_Director director;
+    public string artistName = "";
 
     private Pawn lead;
 
@@ -35,18 +33,16 @@ public class Building_Performance : Building_WorkTable
 
     private int ticksSinceLastPerformance = 5000;
 
-    private PerformanceVenueDef venDef;
-
     public RazzleDazzle_Director Director
     {
         get
         {
-            director ??= new RazzleDazzle_Director
+            field ??= new RazzleDazzle_Director
             {
                 stage = this
             };
 
-            return director;
+            return field;
         }
     }
 
@@ -137,9 +133,9 @@ public class Building_Performance : Building_WorkTable
     {
         get
         {
-            venDef ??= (PerformanceVenueDef)def;
+            field ??= (PerformanceVenueDef)def;
 
-            return venDef;
+            return field;
         }
     }
 

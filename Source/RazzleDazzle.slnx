@@ -3,4 +3,58 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="RazzleDazzle/RazzleDazzle.csproj" />
+  <Folder Name="/.github/">
+    <File Path="../.github/copilot-instructions.md" />
+  </Folder>
+  <Folder Name="/XML/Languages/English/Keyed/">
+    <File Path="../Languages/English/Keyed/Messages.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/WorkTypeDefs/">
+    <File Path="../1.7/Defs/WorkTypeDefs/WorkTypes_RAZ.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/DutyDefs/">
+    <File Path="../1.7/Defs/DutyDefs/RAZ_Duties.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingDefs/">
+    <File Path="../1.7/Defs/ThingDefs/RAZ_Buildings.xml" />
+    <File Path="../1.7/Defs/ThingDefs/RAZ_Items.xml" />
+    <File Path="../1.7/Defs/ThingDefs/RAZ_Motes.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Patches/">
+    <File Path="../1.7/Patches/RoyaltyPatch.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/JoyDefs/">
+    <File Path="../1.7/Defs/JoyDefs/Joy_RAZ.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThoughtDefs/">
+    <File Path="../1.7/Defs/ThoughtDefs/ThoughtDefs_RAZ.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/IncidentDefs/">
+    <File Path="../1.7/Defs/IncidentDefs/Incidents.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/WorkGiverDefs/">
+    <File Path="../1.7/Defs/WorkGiverDefs/WorkGivers_RAZ.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/RulePackDefs/">
+    <File Path="../1.7/Defs/RulePackDefs/RAZ_RulePackDefs_Compositions.xml" />
+    <File Path="../1.7/Defs/RulePackDefs/RAZ_RulePackDefs_Plays.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingCategoryDefs/">
+    <File Path="../1.7/Defs/ThingCategoryDefs/ThingCategories.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/JobDefs/">
+    <File Path="../1.7/Defs/JobDefs/JobDef_RAZ.xml" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/RoomDefs/">
+    <File Path="../1.7/Defs/RoomDefs/RoomRoles_RAZ.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/RecipeDefs/">
+    <File Path="../1.7/Defs/RecipeDefs/RAZ_RecipeDefs.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/TaleDefs/">
+    <File Path="../1.7/Defs/TaleDefs/Tales.xml" />
+  </Folder>
 </Solution>

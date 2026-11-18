@@ -58,10 +58,7 @@ public class JobDriver_PerformComedy : JobDriver
 
                     if (Rand.Chance(0.002f))
                     {
-                        if (lordJob != null)
-                        {
-                            lordJob.punchline = true;
-                        }
+                        lordJob?.punchline = true;
                     }
                 }
 

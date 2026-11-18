@@ -81,7 +81,7 @@ public class LordJob_Performance : LordJob_VoluntarilyJoinable
         return p == Support && !p.Dead && !p.Downed && p.health.capacities.CapableOf(PawnCapacityDefOf.Moving);
     }
 
-    private bool IsValidAttendee(Pawn p)
+    private static bool IsValidAttendee(Pawn p)
     {
         return p is { Spawned: true } && GatheringsUtility.ShouldGuestKeepAttendingGathering(p) &&
                !p.Faction.HostileTo(Faction.OfPlayer);
